@@ -27,16 +27,16 @@ app = FastAPI(
     redoc_url="/redoc"
 )
 
-# Set up CORS middleware to allow any local frontend port (5173, 2333, 3000, etc.)
+# Set up CORS middleware to match any localhost / 127.0.0.1 port (5173, 2333, 3000, 8001, etc.)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=False,
+    allow_origin_regex=r"http://(localhost|127\.0\.0\.1)(:\d+)?",
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Global Exception Handler (Never expose raw stack trace in production)
+# Global Exception Handler
 @app.exception_handler(Exception)
 async def global_exception_handler(request: Request, exc: Exception):
     logger.error(f"Unhandled Exception for {request.url}: {exc}", exc_info=True)
