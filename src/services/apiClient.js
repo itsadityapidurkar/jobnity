@@ -1,7 +1,13 @@
 let rawApiBase = import.meta.env.VITE_API_URL
 if (!rawApiBase) {
-  if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-    rawApiBase = '/api'
+  if (typeof window !== 'undefined') {
+    if (window.location.hostname === 'jobnity.thundercipher.xyz') {
+      rawApiBase = 'https://api.jobnity.thundercipher.xyz/api'
+    } else if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      rawApiBase = '/api'
+    } else {
+      rawApiBase = 'http://localhost:8001/api'
+    }
   } else {
     rawApiBase = 'http://localhost:8001/api'
   }
