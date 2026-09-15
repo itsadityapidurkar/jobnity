@@ -1,8 +1,13 @@
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8001/api'
+let rawApiBase = import.meta.env.VITE_API_URL || 'http://localhost:8001/api'
+if (rawApiBase && !rawApiBase.endsWith('/api')) {
+  rawApiBase = rawApiBase.replace(/\/+$/, '') + '/api'
+}
+const API_BASE = rawApiBase
 
 async function request(path, options = {}) {
-  const response = await fetch(`${API_BASE}${path}`, options).catch((err) => {
-    throw new Error(`Cannot connect to backend server at ${API_BASE}. Please ensure FastAPI server is running. (${err.message})`)
+  const url = `${API_BASE}${path}`
+  const response = await fetch(url, options).catch((err) => {
+    throw new Error(`Cannot connect to backend server at ${url}. Please ensure FastAPI server is running. (${err.message})`)
   })
   
   const body = await response.json().catch(() => ({}))
