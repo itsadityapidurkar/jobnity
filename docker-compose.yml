@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  jobnity:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jobnity-app
+    ports:
+      - "8001:8001"
+    environment:
+      - PORT=8001
+      - PROJECT_NAME=Jobnity API
+    volumes:
+      - jobnity_uploads:/app/backend/uploads
+    restart: unless-stopped
+
+volumes:
+  jobnity_uploads:
