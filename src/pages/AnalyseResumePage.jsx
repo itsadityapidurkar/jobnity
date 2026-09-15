@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
 import BackgroundLayout from '../components/BackgroundLayout'
 import Navigation from '../components/Navigation'
 import Toast from '../components/Toast'
@@ -10,6 +11,12 @@ import RoleSelectionStep from '../components/AnalyseResume/RoleSelectionStep'
 import SkillGapAnalysisStep from '../components/AnalyseResume/SkillGapAnalysisStep'
 import { apiClient } from '../services/apiClient'
 import uploadBackground from '../assets/resume-upload-hero.png'
+
+const stepVariants = {
+  initial: { opacity: 0, y: 14, scale: 0.995 },
+  animate: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] } },
+  exit: { opacity: 0, y: -14, scale: 0.995, transition: { duration: 0.2, ease: 'easeInOut' } }
+}
 
 export default function AnalyseResumePage() {
   const navigate = useNavigate()
@@ -158,39 +165,51 @@ export default function AnalyseResumePage() {
           </button>
         </div>
 
-        {/* Step views */}
-        {step === 'upload' && (
-          <ResumeUploadStep 
-            onAnalyze={handleStartAnalysis} 
-            onSampleSelect={handleSampleSelect}
-          />
-        )}
+        {/* Step views with smooth crossfade animation */}
+        <AnimatePresence mode="wait">
+          {step === 'upload' && (
+            <motion.div key="step-upload" initial="initial" animate="animate" exit="exit" variants={stepVariants}>
+              <ResumeUploadStep 
+                onAnalyze={handleStartAnalysis} 
+                onSampleSelect={handleSampleSelect}
+              />
+            </motion.div>
+          )}
 
-        {step === 'parsing' && (
-          <ResumeParsingStep />
-        )}
+          {step === 'parsing' && (
+            <motion.div key="step-parsing" initial="initial" animate="animate" exit="exit" variants={stepVariants}>
+              <ResumeParsingStep />
+            </motion.div>
+          )}
 
-        {step === 'review' && rawProfile && (
-          <ResumeReviewStep 
-            profile={rawProfile} 
-            onConfirm={handleConfirmProfile} 
-          />
-        )}
+          {step === 'review' && rawProfile && (
+            <motion.div key="step-review" initial="initial" animate="animate" exit="exit" variants={stepVariants}>
+              <ResumeReviewStep 
+                profile={rawProfile} 
+                onConfirm={handleConfirmProfile} 
+              />
+            </motion.div>
+          )}
 
-        {step === 'role_select' && (
-          <RoleSelectionStep 
-            selectedRole={selectedRole}
-            onSelectRole={setSelectedRole}
-            onProceed={handlePerformAnalysis}
-          />
-        )}
+          {step === 'role_select' && (
+            <motion.div key="step-role-select" initial="initial" animate="animate" exit="exit" variants={stepVariants}>
+              <RoleSelectionStep 
+                selectedRole={selectedRole}
+                onSelectRole={setSelectedRole}
+                onProceed={handlePerformAnalysis}
+              />
+            </motion.div>
+          )}
 
-        {step === 'analysis' && analysisResult && (
-          <SkillGapAnalysisStep 
-            analysis={analysisResult} 
-            onNavigateToRoadmaps={handleNavigateToRoadmaps}
-          />
-        )}
+          {step === 'analysis' && analysisResult && (
+            <motion.div key="step-analysis" initial="initial" animate="animate" exit="exit" variants={stepVariants}>
+              <SkillGapAnalysisStep 
+                analysis={analysisResult} 
+                onNavigateToRoadmaps={handleNavigateToRoadmaps}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </main>
 
       <Toast message={toastMessage} onDismiss={() => setToastMessage('')} />
