@@ -1,4 +1,8 @@
+import { useState } from 'react'
+
 export default function SkillGapAnalysisStep({ analysis, onNavigateToRoadmaps }) {
+  const [mobileSkillFilter, setMobileSkillFilter] = useState('all')
+
   if (!analysis) return null
 
   const targetRole = analysis.targetRole || (analysis.role && analysis.role.job_role) || analysis.target_role || 'Target Role'
@@ -69,60 +73,89 @@ export default function SkillGapAnalysisStep({ analysis, onNavigateToRoadmaps })
         </div>
       </div>
 
+      {/* Mobile Filter Pill Switch */}
+      <div className="mobile-skill-tabs mobile-only" role="tablist" aria-label="Skill filter tabs">
+        <button 
+          type="button" 
+          className={`mobile-skill-tab ${mobileSkillFilter === 'all' ? 'is-active' : ''}`}
+          onClick={() => setMobileSkillFilter('all')}
+        >
+          All Skills ({matchedCount + missingCount})
+        </button>
+        <button 
+          type="button" 
+          className={`mobile-skill-tab ${mobileSkillFilter === 'matched' ? 'is-active' : ''}`}
+          onClick={() => setMobileSkillFilter('matched')}
+        >
+          Matched ({matchedCount})
+        </button>
+        <button 
+          type="button" 
+          className={`mobile-skill-tab ${mobileSkillFilter === 'missing' ? 'is-active' : ''}`}
+          onClick={() => setMobileSkillFilter('missing')}
+        >
+          Missing ({missingCount})
+        </button>
+      </div>
+
       {/* Skill columns */}
       <div className="skill-columns">
         {/* Matched Skills Column */}
-        <section className="skill-column">
-          <div className="skill-column__title">
-            <span className="status-dot status-dot--matched" /> 
-            <h2>Matched Skills ({matchedCount})</h2>
-          </div>
-          {matched.length > 0 ? (
-            matched.map((item, idx) => (
-              <div className="skill-row" key={item.skill_id || item.id || `${item.skill}-${idx}`}>
-                <div className="skill-row-left">
-                  <strong>✓ {item.skill}</strong>
-                  <span>Candidate: {item.candidate_level || item.candidateLevel || 'Intermediate'} · Required: {item.required_level || item.minimumLevel || 'Intermediate'}</span>
+        {(mobileSkillFilter === 'all' || mobileSkillFilter === 'matched') && (
+          <section className="skill-column">
+            <div className="skill-column__title">
+              <span className="status-dot status-dot--matched" /> 
+              <h2>Matched Skills ({matchedCount})</h2>
+            </div>
+            {matched.length > 0 ? (
+              matched.map((item, idx) => (
+                <div className="skill-row" key={item.skill_id || item.id || `${item.skill}-${idx}`}>
+                  <div className="skill-row-left">
+                    <strong>✓ {item.skill}</strong>
+                    <span>Candidate: {item.candidate_level || item.candidateLevel || 'Intermediate'} · Required: {item.required_level || item.minimumLevel || 'Intermediate'}</span>
+                  </div>
+                  <div className="skill-badge matched-badge">
+                    Matched
+                  </div>
                 </div>
-                <div className="skill-badge matched-badge">
-                  Matched
-                </div>
-              </div>
-            ))
-          ) : (
-            <p className="skill-column__empty">No skills matched yet.</p>
-          )}
-        </section>
+              ))
+            ) : (
+              <p className="skill-column__empty">No skills matched yet.</p>
+            )}
+          </section>
+        )}
 
         {/* Missing Skills Column */}
-        <section className="skill-column">
-          <div className="skill-column__title">
-            <span className="status-dot status-dot--missing" /> 
-            <h2>Missing Skills to Learn ({missingCount})</h2>
-          </div>
-          {missing.length > 0 ? (
-            missing.map((item, idx) => {
-              const imp = item.importance || 'Required'
-              return (
-                <div className="skill-row skill-row--missing" key={item.skill_id || item.id || `${item.skill}-${idx}`}>
-                  <div className="skill-row-left">
-                    <strong>○ {item.skill}</strong>
-                    <span>Candidate: Not Found · Required: {item.minimum_level || item.minimumLevel || 'Intermediate'}</span>
-                    <p className="skill-reason">{item.reason || `Required skill for ${targetRole}`}</p>
+        {(mobileSkillFilter === 'all' || mobileSkillFilter === 'missing') && (
+          <section className="skill-column">
+            <div className="skill-column__title">
+              <span className="status-dot status-dot--missing" /> 
+              <h2>Missing Skills to Learn ({missingCount})</h2>
+            </div>
+            {missing.length > 0 ? (
+              missing.map((item, idx) => {
+                const imp = item.importance || 'Required'
+                return (
+                  <div className="skill-row skill-row--missing" key={item.skill_id || item.id || `${item.skill}-${idx}`}>
+                    <div className="skill-row-left">
+                      <strong>○ {item.skill}</strong>
+                      <span>Candidate: Not Found · Required: {item.minimum_level || item.minimumLevel || 'Intermediate'}</span>
+                      <p className="skill-reason">{item.reason || `Required skill for ${targetRole}`}</p>
+                    </div>
+                    <div className="skill-badge-wrapper">
+                      <span className={`importance-tag importance-tag--${imp.toLowerCase()}`}>
+                        {imp}
+                      </span>
+                      <span className="missing-badge">Missing</span>
+                    </div>
                   </div>
-                  <div className="skill-badge-wrapper">
-                    <span className={`importance-tag importance-tag--${imp.toLowerCase()}`}>
-                      {imp}
-                    </span>
-                    <span className="missing-badge">Missing</span>
-                  </div>
-                </div>
-              )
-            })
-          ) : (
-            <p className="skill-column__empty">No missing skills detected! You meet all requirements for this role.</p>
-          )}
-        </section>
+                )
+              })
+            ) : (
+              <p className="skill-column__empty">No missing skills detected! You meet all requirements for this role.</p>
+            )}
+          </section>
+        )}
       </div>
 
       {/* Roadmap CTA section */}
@@ -140,6 +173,19 @@ export default function SkillGapAnalysisStep({ analysis, onNavigateToRoadmaps })
           <span aria-hidden="true">→</span>
         </button>
       </div>
+
+      {/* Floating Sticky Mobile Action Bar */}
+      <div className="mobile-sticky-action-bar mobile-only">
+        <button 
+          type="button" 
+          className="primary-button full-width-mobile-btn"
+          onClick={() => onNavigateToRoadmaps(missing, targetRole)}
+        >
+          View Recommended Roadmaps
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
     </div>
   )
 }
+

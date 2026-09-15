@@ -112,6 +112,8 @@ export default function ResumeReviewStep({ profile, onConfirm }) {
   }
 
   // Certification handlers
+  const [mobileActiveTab, setMobileActiveTab] = useState('all')
+
   function handleCertChange(index, field, val) {
     setCandidate(prev => ({
       ...prev,
@@ -139,144 +141,189 @@ export default function ResumeReviewStep({ profile, onConfirm }) {
         <p className="eyebrow">Candidate Profile Review</p>
         <h1>Review &amp; Edit Extracted Details</h1>
         <p>Verify and correct the parsed information. This edited profile is the final source of truth for skill-gap analysis.</p>
+
+        {/* Mobile Tab Segmented Filter Switch */}
+        <div className="mobile-review-tabs mobile-only" role="tablist" aria-label="Review sections">
+          <button 
+            type="button" 
+            className={`mobile-review-tab ${mobileActiveTab === 'all' ? 'is-active' : ''}`}
+            onClick={() => setMobileActiveTab('all')}
+          >
+            All Sections
+          </button>
+          <button 
+            type="button" 
+            className={`mobile-review-tab ${mobileActiveTab === 'contact' ? 'is-active' : ''}`}
+            onClick={() => setMobileActiveTab('contact')}
+          >
+            Contact
+          </button>
+          <button 
+            type="button" 
+            className={`mobile-review-tab ${mobileActiveTab === 'skills' ? 'is-active' : ''}`}
+            onClick={() => setMobileActiveTab('skills')}
+          >
+            Skills ({candidate.skills.length})
+          </button>
+          <button 
+            type="button" 
+            className={`mobile-review-tab ${mobileActiveTab === 'experience' ? 'is-active' : ''}`}
+            onClick={() => setMobileActiveTab('experience')}
+          >
+            Experience &amp; Edu
+          </button>
+        </div>
       </div>
 
       {/* 1. Personal Information */}
-      <section className="review-section">
-        <div className="review-section-header">
-          <h2>1. Personal Information</h2>
-          <span>Candidate contact details</span>
-        </div>
-        <div className="form-grid-3">
-          <div className="form-group">
-            <label htmlFor="pi-name">Name</label>
-            <input id="pi-name" value={candidate.personalInfo?.name || ''} onChange={(e) => handlePersonalChange('name', e.target.value)} />
+      {(mobileActiveTab === 'all' || mobileActiveTab === 'contact') && (
+        <section className="review-section">
+          <div className="review-section-header">
+            <h2>1. Personal Information</h2>
+            <span>Candidate contact details</span>
           </div>
-          <div className="form-group">
-            <label htmlFor="pi-email">Email</label>
-            <input id="pi-email" type="email" value={candidate.personalInfo?.email || ''} onChange={(e) => handlePersonalChange('email', e.target.value)} />
+          <div className="form-grid-3">
+            <div className="form-group">
+              <label htmlFor="pi-name">Name</label>
+              <input id="pi-name" value={candidate.personalInfo?.name || ''} onChange={(e) => handlePersonalChange('name', e.target.value)} />
+            </div>
+            <div className="form-group">
+              <label htmlFor="pi-email">Email</label>
+              <input id="pi-email" type="email" value={candidate.personalInfo?.email || ''} onChange={(e) => handlePersonalChange('email', e.target.value)} />
+            </div>
+            <div className="form-group">
+              <label htmlFor="pi-phone">Phone</label>
+              <input id="pi-phone" value={candidate.personalInfo?.phone || ''} onChange={(e) => handlePersonalChange('phone', e.target.value)} />
+            </div>
           </div>
-          <div className="form-group">
-            <label htmlFor="pi-phone">Phone</label>
-            <input id="pi-phone" value={candidate.personalInfo?.phone || ''} onChange={(e) => handlePersonalChange('phone', e.target.value)} />
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* 2. Skills */}
-      <section className="review-section">
-        <div className="review-section-header">
-          <h2>2. Skills</h2>
-          <span>Extracted skills (Add, remove, or edit)</span>
-        </div>
+      {(mobileActiveTab === 'all' || mobileActiveTab === 'skills') && (
+        <section className="review-section">
+          <div className="review-section-header">
+            <h2>2. Skills</h2>
+            <span>Extracted skills (Add, remove, or edit)</span>
+          </div>
 
-        <div className="skill-chips-container">
-          {candidate.skills.map((skill, index) => (
-            <div className="skill-chip-editable" key={`${skill}-${index}`}>
-              <input 
-                value={skill} 
-                onChange={(e) => handleSkillChange(index, e.target.value)} 
-                aria-label={`Edit skill ${skill}`}
-              />
-              <button 
-                type="button" 
-                className="skill-remove-btn" 
-                onClick={() => handleRemoveSkill(index)} 
-                aria-label={`Remove skill ${skill}`}
-              >
-                ×
-              </button>
-            </div>
-          ))}
-        </div>
+          <div className="skill-chips-container">
+            {candidate.skills.map((skill, index) => (
+              <div className="skill-chip-editable" key={`${skill}-${index}`}>
+                <input 
+                  value={skill} 
+                  onChange={(e) => handleSkillChange(index, e.target.value)} 
+                  aria-label={`Edit skill ${skill}`}
+                />
+                <button 
+                  type="button" 
+                  className="skill-remove-btn" 
+                  onClick={() => handleRemoveSkill(index)} 
+                  aria-label={`Remove skill ${skill}`}
+                >
+                  ×
+                </button>
+              </div>
+            ))}
+          </div>
 
-        <form className="add-skill-bar" onSubmit={handleAddSkill}>
-          <input 
-            type="text"
-            className={duplicateSkillAlert ? 'is-shaking' : ''}
-            placeholder="Enter skill to add (e.g. Docker, REST APIs)..."
-            value={newSkill}
-            onChange={(e) => setNewSkill(e.target.value)}
-          />
-          <button type="submit" className="add-btn-small">
-            + Add Skill
-          </button>
-        </form>
-        {duplicateSkillAlert && <p className="field-hint-error">That skill is already in your profile list.</p>}
-      </section>
+          <form className="add-skill-bar" onSubmit={handleAddSkill}>
+            <input 
+              type="text"
+              className={duplicateSkillAlert ? 'is-shaking' : ''}
+              placeholder="Enter skill to add (e.g. Docker, REST APIs)..."
+              value={newSkill}
+              onChange={(e) => setNewSkill(e.target.value)}
+            />
+            <button type="submit" className="add-btn-small">
+              + Add Skill
+            </button>
+          </form>
+          {duplicateSkillAlert && <p className="field-hint-error">That skill is already in your profile list.</p>}
+        </section>
+      )}
 
       {/* 3. Education */}
-      <section className="review-section">
-        <div className="review-section-header">
-          <h2>3. Education</h2>
-          <button type="button" className="add-link-btn" onClick={handleAddEducation}>+ Add Education</button>
-        </div>
-        {(candidate.education || []).map((edu, idx) => (
-          <div className="card-item-editable" key={idx}>
-            <div className="card-item-row">
-              <input className="input-title" placeholder="Degree" value={edu.degree || ''} onChange={(e) => handleEducationChange(idx, 'degree', e.target.value)} />
-              <input className="input-subtitle" placeholder="College / University" value={edu.institution || ''} onChange={(e) => handleEducationChange(idx, 'institution', e.target.value)} />
-              <button type="button" className="delete-card-btn" onClick={() => handleRemoveEducation(idx)}>Delete</button>
-            </div>
-            <textarea className="input-desc" placeholder="Additional details..." value={edu.details || ''} onChange={(e) => handleEducationChange(idx, 'details', e.target.value)} rows="2" />
+      {(mobileActiveTab === 'all' || mobileActiveTab === 'experience') && (
+        <section className="review-section">
+          <div className="review-section-header">
+            <h2>3. Education</h2>
+            <button type="button" className="add-link-btn" onClick={handleAddEducation}>+ Add Education</button>
           </div>
-        ))}
-      </section>
+          {(candidate.education || []).map((edu, idx) => (
+            <div className="card-item-editable" key={idx}>
+              <div className="card-item-row">
+                <input className="input-title" placeholder="Degree" value={edu.degree || ''} onChange={(e) => handleEducationChange(idx, 'degree', e.target.value)} />
+                <input className="input-subtitle" placeholder="College / University" value={edu.institution || ''} onChange={(e) => handleEducationChange(idx, 'institution', e.target.value)} />
+                <button type="button" className="delete-card-btn" onClick={() => handleRemoveEducation(idx)}>Delete</button>
+              </div>
+              <textarea className="input-desc" placeholder="Additional details..." value={edu.details || ''} onChange={(e) => handleEducationChange(idx, 'details', e.target.value)} rows="2" />
+            </div>
+          ))}
+        </section>
+      )}
 
       {/* 4. Experience */}
-      <section className="review-section">
-        <div className="review-section-header">
-          <h2>4. Experience</h2>
-          <button type="button" className="add-link-btn" onClick={handleAddExperience}>+ Add Experience</button>
-        </div>
-        {(candidate.experience || []).map((exp, idx) => (
-          <div className="card-item-editable" key={idx}>
-            <div className="card-item-row">
-              <input className="input-title" placeholder="Role" value={exp.role || ''} onChange={(e) => handleExperienceChange(idx, 'role', e.target.value)} />
-              <input className="input-subtitle" placeholder="Company" value={exp.company || ''} onChange={(e) => handleExperienceChange(idx, 'company', e.target.value)} />
-              <input className="input-dates" placeholder="Duration" value={exp.duration || ''} onChange={(e) => handleExperienceChange(idx, 'duration', e.target.value)} />
-              <button type="button" className="delete-card-btn" onClick={() => handleRemoveExperience(idx)}>Delete</button>
-            </div>
-            <textarea className="input-desc" placeholder="Role description & key achievements..." value={exp.description || ''} onChange={(e) => handleExperienceChange(idx, 'description', e.target.value)} rows="2" />
+      {(mobileActiveTab === 'all' || mobileActiveTab === 'experience') && (
+        <section className="review-section">
+          <div className="review-section-header">
+            <h2>4. Experience</h2>
+            <button type="button" className="add-link-btn" onClick={handleAddExperience}>+ Add Experience</button>
           </div>
-        ))}
-      </section>
+          {(candidate.experience || []).map((exp, idx) => (
+            <div className="card-item-editable" key={idx}>
+              <div className="card-item-row">
+                <input className="input-title" placeholder="Role" value={exp.role || ''} onChange={(e) => handleExperienceChange(idx, 'role', e.target.value)} />
+                <input className="input-subtitle" placeholder="Company" value={exp.company || ''} onChange={(e) => handleExperienceChange(idx, 'company', e.target.value)} />
+                <input className="input-dates" placeholder="Duration" value={exp.duration || ''} onChange={(e) => handleExperienceChange(idx, 'duration', e.target.value)} />
+                <button type="button" className="delete-card-btn" onClick={() => handleRemoveExperience(idx)}>Delete</button>
+              </div>
+              <textarea className="input-desc" placeholder="Role description & key achievements..." value={exp.description || ''} onChange={(e) => handleExperienceChange(idx, 'description', e.target.value)} rows="2" />
+            </div>
+          ))}
+        </section>
+      )}
 
       {/* 5. Projects */}
-      <section className="review-section">
-        <div className="review-section-header">
-          <h2>5. Projects</h2>
-          <button type="button" className="add-link-btn" onClick={handleAddProject}>+ Add Project</button>
-        </div>
-        {(candidate.projects || []).map((proj, idx) => (
-          <div className="card-item-editable" key={idx}>
-            <div className="card-item-row">
-              <input className="input-title" placeholder="Project Name" value={proj.name || ''} onChange={(e) => handleProjectChange(idx, 'name', e.target.value)} />
-              <input className="input-subtitle" placeholder="Technologies used" value={proj.technologies || ''} onChange={(e) => handleProjectChange(idx, 'technologies', e.target.value)} />
-              <button type="button" className="delete-card-btn" onClick={() => handleRemoveProject(idx)}>Delete</button>
-            </div>
-            <textarea className="input-desc" placeholder="Project description..." value={proj.description || ''} onChange={(e) => handleProjectChange(idx, 'description', e.target.value)} rows="2" />
+      {(mobileActiveTab === 'all' || mobileActiveTab === 'experience') && (
+        <section className="review-section">
+          <div className="review-section-header">
+            <h2>5. Projects</h2>
+            <button type="button" className="add-link-btn" onClick={handleAddProject}>+ Add Project</button>
           </div>
-        ))}
-      </section>
+          {(candidate.projects || []).map((proj, idx) => (
+            <div className="card-item-editable" key={idx}>
+              <div className="card-item-row">
+                <input className="input-title" placeholder="Project Name" value={proj.name || ''} onChange={(e) => handleProjectChange(idx, 'name', e.target.value)} />
+                <input className="input-subtitle" placeholder="Technologies used" value={proj.technologies || ''} onChange={(e) => handleProjectChange(idx, 'technologies', e.target.value)} />
+                <button type="button" className="delete-card-btn" onClick={() => handleRemoveProject(idx)}>Delete</button>
+              </div>
+              <textarea className="input-desc" placeholder="Project description..." value={proj.description || ''} onChange={(e) => handleProjectChange(idx, 'description', e.target.value)} rows="2" />
+            </div>
+          ))}
+        </section>
+      )}
 
       {/* 6. Certifications */}
-      <section className="review-section">
-        <div className="review-section-header">
-          <h2>6. Certifications</h2>
-          <button type="button" className="add-link-btn" onClick={handleAddCert}>+ Add Certification</button>
-        </div>
-        {(candidate.certifications || []).map((cert, idx) => (
-          <div className="card-item-editable" key={idx}>
-            <div className="card-item-row">
-              <input className="input-title" placeholder="Certification Name" value={cert.name || ''} onChange={(e) => handleCertChange(idx, 'name', e.target.value)} />
-              <input className="input-subtitle" placeholder="Issuer" value={cert.issuer || ''} onChange={(e) => handleCertChange(idx, 'issuer', e.target.value)} />
-              <button type="button" className="delete-card-btn" onClick={() => handleRemoveCert(idx)}>Delete</button>
-            </div>
+      {(mobileActiveTab === 'all' || mobileActiveTab === 'experience') && (
+        <section className="review-section">
+          <div className="review-section-header">
+            <h2>6. Certifications</h2>
+            <button type="button" className="add-link-btn" onClick={handleAddCert}>+ Add Certification</button>
           </div>
-        ))}
-      </section>
+          {(candidate.certifications || []).map((cert, idx) => (
+            <div className="card-item-editable" key={idx}>
+              <div className="card-item-row">
+                <input className="input-title" placeholder="Certification Name" value={cert.name || ''} onChange={(e) => handleCertChange(idx, 'name', e.target.value)} />
+                <input className="input-subtitle" placeholder="Issuer" value={cert.issuer || ''} onChange={(e) => handleCertChange(idx, 'issuer', e.target.value)} />
+                <button type="button" className="delete-card-btn" onClick={() => handleRemoveCert(idx)}>Delete</button>
+              </div>
+            </div>
+          ))}
+        </section>
+      )}
 
+      {/* Primary Action Button */}
       <button 
         type="button" 
         className="primary-button panel-button confirm-profile-btn"
@@ -285,6 +332,19 @@ export default function ResumeReviewStep({ profile, onConfirm }) {
         Confirm Profile &amp; Select Target Role
         <span aria-hidden="true">→</span>
       </button>
+
+      {/* Floating Sticky Mobile Action Bar */}
+      <div className="mobile-sticky-action-bar mobile-only">
+        <button 
+          type="button" 
+          className="primary-button full-width-mobile-btn"
+          onClick={() => onConfirm(candidate)}
+        >
+          Confirm Profile &amp; Continue
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
     </div>
   )
 }
+
