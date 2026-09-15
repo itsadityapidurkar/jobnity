@@ -1,6 +1,7 @@
+import os
 import logging
 from fastapi import FastAPI, Request, status
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
@@ -53,10 +54,32 @@ app.include_router(analysis.router, prefix=settings.API_V1_STR)
 app.include_router(roadmaps.router, prefix=settings.API_V1_STR)
 app.include_router(resources.router, prefix=settings.API_V1_STR)
 
-@app.get("/")
-def root():
-    return {
-        "message": "Welcome to Jobnity Backend API",
-        "documentation": "/docs",
-        "health": f"{settings.API_V1_STR}/health"
-    }
+# Static files & SPA fallback
+dist_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../dist"))
+
+if os.path.exists(dist_dir):
+    assets_dir = os.path.join(dist_dir, "assets")
+    if os.path.exists(assets_dir):
+        app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
+
+    @app.get("/favicon.png")
+    def favicon():
+        fav_path = os.path.join(dist_dir, "favicon.png")
+        if os.path.exists(fav_path):
+            return FileResponse(fav_path)
+        return JSONResponse({"detail": "Not found"}, status_code=404)
+
+    @app.get("/{full_path:path}")
+    async def serve_spa(full_path: str):
+        if full_path.startswith("api"):
+            return JSONResponse({"detail": "API route not found"}, status_code=404)
+        
+        target_file = os.path.join(dist_dir, full_path)
+        if full_path and os.path.exists(target_file) and os.path.isfile(target_file):
+            return FileResponse(target_file)
+        
+        index_file = os.path.join(dist_dir, "index.html")
+        if os.path.exists(index_file):
+            return FileResponse(index_file)
+        return JSONResponse({"detail": "Frontend build not found"}, status_code=404)
+
