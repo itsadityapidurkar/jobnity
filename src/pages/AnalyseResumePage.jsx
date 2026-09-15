@@ -168,7 +168,7 @@ export default function AnalyseResumePage() {
         {/* Step views with smooth crossfade animation */}
         <AnimatePresence mode="wait">
           {step === 'upload' && (
-            <motion.div key="step-upload" initial="initial" animate="animate" exit="exit" variants={stepVariants}>
+            <motion.div key="step-upload" className="analysis-step-wrapper" initial="initial" animate="animate" exit="exit" variants={stepVariants}>
               <ResumeUploadStep 
                 onAnalyze={handleStartAnalysis} 
                 onSampleSelect={handleSampleSelect}
@@ -177,13 +177,13 @@ export default function AnalyseResumePage() {
           )}
 
           {step === 'parsing' && (
-            <motion.div key="step-parsing" initial="initial" animate="animate" exit="exit" variants={stepVariants}>
+            <motion.div key="step-parsing" className="analysis-step-wrapper" initial="initial" animate="animate" exit="exit" variants={stepVariants}>
               <ResumeParsingStep />
             </motion.div>
           )}
 
           {step === 'review' && rawProfile && (
-            <motion.div key="step-review" initial="initial" animate="animate" exit="exit" variants={stepVariants}>
+            <motion.div key="step-review" className="analysis-step-wrapper" initial="initial" animate="animate" exit="exit" variants={stepVariants}>
               <ResumeReviewStep 
                 profile={rawProfile} 
                 onConfirm={handleConfirmProfile} 
@@ -192,7 +192,7 @@ export default function AnalyseResumePage() {
           )}
 
           {step === 'role_select' && (
-            <motion.div key="step-role-select" initial="initial" animate="animate" exit="exit" variants={stepVariants}>
+            <motion.div key="step-role-select" className="analysis-step-wrapper" initial="initial" animate="animate" exit="exit" variants={stepVariants}>
               <RoleSelectionStep 
                 selectedRole={selectedRole}
                 onSelectRole={setSelectedRole}
@@ -202,7 +202,7 @@ export default function AnalyseResumePage() {
           )}
 
           {step === 'analysis' && analysisResult && (
-            <motion.div key="step-analysis" initial="initial" animate="animate" exit="exit" variants={stepVariants}>
+            <motion.div key="step-analysis" className="analysis-step-wrapper" initial="initial" animate="animate" exit="exit" variants={stepVariants}>
               <SkillGapAnalysisStep 
                 analysis={analysisResult} 
                 onNavigateToRoadmaps={handleNavigateToRoadmaps}
