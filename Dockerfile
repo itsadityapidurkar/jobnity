@@ -42,7 +42,8 @@ RUN pip install --no-cache-dir -r ./backend/requirements.txt
 # Copy production dist folder built in Stage 1
 COPY --from=frontend-builder /app/dist ./dist
 
-# Copy backend application code and dataset scripts
+# Copy datasets and backend application code
+COPY jobnitydatasets ./jobnitydatasets
 COPY backend ./backend
 
 # Create uploads directory for candidate resume storage
