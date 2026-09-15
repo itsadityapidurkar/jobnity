@@ -1,57 +1,49 @@
-import BackgroundLayout from './components/BackgroundLayout'
-import StepIcon from './components/StepIcon'
-import UploadResumePage from './pages/UploadResumePage'
-import SkillGapReportPage from './pages/SkillGapReportPage'
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
+import LandingPage from './pages/LandingPage'
+import AnalyseResumePage from './pages/AnalyseResumePage'
 import RoadmapPage from './pages/RoadmapPage'
-import MockInterviewPage from './pages/MockInterviewPage'
-import DashboardPage from './pages/DashboardPage'
 
-const steps = [
-  { icon: 'upload', label: 'Upload resume' },
-  { icon: 'analyze', label: 'Analyze skills' },
-  { icon: 'prepare', label: 'Prepare smarter' },
-]
+const pageVariants = {
+  initial: { opacity: 0, y: 15, scale: 0.99 },
+  animate: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] } },
+  exit: { opacity: 0, y: -15, scale: 0.99, transition: { duration: 0.2, ease: 'easeInOut' } }
+}
 
-function LandingPage() {
+const PageWrapper = ({ children }) => (
+  <motion.div initial="initial" animate="animate" exit="exit" variants={pageVariants} style={{ minHeight: '100svh' }}>
+    {children}
+  </motion.div>
+)
+
+function AnimatedRoutes() {
+  const location = useLocation()
   return (
-    <BackgroundLayout>
-      <header className="site-header">
-        <a className="wordmark" href="/" aria-label="Jobnity home">Jobnity</a>
-      </header>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        {/* Landing Page */}
+        <Route path="/" element={<PageWrapper><LandingPage /></PageWrapper>} />
 
-      <section className="hero" aria-labelledby="hero-title">
-        <p className="eyebrow">Career clarity, made personal</p>
-        <h1 id="hero-title">See where your potential can take you.</h1>
-        <p className="hero__copy">
-          Turn your resume into a tailored path to stronger skills and more confident interviews.
-        </p>
-        <a className="primary-button" href="/upload-resume">
-          Get Started
-          <span aria-hidden="true">→</span>
-        </a>
-      </section>
+        {/* Main Tab 1: Analyse Resume */}
+        <Route path="/analyse-resume" element={<PageWrapper><AnalyseResumePage /></PageWrapper>} />
+        <Route path="/upload-resume" element={<Navigate to="/analyse-resume" replace />} />
+        <Route path="/skill-gap-report" element={<Navigate to="/analyse-resume" replace />} />
 
-      <section className="steps" aria-label="How Jobnity works">
-        <p className="steps__intro">A clearer way forward</p>
-        <div className="steps__list">
-          {steps.map((step, index) => (
-            <div className="step" key={step.icon}>
-              <span className="step__number">0{index + 1}</span>
-              <StepIcon name={step.icon} />
-              <span>{step.label}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-    </BackgroundLayout>
+        {/* Main Tab 2: Roadmaps */}
+        <Route path="/roadmaps" element={<PageWrapper><RoadmapPage /></PageWrapper>} />
+        <Route path="/roadmap" element={<Navigate to="/roadmaps" replace />} />
+
+        {/* Fallback */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </AnimatePresence>
   )
 }
 
 export default function App() {
-  if (window.location.pathname === '/upload-resume') return <UploadResumePage />
-  if (window.location.pathname === '/skill-gap-report') return <SkillGapReportPage />
-  if (window.location.pathname === '/roadmap') return <RoadmapPage />
-  if (window.location.pathname === '/interview-prep') return <MockInterviewPage />
-  if (window.location.pathname === '/dashboard') return <DashboardPage />
-  return <LandingPage />
+  return (
+    <BrowserRouter>
+      <AnimatedRoutes />
+    </BrowserRouter>
+  )
 }

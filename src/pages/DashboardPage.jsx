@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useEffect, useMemo, useState } from 'react'
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import dashboardBackground from '../assets/dashboard-hero.png'
@@ -43,8 +44,21 @@ function SkillsStatus({ closed, open }) {
   return <section className="skills-status"><p className="eyebrow">Skills progress</p><h2>Closing the gap</h2><div className="skills-status__bar"><b style={{ width: `${percent}%` }} /></div><div className="skills-status__legend"><span><i className="skills-status__closed" />{closed} closed</span><span><i className="skills-status__open" />{open} to build</span><strong>{percent}%</strong></div></section>
 }
 
+function EmptyDashboardIcon() {
+  return (
+    <svg viewBox="0 0 48 48" width="64" height="64" style={{ margin: '0 auto 1.25rem', display: 'block', opacity: 0.8 }}>
+      <rect x="4" y="8" width="40" height="32" rx="4" fill="none" stroke="#9cebd9" strokeWidth="2" strokeDasharray="4 4"/>
+      <path d="M12 28l6-8 8 6 10-12" fill="none" stroke="#f2c879" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <circle cx="12" cy="28" r="2" fill="#f2c879"/>
+      <circle cx="18" cy="20" r="2" fill="#f2c879"/>
+      <circle cx="26" cy="26" r="2" fill="#f2c879"/>
+      <circle cx="36" cy="14" r="2" fill="#f2c879"/>
+    </svg>
+  )
+}
+
 function EmptyDashboard() {
-  return <section className="dashboard-empty"><span>↗</span><p className="eyebrow">No data yet</p><h1>Your first practice session starts the story.</h1><p>Take a mock interview to begin tracking your readiness, strengths, and growth.</p><a className="primary-button" href="/interview-prep">Start Mock Interview <span aria-hidden="true">→</span></a></section>
+  return <section className="dashboard-empty"><EmptyDashboardIcon /><p className="eyebrow">No data yet</p><h1>Your first practice session starts the story.</h1><p>Take a mock interview to begin tracking your readiness, strengths, and growth.</p><Link className="primary-button" to="/interview-prep">Start Mock Interview <span aria-hidden="true">→</span></Link></section>
 }
 
 export default function DashboardPage() {
@@ -56,5 +70,5 @@ export default function DashboardPage() {
   useEffect(() => { let cancelled = false; async function load() { if (!candidateId) { setStatus('empty'); return } try { const response = await apiClient.getDashboard(candidateId); if (!cancelled) { const data = normaliseDashboard(response); setDashboard(data); setStatus(data.hasSessions ? 'ready' : 'empty') } } catch (error) { if (!cancelled) { setStatus('error'); setToast(error.message || 'We could not load your dashboard.') } } } load(); return () => { cancelled = true } }, [candidateId])
 
   const hasData = useMemo(() => dashboard?.hasSessions, [dashboard])
-  return <BackgroundLayout backgroundImage={dashboardBackground} className="dashboard-layout"><header className="dashboard-header"><a className="wordmark" href="/">Jobnity</a><span>Your progress</span></header><main className="dashboard-main">{status === 'loading' && <div className="dashboard-loading"><LoadingSkeleton title="Gathering your progress" detail="Bringing your career momentum into view." /></div>}{status === 'empty' && <EmptyDashboard />}{status === 'ready' && dashboard && hasData && <><section className="dashboard-heading"><p className="eyebrow">Your progress</p><h1>Keep the momentum.</h1><p>Every focused step makes the next opportunity feel closer.</p></section><section className="stat-readouts"><StatReadout value={`${Math.round(dashboard.readiness)}%`} label="Current readiness" trend={dashboard.trend} /><StatReadout value={`${Math.round(dashboard.roadmapCompletion)}%`} label="Roadmap complete" /><StatReadout value={dashboard.sessions} label="Sessions completed" /><StatReadout value={`${Math.round(dashboard.averageInterview)}%`} label="Avg. interview score" /></section><ScoreChart data={dashboard.history} /><SkillsStatus closed={dashboard.closed} open={dashboard.open} /></>}{status === 'error' && <section className="dashboard-empty"><p className="eyebrow">Dashboard unavailable</p><h1>Your progress will be here once it’s ready.</h1><a className="primary-button" href="/interview-prep">Go to Interview Prep <span aria-hidden="true">→</span></a></section>}</main><Toast message={toast} onDismiss={() => setToast('')} /></BackgroundLayout>
+  return <BackgroundLayout backgroundImage={dashboardBackground} className="dashboard-layout"><header className="dashboard-header"><Link className="wordmark" to="/">Jobnity</Link><span>Your progress</span></header><main className="dashboard-main">{status === 'loading' && <div className="dashboard-loading"><LoadingSkeleton title="Gathering your progress" detail="Bringing your career momentum into view." /></div>}{status === 'empty' && <EmptyDashboard />}{status === 'ready' && dashboard && hasData && <><section className="dashboard-heading"><p className="eyebrow">Your progress</p><h1>Keep the momentum.</h1><p>Every focused step makes the next opportunity feel closer.</p></section><section className="stat-readouts"><StatReadout value={`${Math.round(dashboard.readiness)}%`} label="Current readiness" trend={dashboard.trend} /><StatReadout value={`${Math.round(dashboard.roadmapCompletion)}%`} label="Roadmap complete" /><StatReadout value={dashboard.sessions} label="Sessions completed" /><StatReadout value={`${Math.round(dashboard.averageInterview)}%`} label="Avg. interview score" /></section><ScoreChart data={dashboard.history} /><SkillsStatus closed={dashboard.closed} open={dashboard.open} /></>}{status === 'error' && <section className="dashboard-empty"><p className="eyebrow">Dashboard unavailable</p><h1>Your progress will be here once it’s ready.</h1><Link className="primary-button" to="/interview-prep">Go to Interview Prep <span aria-hidden="true">→</span></Link></section>}</main><Toast message={toast} onDismiss={() => setToast('')} /></BackgroundLayout>
 }

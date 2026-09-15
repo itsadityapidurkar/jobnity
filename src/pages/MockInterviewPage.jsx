@@ -1,4 +1,6 @@
-import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom';
+import { useMemo, useState, useRef } from 'react'
+import { motion } from 'framer-motion'
 import interviewBackground from '../assets/mock-interview-hero.png'
 import BackgroundLayout from '../components/BackgroundLayout'
 import LoadingSkeleton from '../components/LoadingSkeleton'
@@ -30,17 +32,18 @@ function normaliseEvaluation(response) {
 
 function ScoreBars({ scores }) {
   const rows = [['Relevance', scores.relevance], ['Correctness', scores.correctness], ['Clarity', scores.clarity]]
-  return <div className="score-bars">{rows.map(([label, score]) => <div className="score-bar" key={label}><div><span>{label}</span><strong>{Math.round(score)}<small>/100</small></strong></div><i><b style={{ width: `${Math.min(Math.max(score, 0), 100)}%` }} /></i></div>)}</div>
+  return <div className="score-bars">{rows.map(([label, score], index) => <div className="score-bar" key={label}><div><span>{label}</span><strong>{Math.round(score)}<small>/100</small></strong></div><i><motion.b initial={{ width: 0 }} animate={{ width: `${Math.min(Math.max(score, 0), 100)}%` }} transition={{ duration: 0.8, delay: index * 0.15, ease: "easeOut" }} /></i></div>)}</div>
 }
 
 function SessionSummary({ evaluations }) {
   const averages = ['relevance', 'correctness', 'clarity'].map((key) => Math.round(evaluations.reduce((sum, item) => sum + item.scores[key], 0) / evaluations.length || 0))
-  return <section className="session-summary"><span className="session-summary__mark">✓</span><p className="eyebrow">Session complete</p><h1>Nice work showing up.</h1><p>Your average performance across this session.</p><div className="summary-averages">{[['Relevance', averages[0]], ['Correctness', averages[1]], ['Clarity', averages[2]]].map(([label, score]) => <div key={label}><strong>{score}%</strong><span>{label}</span></div>)}</div><a className="primary-button dashboard-button" href="/dashboard">View Full Dashboard <span aria-hidden="true">→</span></a></section>
+  return <section className="session-summary"><span className="session-summary__mark">✓</span><p className="eyebrow">Session complete</p><h1>Nice work showing up.</h1><p>Your average performance across this session.</p><div className="summary-averages">{[['Relevance', averages[0]], ['Correctness', averages[1]], ['Clarity', averages[2]]].map(([label, score]) => <div key={label}><strong>{score}%</strong><span>{label}</span></div>)}</div><Link className="primary-button dashboard-button" to="/dashboard">View Full Dashboard <span aria-hidden="true">→</span></Link></section>
 }
 
 export default function MockInterviewPage() {
   const [question, setQuestion] = useState(openingQuestion)
   const [answer, setAnswer] = useState('')
+  const textareaRef = useRef(null)
   const [status, setStatus] = useState('answering')
   const [evaluation, setEvaluation] = useState(null)
   const [evaluations, setEvaluations] = useState([])
@@ -76,5 +79,13 @@ export default function MockInterviewPage() {
     setStatus('answering')
   }
 
-  return <BackgroundLayout backgroundImage={interviewBackground} className="interview-layout"><header className="upload-header"><a className="wordmark" href="/">Jobnity</a><StepIndicator active={4} steps={interviewSteps} /></header><main className="interview-main">{status === 'summary' ? <SessionSummary evaluations={evaluations} /> : <section className="interview-panel"><div className="interview-panel__top"><p className="eyebrow">Mock interview <span>·</span> Question {questionNumber}</p><span className="interview-average">Session avg. {average || '—'}%</span></div>{status === 'loading' ? <LoadingSkeleton title="Reviewing your answer" detail="Scoring relevance, correctness, and clarity." /> : <>{!evaluation ? <><h1>{question.text}</h1><label className="answer-field"><span>Your answer</span><textarea value={answer} onChange={(event) => setAnswer(event.target.value)} rows="5" placeholder="Take a moment. A thoughtful answer is better than a fast one." /></label><div className="interview-actions"><button className="voice-button" type="button" disabled><span aria-hidden="true">◉</span> Voice input <small>coming soon</small></button><button className="primary-button submit-answer" type="button" disabled={!canSubmit} onClick={submitAnswer}>Submit Answer <span aria-hidden="true">→</span></button></div></> : <div className="answer-feedback" role="status" aria-live="polite"><p className="eyebrow">Your feedback</p><h1>Here’s what landed.</h1><ScoreBars scores={evaluation.scores} /><p className="feedback-copy">{evaluation.feedback}</p><button className="primary-button next-question" type="button" onClick={nextQuestion}>{evaluation.nextQuestion && !evaluation.isLast ? 'Next Question' : 'Finish Session'} <span aria-hidden="true">→</span></button></div>}</>}</section>}</main><Toast message={toast} onDismiss={() => setToast('')} /></BackgroundLayout>
+  function handleInput(event) {
+    setAnswer(event.target.value)
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto'
+      textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px'
+    }
+  }
+
+  return <BackgroundLayout backgroundImage={interviewBackground} className="interview-layout"><header className="upload-header"><Link className="wordmark" to="/">Jobnity</Link><StepIndicator active={4} steps={interviewSteps} /></header><main className="interview-main">{status === 'summary' ? <SessionSummary evaluations={evaluations} /> : <section className="interview-panel"><div className="interview-panel__top"><p className="eyebrow">Mock interview <span>·</span> Question {questionNumber}</p><span className="interview-average">Session avg. {average || '-'}%</span></div>{status === 'loading' ? <LoadingSkeleton title="Reviewing your answer" detail="Scoring relevance, correctness, and clarity." /> : <>{!evaluation ? <><h1>{question.text}</h1><label className="answer-field"><span>Your answer</span><textarea ref={textareaRef} value={answer} onChange={handleInput} rows="5" placeholder="Take a moment. A thoughtful answer is better than a fast one." /></label><div className="interview-actions"><button className="voice-button" type="button" disabled><span aria-hidden="true">◉</span> Voice input <small>coming soon</small></button><button className="primary-button submit-answer" type="button" disabled={!canSubmit} onClick={submitAnswer}>Submit Answer <span aria-hidden="true">→</span></button></div></> : <div className="answer-feedback" role="status" aria-live="polite"><p className="eyebrow">Your feedback</p><h1>Here’s what landed.</h1><ScoreBars scores={evaluation.scores} /><p className="feedback-copy">{evaluation.feedback}</p><button className="primary-button next-question" type="button" onClick={nextQuestion}>{evaluation.nextQuestion && !evaluation.isLast ? 'Next Question' : 'Finish Session'} <span aria-hidden="true">→</span></button></div>}</>}</section>}</main><Toast message={toast} onDismiss={() => setToast('')} /></BackgroundLayout>
 }

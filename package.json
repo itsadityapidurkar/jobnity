@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
+    "framer-motion": "^13.3.0",
     "react": "latest",
     "react-dom": "latest",
+    "react-router-dom": "^7.18.4",
     "recharts": "^3.10.1",
     "vite": "latest"
   }

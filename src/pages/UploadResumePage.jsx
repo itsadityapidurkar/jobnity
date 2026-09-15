@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useRef, useState } from 'react'
 import uploadBackground from '../assets/resume-upload-hero.png'
 import BackgroundLayout from '../components/BackgroundLayout'
@@ -5,6 +6,7 @@ import LoadingSkeleton from '../components/LoadingSkeleton'
 import StepIndicator from '../components/StepIndicator'
 import Toast from '../components/Toast'
 import { apiClient } from '../services/apiClient'
+import { useNavigate } from 'react-router-dom'
 
 const emptyProfile = { skills: [], education: '', experience: '', projects: '' }
 
@@ -19,6 +21,11 @@ function normaliseProfile(response) {
   const source = response.profile ?? response.data ?? response
   return {
     id: source.profile_id ?? source.id,
+    personalInfo: {
+      name: source.name || (source.personalInfo && source.personalInfo.name) || 'Candidate Name',
+      email: source.email || (source.personalInfo && source.personalInfo.email) || '',
+      phone: source.phone || (source.personalInfo && source.personalInfo.phone) || ''
+    },
     skills: Array.isArray(source.skills) ? source.skills.map((skill) => typeof skill === 'string' ? skill : skill.name).filter(Boolean) : [],
     education: asEditableText(source.education),
     experience: asEditableText(source.experience),
@@ -70,17 +77,36 @@ function UploadZone({ onFile, error }) {
 
 function SkillsEditor({ skills, onChange }) {
   const [draft, setDraft] = useState('')
+  const [duplicate, setDuplicate] = useState(false)
+  
   function addSkill(event) {
     event.preventDefault()
     const skill = draft.trim()
-    if (skill && !skills.some((item) => item.toLowerCase() === skill.toLowerCase())) onChange([...skills, skill])
+    if (!skill) return
+    if (skills.some((item) => item.toLowerCase() === skill.toLowerCase())) {
+      setDuplicate(true)
+      setTimeout(() => setDuplicate(false), 400)
+      return
+    }
+    onChange([...skills, skill])
     setDraft('')
+    setDuplicate(false)
   }
-  return <section className="review-field review-field--skills"><div className="review-field__heading"><label>Skills</label><span>Edit, remove, or add anything we missed</span></div><div className="skill-chips">{skills.map((skill, index) => <span className="skill-chip" key={`${skill}-${index}`}><input value={skill} onChange={(event) => onChange(skills.map((item, itemIndex) => itemIndex === index ? event.target.value : item))} aria-label={`Edit ${skill}`} /><button type="button" onClick={() => onChange(skills.filter((_, itemIndex) => itemIndex !== index))} aria-label={`Remove ${skill}`}>×</button></span>)}</div><form className="add-skill" onSubmit={addSkill}><input value={draft} onChange={(event) => setDraft(event.target.value)} placeholder="Add a skill" aria-label="Add a skill" /><button type="submit">Add</button></form></section>
+  return <section className="review-field review-field--skills"><div className="review-field__heading"><label>Skills</label><span>Edit, remove, or add anything we missed</span></div><div className="skill-chips">{skills.map((skill, index) => <span className="skill-chip" key={`${skill}-${index}`}><input value={skill} onChange={(event) => onChange(skills.map((item, itemIndex) => itemIndex === index ? event.target.value : item))} aria-label={`Edit ${skill}`} /><button type="button" onClick={() => onChange(skills.filter((_, itemIndex) => itemIndex !== index))} aria-label={`Remove ${skill}`}>×</button></span>)}</div><form className="add-skill" onSubmit={addSkill}><input className={duplicate ? 'is-shaking' : ''} value={draft} onChange={(event) => { setDraft(event.target.value); setDuplicate(false) }} placeholder="Add a skill" aria-label="Add a skill" /><button type="submit">Add</button></form></section>
 }
 
 function TextEditor({ label, description, value, onChange }) {
-  return <section className="review-field"><div className="review-field__heading"><label htmlFor={label}>{label}</label><span>{description}</span></div><textarea id={label} value={value} onChange={(event) => onChange(event.target.value)} rows="3" /></section>
+  const textareaRef = useRef(null)
+  
+  function handleInput(event) {
+    onChange(event.target.value)
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto'
+      textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px'
+    }
+  }
+
+  return <section className="review-field"><div className="review-field__heading"><label htmlFor={label}>{label}</label><span>{description}</span></div><textarea ref={textareaRef} id={label} value={value} onChange={handleInput} rows="3" /></section>
 }
 
 function ReviewPanel({ profile, onChange, onConfirm, saving }) {
@@ -88,6 +114,7 @@ function ReviewPanel({ profile, onChange, onConfirm, saving }) {
 }
 
 export default function UploadResumePage() {
+  const navigate = useNavigate()
   const [status, setStatus] = useState('idle')
   const [profile, setProfile] = useState(emptyProfile)
   const [uploadError, setUploadError] = useState('')
@@ -116,12 +143,12 @@ export default function UploadResumePage() {
     try {
       await apiClient.updateResume(profile.id, { skills: profile.skills, education: profile.education, experience: profile.experience, projects: profile.projects })
       sessionStorage.setItem('jobnity_profile_id', String(profile.id))
-      window.location.assign('/skill-gap-report')
+      navigate('/skill-gap-report')
     } catch (error) {
       setStatus('review')
       setToast(error.message || 'We could not save your updates. Please try again.')
     }
   }
 
-  return <BackgroundLayout backgroundImage={uploadBackground} className="upload-layout"><header className="upload-header"><a className="wordmark" href="/">Jobnity</a><StepIndicator active={0} /></header><div className="upload-main">{status === 'review' || status === 'saving' ? <ReviewPanel profile={profile} onChange={setProfile} onConfirm={confirmProfile} saving={status === 'saving'} /> : <div className="resume-panel"><div className="panel-heading"><p className="eyebrow">Your career starts here</p><h1>Let’s look at your resume.</h1><p>Upload it once and we’ll turn its details into a clear direction.</p></div>{status === 'loading' ? <LoadingSkeleton /> : <UploadZone onFile={upload} error={uploadError} />}</div>}</div><Toast message={toast} onDismiss={() => setToast('')} /></BackgroundLayout>
+  return <BackgroundLayout backgroundImage={uploadBackground} className="upload-layout"><header className="upload-header"><Link className="wordmark" to="/">Jobnity</Link><StepIndicator active={0} /></header><div className="upload-main">{status === 'review' || status === 'saving' ? <ReviewPanel profile={profile} onChange={setProfile} onConfirm={confirmProfile} saving={status === 'saving'} /> : <div className="resume-panel"><div className="panel-heading"><p className="eyebrow">Your career starts here</p><h1>Let’s look at your resume.</h1><p>Upload it once and we’ll turn its details into a clear direction.</p></div>{status === 'loading' ? <LoadingSkeleton /> : <UploadZone onFile={upload} error={uploadError} />}</div>}</div><Toast message={toast} onDismiss={() => setToast('')} /></BackgroundLayout>
 }

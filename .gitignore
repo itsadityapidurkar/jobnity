@@ -1,3 +1,17 @@
 node_modules/
 dist/
 .vite/
+.env
+*.db
+uploads/
+backend/uploads/
+backend/jobnity.db
+jobnity.db
+test/
+jobnitydatasets.zip
+datasets/
+jobnitydatasets/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.pdf
