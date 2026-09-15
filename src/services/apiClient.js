@@ -1,4 +1,11 @@
-let rawApiBase = import.meta.env.VITE_API_URL || 'http://localhost:8001/api'
+let rawApiBase = import.meta.env.VITE_API_URL
+if (!rawApiBase) {
+  if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+    rawApiBase = '/api'
+  } else {
+    rawApiBase = 'http://localhost:8001/api'
+  }
+}
 if (rawApiBase && !rawApiBase.endsWith('/api')) {
   rawApiBase = rawApiBase.replace(/\/+$/, '') + '/api'
 }
