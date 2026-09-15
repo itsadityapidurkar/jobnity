@@ -9,7 +9,6 @@ import ResumeReviewStep from '../components/AnalyseResume/ResumeReviewStep'
 import RoleSelectionStep from '../components/AnalyseResume/RoleSelectionStep'
 import SkillGapAnalysisStep from '../components/AnalyseResume/SkillGapAnalysisStep'
 import { apiClient } from '../services/apiClient'
-import { parseResumeFile, calculateSkillGap, getJobRoles } from '../services/dataService'
 import uploadBackground from '../assets/resume-upload-hero.png'
 
 export default function AnalyseResumePage() {
@@ -30,7 +29,7 @@ export default function AnalyseResumePage() {
       resume_id: apiRes.resume_id || p.resume_id,
       id: p.id || p.profile_id,
       personalInfo: {
-        name: p.name || (p.personalInfo && p.personalInfo.name) || 'Candidate Name',
+        name: p.name || (p.personalInfo && p.personalInfo.name) || '',
         email: p.email || (p.personalInfo && p.personalInfo.email) || '',
         phone: p.phone || (p.personalInfo && p.personalInfo.phone) || ''
       },
@@ -42,7 +41,7 @@ export default function AnalyseResumePage() {
     }
   }
 
-  // Step 1: User picks or drops file -> upload to backend
+  // Step 1: User picks or drops file -> upload to backend API
   async function handleStartAnalysis(file) {
     setStep('parsing')
     try {
@@ -51,28 +50,13 @@ export default function AnalyseResumePage() {
       setRawProfile(parsed)
     } catch (err) {
       setStep('upload')
-      setToastMessage(err.message || 'Failed to parse resume file.')
+      setToastMessage(err.message || 'Failed to extract profile from resume.')
     }
   }
 
   // Handle sample selection shortcut
   async function handleSampleSelect(roleName) {
-    setStep('parsing')
-    try {
-      const sampleFile = { name: `sample_${roleName.toLowerCase().replace(/\s+/g, '_')}_resume.pdf`, size: 1024 * 512 }
-      const parsedRaw = await parseResumeFile(sampleFile)
-      const parsed = formatProfileForUI(parsedRaw)
-      setRawProfile(parsed)
-      
-      const allRoles = getJobRoles()
-      const matchedRole = allRoles.find(r => r.job_role.toLowerCase().includes(roleName.toLowerCase()))
-      if (matchedRole) {
-        setSelectedRole(matchedRole.job_role)
-      }
-    } catch (err) {
-      setStep('upload')
-      setToastMessage('Could not load sample resume.')
-    }
+    setToastMessage(`Sample selection relies on uploading a real PDF/DOCX file. Please upload your resume above.`)
   }
 
   // Step 2 finish -> move to Review
@@ -80,52 +64,45 @@ export default function AnalyseResumePage() {
     setStep('review')
   }
 
-  // Step 3 finish -> Profile confirmed by user! Update backend profile
+  // Step 3 finish -> Profile confirmed by user! Save to backend
   async function handleConfirmProfile(editedProfile) {
     setConfirmedProfile(editedProfile)
-    if (editedProfile.resume_id) {
-      try {
-        await apiClient.updateResume(editedProfile.resume_id, {
-          name: editedProfile.personalInfo?.name,
-          email: editedProfile.personalInfo?.email,
-          phone: editedProfile.personalInfo?.phone,
-          skills: editedProfile.skills,
-          education: editedProfile.education,
-          experience: editedProfile.experience,
-          projects: editedProfile.projects,
-          certifications: editedProfile.certifications
-        })
-      } catch (err) {
-        console.warn('Failed to save profile updates to API:', err)
-      }
+    if (!editedProfile.resume_id) {
+      setToastMessage('Missing resume session ID. Please re-upload your resume.')
+      return
     }
-    setStep('role_select')
+
+    try {
+      await apiClient.updateResume(editedProfile.resume_id, {
+        name: editedProfile.personalInfo?.name,
+        email: editedProfile.personalInfo?.email,
+        phone: editedProfile.personalInfo?.phone,
+        skills: editedProfile.skills,
+        education: editedProfile.education,
+        experience: editedProfile.experience,
+        projects: editedProfile.projects,
+        certifications: editedProfile.certifications
+      })
+      setStep('role_select')
+    } catch (err) {
+      setToastMessage(err.message || 'Failed to save updated candidate profile.')
+    }
   }
 
-  // Step 4 finish -> Target role selected, calculate skill gap
+  // Step 4 finish -> Target role selected, calculate skill gap via API
   async function handlePerformAnalysis() {
-    if (!selectedRole || !confirmedProfile) {
+    if (!selectedRole || !confirmedProfile || !confirmedProfile.resume_id) {
       setToastMessage('Please select a target role.')
       return
     }
 
-    let result = null
-    if (confirmedProfile.resume_id) {
-      result = await apiClient.analyzeSkillGap(confirmedProfile.resume_id, selectedRole)
+    try {
+      const result = await apiClient.analyzeSkillGap(confirmedProfile.resume_id, selectedRole)
+      setAnalysisResult(result)
+      setStep('analysis')
+    } catch (err) {
+      setToastMessage(err.message || 'Failed to calculate skill gap analysis.')
     }
-    
-    // Fallback to client side gap analysis if backend unavailable
-    if (!result) {
-      result = calculateSkillGap(confirmedProfile, selectedRole)
-    }
-
-    if (!result) {
-      setToastMessage('Could not calculate skill gap for the selected role.')
-      return
-    }
-
-    setAnalysisResult(result)
-    setStep('analysis')
   }
 
   // CTA to Roadmaps
