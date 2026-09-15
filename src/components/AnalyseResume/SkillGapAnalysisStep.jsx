@@ -1,17 +1,22 @@
 export default function SkillGapAnalysisStep({ analysis, onNavigateToRoadmaps }) {
   if (!analysis) return null
 
-  const {
-    targetRole,
-    readinessScore,
-    gapScore,
-    matchedCount,
-    missingCount,
-    requiredMissingCount,
-    preferredMissingCount,
-    matched,
-    missing
-  } = analysis
+  const targetRole = analysis.targetRole || (analysis.role && analysis.role.job_role) || analysis.target_role || 'Target Role'
+  const readinessScore = analysis.readinessScore ?? analysis.readiness_score ?? 0
+  const gapScore = analysis.gapScore ?? analysis.skill_gap_score ?? Math.max(0, 100 - readinessScore)
+  
+  const matched = analysis.matched || analysis.matched_skills || []
+  const reqMissing = analysis.missing || analysis.missing_skills || []
+  const prefMissing = analysis.preferred_missing_skills || []
+
+  // Combine missing items if separate arrays
+  const missing = [...reqMissing, ...prefMissing]
+
+  const matchedCount = analysis.matchedCount ?? matched.length
+  const missingCount = analysis.missingCount ?? missing.length
+  
+  const requiredMissingCount = analysis.requiredMissingCount ?? (analysis.statistics ? (analysis.statistics.required_missing ?? reqMissing.length) : reqMissing.length)
+  const preferredMissingCount = analysis.preferredMissingCount ?? (analysis.statistics ? (analysis.statistics.preferred_missing ?? prefMissing.length) : prefMissing.length)
 
   const gaugeTone = readinessScore >= 75 ? 'var(--green)' : readinessScore >= 50 ? 'var(--amber)' : 'var(--red)'
   const readinessLabel = readinessScore >= 75 ? 'Strong match for role' : readinessScore >= 50 ? 'Good foundation with key growth areas' : 'Actionable skill gaps identified'
@@ -73,11 +78,11 @@ export default function SkillGapAnalysisStep({ analysis, onNavigateToRoadmaps })
             <h2>Matched Skills ({matchedCount})</h2>
           </div>
           {matched.length > 0 ? (
-            matched.map(item => (
-              <div className="skill-row" key={item.id || item.skill}>
+            matched.map((item, idx) => (
+              <div className="skill-row" key={item.skill_id || item.id || `${item.skill}-${idx}`}>
                 <div className="skill-row-left">
                   <strong>✓ {item.skill}</strong>
-                  <span>Candidate: {item.candidateLevel} · Required: {item.minimumLevel}</span>
+                  <span>Candidate: {item.candidate_level || item.candidateLevel || 'Intermediate'} · Required: {item.required_level || item.minimumLevel || 'Intermediate'}</span>
                 </div>
                 <div className="skill-badge matched-badge">
                   Matched
@@ -96,21 +101,24 @@ export default function SkillGapAnalysisStep({ analysis, onNavigateToRoadmaps })
             <h2>Missing Skills to Learn ({missingCount})</h2>
           </div>
           {missing.length > 0 ? (
-            missing.map(item => (
-              <div className="skill-row skill-row--missing" key={item.id || item.skill}>
-                <div className="skill-row-left">
-                  <strong>○ {item.skill}</strong>
-                  <span>Candidate: Not Found · Required: {item.minimumLevel}</span>
-                  <p className="skill-reason">{item.reason}</p>
+            missing.map((item, idx) => {
+              const imp = item.importance || 'Required'
+              return (
+                <div className="skill-row skill-row--missing" key={item.skill_id || item.id || `${item.skill}-${idx}`}>
+                  <div className="skill-row-left">
+                    <strong>○ {item.skill}</strong>
+                    <span>Candidate: Not Found · Required: {item.minimum_level || item.minimumLevel || 'Intermediate'}</span>
+                    <p className="skill-reason">{item.reason || `Required skill for ${targetRole}`}</p>
+                  </div>
+                  <div className="skill-badge-wrapper">
+                    <span className={`importance-tag importance-tag--${imp.toLowerCase()}`}>
+                      {imp}
+                    </span>
+                    <span className="missing-badge">Missing</span>
+                  </div>
                 </div>
-                <div className="skill-badge-wrapper">
-                  <span className={`importance-tag importance-tag--${item.importance.toLowerCase()}`}>
-                    {item.importance}
-                  </span>
-                  <span className="missing-badge">Missing</span>
-                </div>
-              </div>
-            ))
+              )
+            })
           ) : (
             <p className="skill-column__empty">No missing skills detected! You meet all requirements for this role.</p>
           )}
