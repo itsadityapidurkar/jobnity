@@ -43,11 +43,16 @@ export default function AnalyseResumePage() {
 
   // Step 1: User picks or drops file -> upload to backend API
   async function handleStartAnalysis(file) {
+    if (!file) return
     setStep('parsing')
     try {
       const response = await apiClient.uploadResume(file)
       const parsed = formatProfileForUI(response)
+      if (!parsed || !parsed.resume_id) {
+        throw new Error('Backend returned invalid profile. Please try re-uploading.')
+      }
       setRawProfile(parsed)
+      setStep('review')
     } catch (err) {
       setStep('upload')
       setToastMessage(err.message || 'Failed to extract profile from resume.')
@@ -57,11 +62,6 @@ export default function AnalyseResumePage() {
   // Handle sample selection shortcut
   async function handleSampleSelect(roleName) {
     setToastMessage(`Sample selection relies on uploading a real PDF/DOCX file. Please upload your resume above.`)
-  }
-
-  // Step 2 finish -> move to Review
-  function handleParsingComplete() {
-    setStep('review')
   }
 
   // Step 3 finish -> Profile confirmed by user! Save to backend
@@ -167,9 +167,7 @@ export default function AnalyseResumePage() {
         )}
 
         {step === 'parsing' && (
-          <ResumeParsingStep 
-            onComplete={handleParsingComplete} 
-          />
+          <ResumeParsingStep />
         )}
 
         {step === 'review' && rawProfile && (

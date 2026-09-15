@@ -9,25 +9,20 @@ const extractionSteps = [
   'Certifications'
 ]
 
-export default function ResumeParsingStep({ onComplete }) {
+export default function ResumeParsingStep() {
   const [completedIndices, setCompletedIndices] = useState([])
 
   useEffect(() => {
     const timers = extractionSteps.map((_, index) => {
       return setTimeout(() => {
         setCompletedIndices(prev => [...prev, index])
-      }, (index + 1) * 350)
+      }, (index + 1) * 300)
     })
-
-    const finalTimer = setTimeout(() => {
-      onComplete()
-    }, (extractionSteps.length + 1) * 350)
 
     return () => {
       timers.forEach(t => clearTimeout(t))
-      clearTimeout(finalTimer)
     }
-  }, [onComplete])
+  }, [])
 
   return (
     <div className="resume-panel parsing-panel">
@@ -37,7 +32,7 @@ export default function ResumeParsingStep({ onComplete }) {
         </div>
         
         <h2>Analysing your resume...</h2>
-        <p className="parsing-subtitle">Extracting key candidate profile parameters</p>
+        <p className="parsing-subtitle">Extracting key candidate profile parameters via NLP</p>
 
         <div className="parsing-checklist">
           {extractionSteps.map((step, idx) => {
