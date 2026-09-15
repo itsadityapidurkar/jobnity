@@ -20,6 +20,13 @@ def upload_resume(
     db: Session = Depends(get_db)
 ):
     safe_name, file_type, file_size = validate_uploaded_file(file)
+    
+    # Ensure upload directory exists safely
+    try:
+        os.makedirs(settings.UPLOAD_DIR, exist_ok=True)
+    except Exception:
+        pass
+
     file_path = os.path.join(settings.UPLOAD_DIR, safe_name)
 
     # Save uploaded file
