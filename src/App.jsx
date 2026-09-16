@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import LandingPage from './pages/LandingPage'
 import AnalyseResumePage from './pages/AnalyseResumePage'
 import RoadmapPage from './pages/RoadmapPage'
+import DocsPage from './pages/DocsPage'
 
 const pageVariants = {
   initial: { opacity: 0, y: 15, scale: 0.99 },
@@ -32,6 +33,10 @@ function AnimatedRoutes() {
         {/* Main Tab 2: Roadmaps */}
         <Route path="/roadmaps" element={<PageWrapper><RoadmapPage /></PageWrapper>} />
         <Route path="/roadmap" element={<Navigate to="/roadmaps" replace />} />
+
+        {/* Documentation Page */}
+        <Route path="/docs" element={<PageWrapper><DocsPage /></PageWrapper>} />
+        <Route path="/documentation" element={<Navigate to="/docs" replace />} />
 
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />

@@ -9,6 +9,7 @@ export default function Navigation({ className = '' }) {
 
   const isAnalyseActive = location.pathname.startsWith('/analyse') || location.pathname === '/upload-resume' || location.pathname === '/skill-gap-report'
   const isRoadmapsActive = location.pathname.startsWith('/roadmap')
+  const isDocsActive = location.pathname.startsWith('/docs') || location.pathname === '/documentation'
   const isHomeActive = location.pathname === '/'
 
   // Close mobile drawer on route change
@@ -49,6 +50,17 @@ export default function Navigation({ className = '' }) {
               <polyline points="2 12 12 17 22 12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             <span>Roadmaps</span>
+          </Link>
+
+          <Link 
+            to="/docs" 
+            className={`nav-tab ${isDocsActive ? 'is-active' : ''}`}
+          >
+            <svg className="nav-tab__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <span>Docs</span>
           </Link>
 
           <div 
