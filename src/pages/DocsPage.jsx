@@ -23,11 +23,10 @@ export default function DocsPage() {
   }
 
   return (
-    <div className="page-shell">
-      <BackgroundLayout />
+    <BackgroundLayout className="upload-layout">
       <Navigation />
 
-      <main className="main-content-container" style={{ paddingBottom: '5rem' }}>
+      <main className="main-content-container" style={{ paddingBottom: '5rem', paddingTop: '1.5rem', maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
         {/* Header Hero */}
         <div className="docs-hero" style={{
           background: 'linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.8))',
@@ -392,6 +391,6 @@ cloudflared tunnel --config ~/.cloudflared/jobnity-config.yml run jobnity`}</pre
           }
         }
       `}</style>
-    </div>
+    </BackgroundLayout>
   )
 }
