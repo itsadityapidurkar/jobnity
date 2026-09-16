@@ -21,7 +21,8 @@ export default function Navigation({ className = '' }) {
     <>
       <header className={`global-navbar ${className}`}>
         <Link className="wordmark" to="/" aria-label="Jobnity home">
-          Jobnity
+          <img src="/favicon.png" alt="Jobnity Favicon Logo" />
+          <span>Jobnity</span>
         </Link>
 
         {/* Desktop Navigation Tabs */}
@@ -141,7 +142,10 @@ export default function Navigation({ className = '' }) {
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
             >
               <div className="mobile-drawer__header">
-                <span className="wordmark">Jobnity</span>
+                <span className="wordmark">
+                  <img src="/favicon.png" alt="Jobnity Favicon Logo" />
+                  <span>Jobnity</span>
+                </span>
                 <span className="mobile-drawer__badge">Mobile Experience</span>
               </div>
 

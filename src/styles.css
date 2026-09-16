@@ -90,10 +90,23 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
 }
 
 .wordmark {
-  font-size: 1.17rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.2rem;
   font-weight: 800;
-  letter-spacing: -.065em;
+  letter-spacing: -.03em;
   line-height: 1;
+  color: #f8fafc;
+  text-decoration: none;
+}
+
+.wordmark img {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .wordmark::after {
@@ -102,7 +115,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   content: '';
   display: inline-block;
   height: .31em;
-  margin: 0 0 .04em .12em;
+  margin: 0 0 .04em 0em;
   width: .31em;
 }
 
