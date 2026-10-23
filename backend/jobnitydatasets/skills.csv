@@ -1,0 +1,41 @@
+skill_id,skill,category,domain
+S0001,Python,Programming Languages,Software Development
+S0002,JavaScript,Programming Languages,Software Development
+S0003,TypeScript,Programming Languages,Software Development
+S0004,Java,Programming Languages,Software Development
+S0005,C++,Programming Languages,Software Development
+S0006,C#,Programming Languages,Software Development
+S0007,Go,Programming Languages,Software Development
+S0008,Rust,Programming Languages,Software Development
+S0009,SQL,Database Languages,Data Management
+S0010,HTML5,Web Languages,Frontend Web
+S0011,CSS3,Web Languages,Frontend Web
+S0012,React,Frontend Frameworks,Frontend Web
+S0013,Next.js,Frontend Frameworks,Frontend Web
+S0014,Vue.js,Frontend Frameworks,Frontend Web
+S0015,Angular,Frontend Frameworks,Frontend Web
+S0016,FastAPI,Backend Frameworks,Backend Web
+S0017,Django,Backend Frameworks,Backend Web
+S0018,Flask,Backend Frameworks,Backend Web
+S0019,Express.js,Backend Frameworks,Backend Web
+S0020,Spring Boot,Backend Frameworks,Backend Web
+S0021,Node.js,Runtime Environments,Backend Web
+S0022,Docker,Containers,DevOps
+S0023,Kubernetes,Container Orchestration,DevOps
+S0024,AWS,Cloud Platforms,Cloud Infrastructure
+S0025,Azure,Cloud Platforms,Cloud Infrastructure
+S0026,Google Cloud Platform,Cloud Platforms,Cloud Infrastructure
+S0027,Terraform,Infrastructure as Code,DevOps
+S0028,CI/CD Pipelines,Automation & Integration,DevOps
+S0029,Linux,Operating Systems,Systems Infrastructure
+S0030,Git,Version Control,Software Development
+S0031,Pandas,Data Processing,Data Science
+S0032,NumPy,Scientific Computing,Data Science
+S0033,Scikit-Learn,Machine Learning,Data Science
+S0034,PyTorch,Deep Learning Frameworks,Artificial Intelligence
+S0035,TensorFlow,Deep Learning Frameworks,Artificial Intelligence
+S0036,PostgreSQL,Relational Databases,Data Management
+S0037,MongoDB,NoSQL Databases,Data Management
+S0038,Redis,In-Memory Databases,Data Management
+S0039,Apache Spark,Big Data Engines,Data Engineering
+S0040,Kafka,Message Streaming,Data Engineering

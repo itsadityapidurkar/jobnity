@@ -1,0 +1,36 @@
+role_id,job_role,category,experience_level
+R0001,Full Stack Developer,Software Engineering,Mid-Level
+R0002,Frontend Developer,Software Engineering,Mid-Level
+R0003,Backend Developer,Software Engineering,Mid-Level
+R0004,Software Engineer,Software Engineering,Mid-Level
+R0005,Senior Software Engineer,Software Engineering,Senior
+R0006,Lead Software Architect,Software Engineering,Lead
+R0007,Mobile App Developer (iOS/Android),Software Engineering,Mid-Level
+R0008,Embedded Systems Engineer,Software Engineering,Mid-Level
+R0009,QA / Automation Test Engineer,Software Engineering,Mid-Level
+R0010,Game Developer (Unity/Unreal),Software Engineering,Mid-Level
+R0011,Data Scientist,Data & AI,Mid-Level
+R0012,Machine Learning Engineer,Data & AI,Mid-Level
+R0013,AI Research Scientist,Data & AI,Senior
+R0014,Data Engineer,Data & AI,Mid-Level
+R0015,Data Analyst,Data & AI,Entry-Level
+R0016,Business Intelligence (BI) Analyst,Data & AI,Mid-Level
+R0017,Computer Vision Engineer,Data & AI,Senior
+R0018,NLP / LLM Specialist,Data & AI,Senior
+R0019,Big Data Architect,Data & AI,Lead
+R0020,MLOps Engineer,Data & AI,Mid-Level
+R0021,DevOps Engineer,Cloud & Infrastructure,Mid-Level
+R0022,Cloud Solutions Architect (AWS/Azure/GCP),Cloud & Infrastructure,Senior
+R0023,Site Reliability Engineer (SRE),Cloud & Infrastructure,Senior
+R0024,System Administrator (Linux/Unix),Cloud & Infrastructure,Mid-Level
+R0025,Network Infrastructure Engineer,Cloud & Infrastructure,Mid-Level
+R0026,Cybersecurity Analyst,Cybersecurity,Mid-Level
+R0027,Penetration Tester / Ethical Hacker,Cybersecurity,Mid-Level
+R0028,Security Operations Center (SOC) Analyst,Cybersecurity,Entry-Level
+R0029,Information Security Architect,Cybersecurity,Senior
+R0030,Cloud Security Specialist,Cybersecurity,Senior
+R0031,Technical Product Manager,Product & Management,Senior
+R0032,Scrum Master / Agile Coach,Product & Management,Mid-Level
+R0033,Engineering Manager,Product & Management,Lead
+R0034,UI/UX Product Designer,Design & UX,Mid-Level
+R0035,Technical Writer,Documentation,Entry-Level

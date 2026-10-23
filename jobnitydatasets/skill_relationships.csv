@@ -1,0 +1,5 @@
+source_skill_id,source_skill,relationship_type,target_skill_id,target_skill
+S0056,React,prerequisite,S0003,JavaScript
+S0041,Deep Learning,child,S0040,Machine Learning
+S0069,Pandas,prerequisite,S0001,Python
+S0076,Docker,prerequisite,S0089,Linux

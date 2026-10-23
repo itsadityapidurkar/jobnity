@@ -1,0 +1,1157 @@
+skill_id,skill,category,sub_category,description,aliases,parent_skill,related_skills,prerequisite_skills,skill_type,technical_domain,standardization_source,source_url
+S0001,Python,Programming Languages,,"High-level programming language widely used in AI, Data Science, and Web Backend.",python 3; python3; python programming; python; py,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0002,Java,Programming Languages,,"Object-oriented, class-based programming language (distinct from JavaScript).",java; java se; java ee; core java,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0003,JavaScript,Programming Languages,,High-level dynamic programming language for web client and server scripting.,javascript; js; ecmascript; es6,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0004,TypeScript,Programming Languages,,Typed superset of JavaScript that compiles to plain JavaScript.,typescript; ts,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0005,C,Programming Languages,,"General-purpose, procedural computer programming language.",c language; c programming; c,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0006,C++,Programming Languages,,High-performance object-oriented programming language (distinct from C).,c++; cpp; c plus plus,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0007,C#,Programming Languages,,"Modern, object-oriented language developed by Microsoft for .NET.",c#; csharp; c sharp; c-sharp,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0008,Go,Programming Languages,,"Statically typed, compiled language designed at Google.",go; golang; go language,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0009,Rust,Programming Languages,,"Multi-paradigm, general-purpose language emphasizing performance and type safety.",rust; rust-lang,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0010,R,Programming Languages,,Programming language for statistical computing and graphics.,r; r language; r programming,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0011,PHP,Programming Languages,,Popular general-purpose scripting language suited for web development.,php; php7; php8,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0012,Ruby,Programming Languages,,"Dynamic, open-source programming language with focus on simplicity.",ruby; ruby-lang,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0013,Scala,Programming Languages,,Strongly typed language combining object-oriented and functional paradigms.,scala; scala programming,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0014,Swift,Programming Languages,,"Powerful and intuitive language for iOS, iPadOS, macOS, and watchOS.",swift; apple swift,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0015,Kotlin,Programming Languages,,"Cross-platform, statically typed language standard for Android.",kotlin,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0016,Bash,Programming Languages,,Unix shell and command language.,bash; shell scripting; bash scripting; sh; zsh,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0017,SQL,Programming Languages,,Domain-specific language used in programming and managing relational databases.,sql; structured query language; ansi sql,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0018,Dart,Programming Languages,,Client-optimized language for fast apps on any platform.,dart; dartlang,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0019,MATLAB,Programming Languages,,Proprietary multi-paradigm programming language and numeric computing environment.,matlab,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0020,SAS,Programming Languages,,Statistical analysis system software suite.,sas; sas programming,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0021,Julia,Programming Languages,,"High-level, high-performance dynamic language for technical computing.",julia; julialang,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0022,AWS,Cloud Platforms,,"Comprehensive, evolving cloud computing platform by Amazon.",amazon web services; aws cloud; aws; amazon aws,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0023,Azure,Cloud Platforms,,Cloud computing platform and services created by Microsoft.,microsoft azure; azure cloud; azure; ms azure,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0024,GCP,Cloud Platforms,,Suite of cloud computing services offered by Google.,google cloud platform; gcp; google cloud,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0025,Snowflake,Cloud Platforms,,Cloud-based data storage and analytics service.,snowflake; snowflake data cloud,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0026,Databricks,Cloud Platforms,,Unified data analytics platform on top of Apache Spark.,databricks; lakehouse,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0027,Oracle Cloud,Cloud Platforms,,Cloud infrastructure platform by Oracle.,oracle cloud; oci,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0028,PostgreSQL,Databases & Storage,,"Powerful, open source object-relational database system.",postgresql; postgres; psql,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0029,MySQL,Databases & Storage,,Open-source relational database management system.,mysql,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0030,Microsoft SQL Server,Databases & Storage,,Relational database management system developed by Microsoft.,microsoft sql server; ms sql; mssql; sql server,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0031,Oracle Database,Databases & Storage,,Multi-model relational database management system.,oracle database; oracle db; oracle rdbms,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0032,MongoDB,Databases & Storage,,Source-available cross-platform document-oriented database program.,mongodb; mongo db; mongo,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0033,Redis,Databases & Storage,,"In-memory data structure store used as database, cache, and message broker.",redis; redis cache,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0034,Apache Cassandra,Databases & Storage,,Open-source distributed NoSQL database management system.,cassandra; apache cassandra,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0035,DynamoDB,Databases & Storage,,Fully managed proprietary NoSQL database service offered by Amazon.,dynamodb; amazon dynamodb,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0036,Elasticsearch,Databases & Storage,,"Distributed, multitenant-capable full-text search and analytics engine.",elasticsearch; elastic search,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0037,Neo4j,Databases & Storage,,"Graph database management system developed by Neo4j, Inc.",neo4j; graph database,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0038,BigQuery,Databases & Storage,,"Fully-managed, serverless enterprise data warehouse on GCP.",bigquery; google bigquery,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0039,Redshift,Databases & Storage,,Cloud data warehouse service by AWS.,amazon redshift; redshift,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0040,Machine Learning,AI & Machine Learning,,Study of algorithms that improve automatically through experience and data.,machine learning; ml,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0041,Deep Learning,AI & Machine Learning,,Subset of machine learning based on artificial neural networks.,deep learning; dl; neural networks; artificial neural networks,Machine Learning,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0042,Natural Language Processing,AI & Machine Learning,,"Subfield of linguistics, computer science, and AI focused on text/speech.",natural language processing; nlp; computational linguistics,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0043,Computer Vision,AI & Machine Learning,,Field of AI that trains computers to interpret and understand the visual world.,computer vision; cv; image processing,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0044,Generative AI,AI & Machine Learning,,"AI systems capable of generating text, images, or other media using models.",generative ai; genai; large language models; llms; llm,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0045,PyTorch,AI & Machine Learning,,Open source machine learning framework based on Torch library.,pytorch; torch,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0046,TensorFlow,AI & Machine Learning,,End-to-end open source platform for machine learning by Google.,tensorflow; tf,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0047,Keras,AI & Machine Learning,,High-level neural networks API running on top of TensorFlow.,keras,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0048,Scikit-Learn,AI & Machine Learning,,Machine learning library for the Python programming language.,scikit-learn; sklearn; scikit learn,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0049,XGBoost,AI & Machine Learning,,Optimized distributed gradient boosting library.,xgboost; extreme gradient boosting,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0050,LightGBM,AI & Machine Learning,,Gradient boosting framework developed by Microsoft.,lightgbm,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0051,Hugging Face,AI & Machine Learning,,Platform and library providing tools to build and deploy ML models.,hugging face; huggingface; transformers,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0052,OpenCV,AI & Machine Learning,,Library of programming functions mainly for real-time computer vision.,opencv,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0053,spaCy,AI & Machine Learning,,Open-source software library for advanced Natural Language Processing in Python.,spacy,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0054,NLTK,AI & Machine Learning,,Suite of libraries and programs for symbolic and statistical NLP.,nltk; natural language toolkit,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0055,LangChain,AI & Machine Learning,,Framework designed to simplify the creation of applications using LLMs.,langchain,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0056,React,Web & Application Frameworks,,Free and open-source front-end JavaScript library for building UI (web).,react; react.js; reactjs,,,JavaScript,Tool/Technology,Tech,skills_master.csv,N/A
+S0057,React Native,Web & Application Frameworks,,Open-source UI software framework used to develop cross-platform mobile apps.,react native; react-native,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0058,Angular,Web & Application Frameworks,,TypeScript-based free and open-source web application framework.,angular; angularjs; angular 2+,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0059,Vue.js,Web & Application Frameworks,,Open-source model-view-viewmodel front end JavaScript framework.,vue; vue.js; vuejs,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0060,Node.js,Web & Application Frameworks,,"Cross-platform, open-source JavaScript runtime environment.",node.js; nodejs; node,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0061,Express.js,Web & Application Frameworks,,Back end web application framework for Node.js.,express; express.js; expressjs,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0062,Django,Web & Application Frameworks,,Python-based free and open-source web framework that follows MVT.,django; django framework,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0063,Flask,Web & Application Frameworks,,Micro web framework written in Python.,flask; flask framework,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0064,FastAPI,Web & Application Frameworks,,"Modern, fast web framework for building APIs with Python 3.8+.",fastapi,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0065,Spring Boot,Web & Application Frameworks,,Microservice-ready Java framework for enterprise backend applications.,spring boot; spring framework; spring,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0066,ASP.NET,Web & Application Frameworks,,Open-source server-side web application framework designed by Microsoft.,asp.net; asp.net core; .net core; .net,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0067,Next.js,Web & Application Frameworks,,React framework for production by Vercel enabling server-side rendering.,next.js; nextjs,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0068,HTML/CSS,Web & Application Frameworks,,Core markup and style languages of the World Wide Web.,html; html5; css; css3,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0069,Pandas,Data Science & Libraries,,"Fast, powerful, flexible, and open source data analysis and manipulation tool.",pandas; python pandas,,,Python,Tool/Technology,Tech,skills_master.csv,N/A
+S0070,NumPy,Data Science & Libraries,,Fundamental package for scientific computing in Python.,numpy; python numpy,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0071,Tableau,Data Analytics & BI,,Interactive data visualization software focused on business intelligence.,tableau; tableau software; tableau desktop,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0072,Power BI,Data Analytics & BI,,Interactive data visualization software product developed by Microsoft.,power bi; powerbi; microsoft power bi,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0073,Microsoft Excel,Data Analytics & BI,,Spreadsheet editor developed by Microsoft for computation and analysis.,excel; microsoft excel; ms excel,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0074,Business Intelligence,Data Analytics & BI,,Strategies and technologies used by enterprises for data analysis of business info.,business intelligence; bi,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0075,Data Warehousing,Data Analytics & BI,,Architecture and processes for consolidating data from multiple sources.,data warehousing; data warehouse; dwh; etl,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0076,Docker,DevOps & Infrastructure,,Set of platform as a service products using OS-level virtualization.,docker; docker containers,,,Linux,Tool/Technology,Tech,skills_master.csv,N/A
+S0077,Kubernetes,DevOps & Infrastructure,,"Open-source system for automating deployment, scaling, and container management.",kubernetes; k8s,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0078,Git,DevOps & Infrastructure,,Distributed version control system for tracking changes in source code.,git; git version control,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0079,GitHub,DevOps & Infrastructure,,Platform for software development and version control using Git.,github,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0080,GitLab,DevOps & Infrastructure,,Web-based DevOps lifecycle tool that provides a Git-repository manager.,gitlab,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0081,CI/CD,DevOps & Infrastructure,,Method to frequently deliver apps to customers by introducing automation.,ci/cd; ci cd; continuous integration; continuous delivery,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0082,Jenkins,DevOps & Infrastructure,,"Open source automation server enabling building, testing, and deploying.",jenkins,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0083,Terraform,DevOps & Infrastructure,,Open-source infrastructure as code software tool.,terraform; hashicorp terraform,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0084,Ansible,DevOps & Infrastructure,,"Open-source software provisioning, configuration management, and app-deployment tool.",ansible,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0085,Apache Spark,DevOps & Infrastructure,,"Multi-language engine for executing data engineering, data science, and ML.",spark; apache spark; pyspark,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0086,Apache Kafka,DevOps & Infrastructure,,Distributed event store and stream-processing platform.,kafka; apache kafka,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0087,Apache Airflow,DevOps & Infrastructure,,"Open-source platform to programmatically author, schedule, and monitor workflows.",airflow; apache airflow,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0088,Apache Hadoop,DevOps & Infrastructure,,Collection of open-source utilities for distributed storage and processing.,hadoop; apache hadoop; hdfs,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0089,Linux,DevOps & Infrastructure,,Family of open-source Unix-like operating systems based on the Linux kernel.,linux; unix; ubuntu; centos; redhat,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0090,Jira,DevOps & Infrastructure,,Issue tracking product developed by Atlassian for bug tracking and agile.,jira; atlassian jira,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0091,Critical Thinking,Core Cognitive & Soft Skills,,Using logic and reasoning to identify strengths and weaknesses of alternative solutions.,critical thinking; analytical thinking; analytical skills,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0092,Complex Problem Solving,Core Cognitive & Soft Skills,,Identifying complex problems and reviewing related information to develop and evaluate options.,complex problem solving; problem solving; troubleshooting,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0093,Data Structures & Algorithms,Core Cognitive & Soft Skills,,Core foundational computer science knowledge for efficient computation.,data structures; algorithms; dsa; data structures and algorithms,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0094,System Design & Architecture,Core Cognitive & Soft Skills,,Designing scalable high-availability computing architectures.,system design; software architecture; systems analysis,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0095,Communication Skills,Core Cognitive & Soft Skills,,Giving full attention to what other people are saying and communicating effectively in writing/speech.,communication; verbal communication; written communication; presentation skills,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0096,Collaboration & Teamwork,Core Cognitive & Soft Skills,,Working cooperatively with others to achieve shared team goals.,teamwork; collaboration; cross-functional collaboration; interpersonal skills,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0097,Agile & Scrum,Core Cognitive & Soft Skills,,Iterative approach to project management and software development.,agile; scrum; kanban; sprint planning,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0098,Active Learning,Core Cognitive & Soft Skills,,Understanding the implications of new information for both current and future problem-solving.,active learning; continuous learning,,,,Tool/Technology,Tech,skills_master.csv,N/A
+S0099,Version Control,Tools,,Extracted from role requirements for Software Developer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0100,Technical Documentation,Soft Skills,,Extracted from role requirements for Software Developer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0101,Agile Methodologies,Software Engineering,,Extracted from role requirements for Software Developer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0102,Software Testing,Software Engineering,,Extracted from role requirements for Software Developer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0103,REST APIs,Web Development,,Extracted from role requirements for Backend Developer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0104,Database Design,Database,,Extracted from role requirements for Backend Developer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0105,Responsive Design,Web Development,,Extracted from role requirements for Frontend Developer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0106,Project Management,Soft Skills,,Extracted from role requirements for Full Stack Developer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0107,Operating Systems,IT Fundamentals,,Extracted from role requirements for Full Stack Developer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0108,Microservices,Software Engineering,,Extracted from role requirements for Java Developer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0109,Memory Management,CS Fundamentals,,Extracted from role requirements for C/C++ Developer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0110,Android SDK,Framework,,Extracted from role requirements for Android Developer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0111,Objective-C,Programming Language,,Extracted from role requirements for iOS Developer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0112,iOS SDK,Framework,,Extracted from role requirements for iOS Developer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0113,Networking,Networking,,Extracted from role requirements for Cybersecurity Analyst,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0114,TCP/IP,Networking,,Extracted from role requirements for Cybersecurity Analyst,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0115,Security Principles,Cybersecurity,,Extracted from role requirements for Cybersecurity Analyst,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0116,Vulnerability Management,Cybersecurity,,Extracted from role requirements for Cybersecurity Analyst,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0117,SIEM,Tools,,Extracted from role requirements for SOC Analyst,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0118,Splunk,Tools,,Extracted from role requirements for SOC Analyst,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0119,Log Analysis,Cybersecurity,,Extracted from role requirements for SOC Analyst,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0120,Metasploit,Tools,,Extracted from role requirements for Penetration Tester,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0121,Nmap,Tools,,Extracted from role requirements for Penetration Tester,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0122,Burp Suite,Tools,,Extracted from role requirements for Penetration Tester,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0123,Statistics,Data Science,,Extracted from role requirements for Data Analyst,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0124,Data Cleaning,Data Science,,Extracted from role requirements for Data Analyst,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0125,Data Visualization,Data Science,,Extracted from role requirements for Data Analyst,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0126,TensorFlow/PyTorch,Framework,,Extracted from role requirements for Machine Learning Engineer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0127,Infrastructure as Code (IaC),DevOps,,Extracted from role requirements for Cloud Engineer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0128,Routing and Switching,Networking,,Extracted from role requirements for Network Engineer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0129,BGP/OSPF,Networking,,Extracted from role requirements for Network Engineer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0130,Cisco IOS,Networking,,Extracted from role requirements for Network Engineer,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0131,Database Performance Tuning,Database,,Extracted from role requirements for Database Administrator,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0132,Backup and Recovery,Database,,Extracted from role requirements for Database Administrator,,,,,Requirement,Tech,role_skills_dataset.csv,N/A
+S0133,"""sales""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0134,"""autocad""",Extracted,,Extracted from resume dataset.,"""auto cad""",,,,Tool/Technology,General,resume_dataset,N/A
+S0135,"""marketing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0136,"""project management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0137,"""quality""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0138,"""mechanical""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0139,"""budgeting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0140,"""proposals""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0141,"""insurance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0142,"""process improvement""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0143,"""network""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0144,"""quality control""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0145,"""presentations""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0146,"""database""",Extracted,,Extracted from resume dataset.,"""data base""",,,,Tool/Technology,General,resume_dataset,N/A
+S0147,"""materials""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0148,"""business development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0149,"""policies""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0150,"""contracts""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0151,"""market""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0152,"""mechanical engineering""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0153,"""six sigma""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0154,"""budget""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0155,"""selling""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0156,"""technical support""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0157,"""staffing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0158,"""account management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0159,"""maintenance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0160,"""budgets""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0161,"""accounting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0162,"""database management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0163,"""scheduling""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0164,"""finance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0165,"""personnel""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0166,"""delivery""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0167,"""drafting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0168,"""customer relationship management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0169,"""safety""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0170,"""gpon""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0171,"""hardware networking""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0172,"""iig""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0173,"""isp""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0174,"""it enabled services""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0175,"""functional""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0176,"""managing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0177,"""ios app developer""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0178,"""ios application development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0179,"""ios development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0180,"""mobile apps developer ios""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0181,"""native ios""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0182,"""swift ios""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0183,"""coordination""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0184,"""ccna cisco certified network associate""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0185,"""human resource management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0186,"""communication and negotiation skills""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0187,"""internet""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0188,"""good communication skills""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0189,"""etabs""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0190,"""logistics""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0191,"""ios""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0192,"""civil 3d""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0193,"""civil construction""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0194,"""banking""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0195,"""engineer""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0196,"""processes""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0197,"""microsoft office suite""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0198,"""ms office""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0199,"""clients""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0200,"""computer skill""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0201,"""networking""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0202,"""crm""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0203,"""team building""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0204,"""auto cad 2d 3d""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0205,"""maintenance and troubleshooting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0206,"""risk management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0207,"""inspection""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0208,"""microsoft access""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0209,"""utilities""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0210,"""consulting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0211,"""preventive maintenance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0212,"""installation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0213,"""systems engineering""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0214,"""lean manufacturing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0215,"""hardware""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0216,"""continuous improvement""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0217,"""estimating""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0218,"""leadership development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0219,"""producing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0220,"""project planning""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0221,"""schematics""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0222,"""new product development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0223,"""process development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0224,"""product development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0225,"""portfolio management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0226,"""laser""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0227,"""integration""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0228,"""strategic planning""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0229,"""bonds""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0230,"""inventory""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0231,"""vendor management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0232,"""sap""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0233,"""sharepoint""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0234,"""data management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0235,"""forms""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0236,"""director""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0237,"""promotion""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0238,"""natural gas""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0239,"""supervisory""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0240,"""fundraising""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0241,"""machinery""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0242,"""filing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0243,"""direct marketing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0244,"[""microsoft office suite""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0245,"""program management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0246,"""development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0247,"""public relations""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0248,"""billing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0249,"""campaign management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0250,"""field supervision""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0251,"""merchandising""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0252,"""promotional activities""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0253,"""teamviewer""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0254,"""recuva""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0255,"""teaching""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0256,"""financial statements""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0257,"""supervision""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0258,"""email""",Extracted,,Extracted from resume dataset.,"""e-mail""",,,,Tool/Technology,General,resume_dataset,N/A
+S0259,"""health safety and environment""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0260,"""messaging""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0261,"""organizational""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0262,"""team leadership""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0263,"""procurement""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0264,"""brand promotion""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0265,"""reading""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0266,"""having cacc from reputed ca firm""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0267,"""new business development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0268,"""facebook ads manager""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0269,"""facebook campaign""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0270,"""facebook marketing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0271,"""google ads""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0272,"""google analytics""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0273,"""market researc""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0274,"""administrative support""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0275,"""fast""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0276,"""strategic""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0277,"""corporate marketing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0278,"""mentor""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0279,"""mentoring""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0280,"""relationship building""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0281,"""detail-oriented""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0282,"""phone""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0283,"""payroll""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0284,"""progress""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0285,"""organizing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0286,"""olt and onu""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0287,"""swift ui""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0288,"""hrm report""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0289,"""fast typing skill""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0290,"""quick learner and hard working""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0291,"""process improvement""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0292,"""inventory management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0293,"""client""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0294,"""audit and inspection""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0295,"""strategy""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0296,"""statistical process control""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0297,"""civil engineering""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0298,"""ms project""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0299,"""radar""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0300,"""information security""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0301,"""quality assurance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0302,"""networks""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0303,"""olt and onu""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0304,"""strong interpersonal skills""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0305,"""sales forecasting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0306,"""change management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0307,"""ms office""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0308,"""ms project""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0309,"""swift ui""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0310,"""instructor""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0311,"[""project management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0312,"""staff development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0313,"""civil engineering""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0314,"""quick learner and hard working""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0315,"""information technology""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0316,"""solidworks""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0317,"[""arcview""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0318,"""gps""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0319,"""graphic""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0320,"""microstation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0321,"""file maintenance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0322,"""repairs""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0323,"""surveys""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0324,"""design""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0325,"""geopak""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0326,"""survey""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0327,"""trimble gps""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0328,"""topcon total station""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0329,"""topo graphic surveys""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0330,"""land surveys""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0331,"""construction surveys""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0332,"""ashtec gps""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0333,"""trimble 5600 total station""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0334,"""eagle point""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0335,"""surveying""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0336,"""geodimeter total station""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0337,"""environmental sampling""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0338,"""construction inspection""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0339,"""stream gauging""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0340,"[""streamline""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0341,"""approach""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0342,"""balance sheet""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0343,"""cash flow""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0344,"""clinical research""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0345,"""clinical trials""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0346,"""com""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0347,"""corporate finance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0348,"""equities""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0349,"""financials""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0350,"""financing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0351,"""financial""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0352,"""funds""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0353,"""graphical user interface""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0354,"""information systems""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0355,"""innovation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0356,"""neural""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0357,"""next""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0358,"""speaker""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0359,"""scientific""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0360,"""spanish""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0361,"""websites""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0362,"""safety and security management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0363,"""financial projections""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0364,"""financial model""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0365,"[""basic and advanced supervision training courses""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0366,"""cbmet""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0367,"""aramark service trained on ge 9600 9800 9900 portable c-arm""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0368,"""microsoft applications""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0369,"""foresight imaging systems trained on dicom protocols""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0370,"""skilled in the operation of networks""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0371,"""skilled in the operation of workstations and servers""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0372,"""operational efficiency""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0373,"""medical equipment management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0374,"""regulatory compliance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0375,"""personnel management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0376,"""repair service""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0377,"""customer relationships""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0378,"""technical skills""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0379,"""lan and wlan management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0380,"""dicom protocol""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0381,"""equipment repair""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0382,"""electrical safety""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0383,"""diagnostic monitoring""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0384,"[""know-your-consumer kyc""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0385,"""cost reduction and avoidance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0386,"""systems engineering management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0387,"""software systems engineering""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0388,"""failure analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0389,"""tools of operations research""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0390,"""process control""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0391,"""process design""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0392,"""simulation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0393,"""system configuration""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0394,"""lean techniques""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0395,"""kaizen events""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0396,"""extraction""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0397,"""nutraceuticals""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0398,"""sub-critical carbon-di-oxide""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0399,"""quality management system implementation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0400,"""production and engineering management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0401,"""cost reduction""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0402,"""process development and documentation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0403,"""process improvement/simplification""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0404,"""source evaluation and selection""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0405,"""experience with autocad""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0406,"""various erp systems""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0407,"[""microsoft project""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0408,"""microsoft visio""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0409,"""ibm rationale doors""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0410,"""communication/presentations""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0411,"""risk analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0412,"""cmpro""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0413,"""air force""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0414,"""conflict management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0415,"""dc""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0416,"""doors""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0417,"""electrical engineering""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0418,"""electrical systems""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0419,"""senior management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0420,"""drawing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0421,"""hardware design""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0422,"""ibm""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0423,"""navy""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0424,"""peer review""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0425,"""power distribution""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0426,"""power supplies""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0427,"""siemens""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0428,"""software engineering""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0429,"""video""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0430,"""hardware solutions""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0431,"""cost savings""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0432,"""design""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0433,"[""architecting best practice technical solutions""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0434,"""technical program management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0435,"""qa/qm""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0436,"""client management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0437,"""testing and commissioning planning and execution""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0438,"""team leadership / cross-team collaboration""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0439,"""engineering cost estimating""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0440,"""engineering resource management and forecasting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0441,"[""executive decision maker""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0442,"""process design improvement""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0443,"""strategic planning development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0444,"""lean six sigma practitioner""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0445,"""product design""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0446,"""budgetary and policy development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0447,"""automation design""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0448,"""project management execution""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0449,"""economic analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0450,"""ergonomic and safety conscious""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0451,"""design engineering""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0452,"""resource allocation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0453,"""productivity improvement""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0454,"""resource capability""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0455,"""lean""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0456,"""cost containment""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0457,"[""electronic mechanical technology""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0458,"""maintenance management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0459,"""lean/six sigma principles""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0460,"""mechanical component troubleshooting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0461,"""quality assurance/control""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0462,"""material management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0463,"""staff development/leadership""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0464,"""technical interface""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0465,"""safety compliance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0466,"""microsoft project""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0467,"""engineering""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0468,"""technical coordination""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0469,"""aircraft maintenance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0470,"""engineering change management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0471,"""technical supervision""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0472,"""system calibration""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0473,"[""program management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0474,"""process analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0475,"""solution design""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0476,"""enterprise software""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0477,"""systems integration""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0478,"""product excellence""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0479,"""agile methodology""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0480,"""people development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0481,"[""cae softwares hypermesh abaqus ansys optistruct""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0482,"""sheet metal""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0483,"""design for manufacturing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0484,"""generating bill of materials""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0485,"""dfmea""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0486,"""sculpting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0487,"""advanced material selection for rapid prototyping""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0488,"""advanced manufacturing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0489,"""welding""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0490,"""3d printing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0491,"""finite element analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0492,"""static analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0493,"""dynamic analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0494,"""optimization""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0495,"""reliability engineering analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0496,"""fluid analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0497,"""reliability engineering""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0498,"""taguchi analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0499,"""failure mode effect analysis fmea""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0500,"""gearbox design""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0501,"""dynamic simulation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0502,"""material assignment""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0503,"""failure investigation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0504,"""maintenance coordination""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0505,"""gd t""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0506,"""safety procedures""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0507,"""vibration analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0508,"""automation analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0509,"""process parameters analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0510,"""shop floor design""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0511,"""statistical analysis""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0512,"[""microsoft windows 10""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0513,"""memtest86""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0514,"""mcafee endpoint security""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0515,"""acronis true image""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0516,"""wireshark""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0517,"""hwinfo""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0518,"""vmware workstation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0519,"""powershell""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0520,"""hardware troubleshooting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0521,"""software troubleshooting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0522,"""it infrastructure management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0523,"""network analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0524,"""customer support""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0525,"[""client engagement""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0526,"""analytical and business acumen""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0527,"""demand creation pursuits""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0528,"""federal government experience""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0529,"""it support services""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0530,"""data storage""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0531,"""interoperability""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0532,"""advanced data analytics""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0533,"""healthcare""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0534,"""data acquisition""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0535,"""data mining""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0536,"""saas""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0537,"""repository services""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0538,"""software solutions""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0539,"""records management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0540,"""interoperability networks""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0541,"""digital technology""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0542,"""storage""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0543,"""revenue generation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0544,"""industrial engineering""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0545,"""statistical release testing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0546,"""client engineering support services""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0547,"""sales management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0548,"""hipaa compliance""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0549,"[""academic""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0550,"""edge""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0551,"""fiber optics""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0552,"""scanning""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0553,"""measurement""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0554,"""tooling""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0555,"""collaborative""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0556,"""etching""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0557,"""cmp""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0558,"""wet etch""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0559,"""fabrication""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0560,"""n/a""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0561,"[""visio""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0562,"""inventor""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0563,"""ergonomics""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0564,"""manufacturing processes""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0565,"""contract administration""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0566,"[""troubleshooting and problem solving""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0567,"""exceptional telephone etiquette""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0568,"""professional demeanor""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0569,"""self-starter""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0570,"""time management ability""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0571,"""ability to prioritize""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0572,"""deadline-oriented""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0573,"""employee training and development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0574,"""sales software salesforce.com paperless proposals""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0575,"""administrative microsoft office suite concur""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0576,"""trade marketing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0577,"[""training program implementation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0578,"""drilling engineering""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0579,"""building commissioning experience""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0580,"""a highly motivated and energetic personality.""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0581,"""ability to take initiative and exhibit flexibility.""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0582,"""excellent customer service skills.""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0583,"""leadership development program""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0584,"""interpersonal communication skills""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0585,"""demonstrated organizational/planning skills""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0586,"""adaptability""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0587,"""directing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0588,"""business management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0589,"""mechanical""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0590,"[""operational analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0591,"""exceptional time management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0592,"""geometric dimensioning""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0593,"""strong leader""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0594,"""manufacturing process controls""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0595,"""analog and digital circuitry""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0596,"""detail drawings""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0597,"""comfortable working at heights and odd locations""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0598,"""technical plan execution aptitude""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0599,"""understand overtime and on-call basis may be required""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0600,"""rigging""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0601,"""soldering drilling- tapping""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0602,"""measurement and layout""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0603,"""test and measurement equipment""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0604,"""equipment calibration""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0605,"""assembly""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0606,"""broadcast""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0607,"""calibration""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0608,"""concept""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0609,"""modeling""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0610,"""naval""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0611,"""oscilloscopes""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0612,"""record keeping""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0613,"""fm""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0614,"""sps""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0615,"""test equipment""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0616,"""uhf""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0617,"""wiring""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0618,"""rf systems""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0619,"""component level testing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0620,"""calibrations""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0621,"""low voltage control wiring""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0622,"""field service engineering""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0623,"""engineering project issues""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0624,"""collaboration with engineers""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0625,"""research and development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0626,"""component testing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0627,"""proof of performance test""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0628,"""repair""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0629,"""manuals""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0630,"""operate radar""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0631,"""communications equipment""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0632,"""naval tactical data systems operator""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0633,"[""microsoft excel project and visio""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0634,"""adobe""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0635,"""engineering standards""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0636,"""osha regulations""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0637,"""ms office proficient""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0638,"""competency in procedure development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0639,"""advanced anatomy knowledge""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0640,"""advanced knowledge of embedded systems""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0641,"""vast technical knowledge""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0642,"""windows xp/vista""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0643,"""dhcp/dns ethernet and firewall proficient""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0644,"""lan aptitude""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0645,"""proficient in avg printers pc security systems""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0646,"""knowledge of manufacturing test methodologies.""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0647,"""database servers""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0648,"""local remoter systems support""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0649,"""proficiency in tcp/ip protocols""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0650,"""document management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0651,"""ability to stand and walk for hours at time.""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0652,"""biomedical equipment repair""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0653,"""networking systems integration""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0654,"""customer relations""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0655,"""technical knowledge""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0656,"""patient care""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0657,"""schedule management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0658,"""clerical""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0659,"""internal audit and compliance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0660,"[""biology""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0661,"""charts""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0662,"""oral""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0663,"""cost analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0664,"""data analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0665,"""equipment operation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0666,"""experiments""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0667,"""graphs""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0668,"""oil""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0669,"""pq""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0670,"""process-engineering""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0671,"""protocols""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0672,"""technician""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0673,"""trouble shooting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0674,"""validation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0675,"""outlook""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0676,"""salesforce.com crm""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0677,"""closing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0678,"""energy saving""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0679,"""focus""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0680,"""newsletter""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0681,"""strong relationships""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0682,"""name brand awareness""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0683,"""c-suite""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0684,"""building owners""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0685,"""solution skills""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0686,"""lean six sigma""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0687,"""network computer software and hardware systems""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0688,"""managed services""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0689,"""c-level executives""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0690,"""it manager""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0691,"""engineers""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0692,"""growing sales""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0693,"""vertical marketing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0694,"""medical practices""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0695,"""opening new accounts""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0696,"""managing long-term client relationships""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0697,"""cross-functional teams""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0698,"""design engineers""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0699,"""new markets""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0700,"""key oem accounts""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0701,"[""business systems analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0702,"""business process improvement""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0703,"""forecasting and planning""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0704,"""requirements gathering""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0705,"""scope and project definition""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0706,"""technology architecture analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0707,"""integrated reporting information system iris""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0708,"""cost-benefit analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0709,"""functional requirements""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0710,"""requirement tracing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0711,"""business analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0712,"""big data""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0713,"""business administration""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0714,"""business consulting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0715,"""business solutions""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0716,"""business systems""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0717,"""client relations development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0718,"""law""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0719,"""market evaluation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0720,"""enterprise""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0721,"""performance reviews""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0722,"""performance management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0723,"""proposal writing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0724,"""speaking""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0725,"""professor""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0726,"""recruitment""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0727,"""scheme""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0728,"""strategic plans""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0729,"""supply chain management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0730,"""tables""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0731,"[""assembly""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0732,"""automation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0733,"""cnc""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0734,"""electronics""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0735,"""layout""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0736,"""machine tools""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0737,"""mathematics""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0738,"""packaging""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0739,"""plc""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0740,"""programming""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0741,"""recording""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0742,"""spreadsheet""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0743,"""team work""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0744,"""mechanical design""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0745,"""production""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0746,"""precision machining""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0747,"""g-code programming""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0748,"""production control""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0749,"""search engine optimization seo""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0750,"[""administrative support""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0751,"""scheduling appointments""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0752,"""benefits""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0753,"""conferences""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0754,"""home care""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0755,"""home health""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0756,"""human resources""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0757,"""hr""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0758,"""maintaining inventory""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0759,"""management skills""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0760,"""internet research""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0761,"""patient safety""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0762,"""pricing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0763,"""purchasing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0764,"""transportation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0765,"""travel arrangements""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0766,"""social media""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0767,"""powerpoint""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0768,"""hr compliance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0769,"""managed care""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0770,"""nursing scheduling""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0771,"""file management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0772,"""clinic operations""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0773,"""patient support""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0774,"""phone management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0775,"""verification""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0776,"""liaison""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0777,"""pricing negotiation""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0778,"[""solidworks 2005""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0779,"""electrical drafting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0780,"""tube furnaces""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0781,"""administrative""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0782,"""cash receipts""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0783,"""instruction""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0784,"""police""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0785,"""reconciling""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0786,"[""project coordination""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0787,"""forward-thinking mindset""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0788,"""microsoft office proficiency""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0789,"""business writing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0790,"""results-oriented""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0791,"""self-directed""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0792,"""organized and detail-oriented""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0793,"""accounting systems""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0794,"""aia""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0795,"""as400""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0796,"""billings""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0797,"""bluebeam""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0798,"""clerical""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0799,"""construction management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0800,"""special events""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0801,"""imaging""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0802,"""jd edwards""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0803,"""microsoft""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0804,"""negotiations""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0805,"""coding""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0806,"""property management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0807,"""rfi""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0808,"""taxes""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0809,"""trade shows""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0810,"""licensing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0811,"""insurance management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0812,"""construction coordination""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0813,"""design phase planning""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0814,"""manual design""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0815,"""clerical support""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0816,"""document management""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0817,"""relationship management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0818,"""training programs""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0819,"""vat and tax""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0820,"""ngo""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0821,"""marketing strategies""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0822,"""safety and security management""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0823,"[""data analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0824,"""data analytics""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0825,"""linear regression""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0826,"""logistic regression""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0827,"""predictive modeling""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0828,[],Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0829,"[""marketing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0830,"""promotional""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0831,"""and marketing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0832,"""sales and""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0833,"""aviation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0834,"""class""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0835,"""comprehensive large array data stewardship system""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0836,"""excellent multitasker""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0837,"""simultaneous""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0838,"""accounts and""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0839,"""advertising""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0840,"""branding""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0841,"""community outreach""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0842,"""from sales""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0843,"""its""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0844,"""managed sales""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0845,"""of sales""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0846,"""increase""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0847,"""audit""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0848,"""cost control""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0849,"""executive assistant""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0850,"""for selling""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0851,"""ordering""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0852,"""selling and""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0853,"""accountable for""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0854,"""forecasting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0855,"""implemented sales""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0856,"""key accounts""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0857,"""market trends""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0858,"""sale and""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0859,"""sales objectives""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0860,"""sales strategies""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0861,"""the sale""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0862,"""the sales""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0863,"""marketing plan""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0864,"""overall sales""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0865,"""project development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0866,"""sales plan""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0867,"""energetic""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0868,"""highly organized""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0869,"""mac""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0870,"""quicken""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0871,"""san""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0872,"""self motivated""",Extracted,,Extracted from resume dataset.,"""self-motivated""",,,,Tool/Technology,General,resume_dataset,N/A
+S0873,"""storage area network""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0874,"""very organized""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0875,"""shipping""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0876,"""translation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0877,"""client management""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0878,"""videoscribe software""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0879,"""peoplesoft finance applications""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0880,"""client relations""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0881,"""eclipse""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0882,"""financial reporting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0883,"""front office""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0884,"""hiring""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0885,"""instructional design""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0886,"""leadership training""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0887,"""needs analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0888,"""payables""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0889,"""peoplesoft hrms""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0890,"""peoplesoft""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0891,"""project plans""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0892,"""training materials""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0893,"""training design and development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0894,"""training material""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0895,"""upgrade""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0896,"""view""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0897,"""training facilitation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0898,"""training management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0899,"""online course instruction""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0900,"""internal audit and compliance""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0901,"""ieltsinternet browsing online work ability.""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0902,"[""account reconciliation processes""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0903,"""interpersonal active-listening and critical thinking skills""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0904,"""proficient in polish language""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0905,"""data entry""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0906,"""superior analytical skills""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0907,"""general ledger proficiency""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0908,"""trade marketing""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0909,"[""ifixit pro tech toolkit""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0910,"""passmark memtest86""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0911,"""malwarebytes""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0912,"""ultimate boot cd ubcd""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0913,"""windows installation usb/dvd""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0914,"""driver booster""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0915,"""falcon dust-off compressed gas duster""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0916,"[""dasylab""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0917,"""labview""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0918,"""electrical""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0919,"""lean/5s""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0920,"""hydraulic testing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0921,"""internal audit""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0922,"""coaching/mentoring""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0923,"""technical vantive clarify""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0924,"""ability to translate technical specifications""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0925,"""iso9001 and as9100 auditing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0926,"""waste reduction""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0927,"""underwriting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0928,"[""3d modeling""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0929,"""architectural drafting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0930,"""read blueprints""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0931,"""carpentry""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0932,"""floor plans""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0933,"""frame""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0934,"""3dsmax""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0935,"""microsoft office applications""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0936,"""multi-tasking""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0937,"""painting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0938,"""problem solving skills""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0939,"""renovation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0940,"""revit""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0941,"""supervisor""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0942,"""creating and finalizing drawings""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0943,"""review projects""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0944,"""assisting customers""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0945,"""loaded and unloaded packages""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0946,"""maintained campus upkeep""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0947,"""repaired replaced and installed signs""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0948,"""maintained building appearance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0949,"""involved in renovation projects""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0950,"""janitorial work""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0951,"""customer satisfaction""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0952,"[""careful and active listener""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0953,"""self-starter self-motivated""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0954,"""hungry for growth and continuous learning""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0955,"""proactive and energetic""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0956,"[""microsoft word/excel""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0957,"""great plains dynamics""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0958,"""bi360 businessintelligence tool""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0959,"[""skill 1""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0960,"""skill 3""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0961,"""skill 5""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0962,"""skill 2""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0963,"""skill 4""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0964,"""p l management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0965,"[""cpr first aid certified""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0966,"""proficient in microsoft word""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0967,"""basic knowledge of microsoft powerpoint and excel""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0968,"""educational support""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0969,"""cpr first aid""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0970,"""business analytics""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0971,"[""key decision making""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0972,"""verbal and written communication""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0973,"""excellent at networking""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0974,"""relationship building and management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0975,"""conflict resolution""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0976,"""goals and performance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0977,"""territory management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0978,"""account management and development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0979,"""product and service sales""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0980,"""swot analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0981,"""software""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0982,"""program management""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0983,"[""agency""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0984,"""roofing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0985,"""solidworks""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0986,"""fluke 115 compact true-rms digital multimeter""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0987,"""operations management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0988,"""test stand fabrication""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0989,"""search engine optimization seo""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0990,"""vat and tax""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0991,"[""seasoned leadership""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0992,"""experienced manager""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0993,"""motivated""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0994,"[""organizational and planning skills""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0995,"""it skills shopper tally voyager""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0996,"""creativity and imagination""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0997,"""business and commercial acumen""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0998,"""drive motivation and initiative""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S0999,"""good team player""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1000,"""oral and written communication""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1001,"""numerical and analytical ability""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1002,"""ability to lead and motivate a team""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1003,"""influencing and negotiation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1004,"""work under pressure and deadlines""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1005,"""proficient in ms-office word/excel/powerpoint""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1006,"""focus integrated erp software for retail garment stores""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1007,"""sales and marketing strategies""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1008,"""distribution network management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1009,"""sales team management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1010,"""market research""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1011,"""retail parameter management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1012,"""business expansion""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1013,"""trade marketing strategy development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1014,"""visual merchandising""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1015,"""local marketing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1016,"""team motivation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1017,"""target achievement""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1018,"""staff supervision""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1019,"[""advertising""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1020,"""competitive""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1021,"""content""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1022,"""customer support""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1023,"""fashion""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1024,"""marketing material""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1025,"""script""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1026,"""telephone""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1027,"""training manuals""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1028,"""content marketing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1029,"""cross-functional work""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1030,"""product knowledge""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1031,"""service quality""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1032,"[""assisted living""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1033,"""interpersonal and communication""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1034,"""internal medicine""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1035,"""marketing/sales""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1036,"""meetings""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1037,"""orthopedics""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1038,"""outside sales""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1039,"""physical therapy""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1040,"""rehabilitation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1041,"""seminars""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1042,"""team player""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1043,"""building referral relationships""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1044,"""customer needs""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1045,"""organizing seminars""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1046,"""same store growth""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1047,"""market analysis""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1048,"""representation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1049,"""growth management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1050,"""recognition""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1051,"""customer facilitation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1052,"""census maintenance""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1053,"[""business to business""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1054,"""business to customer""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1055,"""contract negotiation""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1056,"""calm under pressure""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1057,"""total quality management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1058,"[""bilingual spanish fluent speak read and write""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1059,"""quickbooks""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1060,"""tax software""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1061,"""analytical""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1062,"""thoroughness""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1063,"""reconciled various general ledger fund accounts""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1064,"""prepared various specialty reports""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1065,"""documenting operational procedures""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1066,"""ascertain accuracy of financial reporting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1067,"""recorded monthly transactions""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1068,"""developed reconciliation format""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1069,"[""accounts receivable professional""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1070,"""sales software salesforce.com tapscan""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1071,"""public relations software bacon s mediasource factiva""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1072,"""desktop publishing software photoshop illustrator html""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1073,"""accounts receivable reporting enhancements""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1074,"""reconciliation procedures""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1075,"""evaluated accounting requirements""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1076,"""received recorded and banked cash checks and vouchers""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1077,"""processed and issued money orders""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1078,"""created training manuals""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1079,"""successfully managed activities""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1080,"""monitored daily activities""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1081,"""interviewed hired and trained""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1082,SAP,Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1083,"""fluent in spanish""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1084,"[""autocad""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1085,"""ngo""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1086,"""skill 6""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1087,"""internal audit""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1088,"""keane care""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1089,"""ieltsinternet browsing online work ability.""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1090,"""human resource management""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1091,Eclipse,Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1092,Microsoft office,Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1093,"[""brand development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1094,"""analyzing market trends""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1095,"""established track record of exceptional sales results""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1096,"""excellent negotiating tactics""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1097,"""skilled multi-tasker""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1098,"""salesforce lead management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1099,"""balanced""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1100,"""assured internal controls""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1101,Windows,Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1102,CHEF,Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1103,SOAP UI,Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1104,XML,Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1105,EXCEL (Less than 1 year),Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1106,"""iso9001 and as9100 auditing""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1107,"""keane care""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1108,"[""business development sales leadership""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1109,"""sales presentations""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1110,"""client development""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1111,"""market expansion""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1112,"""team building leadership""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1113,"""client engagement""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1114,"""market analysis/competitive positioning""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1115,"""vendor sourcing/relations""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1116,"""profit improvement""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1117,"""streamline""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1118,"""cold calling""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1119,"""compliance management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1120,"""inventory levels""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1121,"""inventory control""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1122,"""mailing""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1123,"""process management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1124,"""voip""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1125,"""strategies""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1126,"""market share growth""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1127,"""sales techniques""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1128,"""vendor relationships""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1129,"""staff management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1130,"""dot compliance""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1131,"""sales activities""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1132,"""qualifying""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1133,"""prospecting""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1134,"""drilling projects""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1135,"""strategic leadership""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1136,"""team management""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1137,"""sales goals""",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1138,"""promotional marketing""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1139,"""supervision""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1140,"""fluent in spanish""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1141,"""administrative support""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1142,"""technical vantive clarify""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1143,"""business analytics""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1144,"""sales""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1145,"""underwriting""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1146,"""test stand fabrication""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1147,"""ability to translate technical specifications""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1148,"""waste reduction""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1149,"""coaching/mentoring""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1150,"""skill 6""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1151,"""fluke 115 compact true-rms digital multimeter""]",Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1152,HTML (Less than 1 year),Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1153,Oracle,Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1154,DOJO,Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1155,SVN,Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A
+S1156,Velocity,Extracted,,Extracted from resume dataset.,,,,,Tool/Technology,General,resume_dataset,N/A

@@ -1,0 +1,9 @@
+resource_id,skill,title,provider,type,url,estimated_hours,cost
+LR0001,React,React Official Documentation & Guides,React Core Team,Documentation,https://react.dev,15,Free
+LR0002,React,Complete React Developer Course,Udemy,Course,https://www.udemy.com/course/react-2024,40,Paid
+LR0003,Python,Python for Everybody Specialization,Coursera,Course,https://www.coursera.org/specializations/python,30,Free Audit
+LR0004,FastAPI,FastAPI Tutorial - User Guide,FastAPI Docs,Documentation,https://fastapi.tiangolo.com,10,Free
+LR0005,Docker,Docker Curriculum for Beginners,Docker Docs,Tutorial,https://docker-curriculum.com,8,Free
+LR0006,Kubernetes,Kubernetes Basics & Hands-on Labs,Kubernetes.io,Documentation,https://kubernetes.io/docs/tutorials/kubernetes-basics/,20,Free
+LR0007,AWS,AWS Certified Cloud Practitioner Pathway,AWS Skill Builder,Course,https://explore.skillbuilder.aws,25,Free
+LR0008,Pandas,Pandas Data Analysis Fundamentals,Kaggle Learn,Interactive Course,https://www.kaggle.com/learn/pandas,6,Free

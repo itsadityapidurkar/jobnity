@@ -1,0 +1,528 @@
+role_id,job_role,skill,skill_category,importance,priority,minimum_level,frequency,skill_evidence,source,source_url
+R001,Software Developer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R001,Software Developer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R001,Software Developer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R001,Software Developer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R001,Software Developer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R001,Software Developer,Git,Tools,Required,5,Intermediate,High,Standard version control system.,O*NET / Industry Standard,https://www.onetonline.org/
+R001,Software Developer,Data Structures,CS Fundamentals,Required,5,Intermediate,High,Core CS foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R001,Software Developer,Algorithms,CS Fundamentals,Required,4,Intermediate,Medium,Core CS foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R001,Software Developer,Agile Methodologies,Software Engineering,Required,3,Beginner,High,Standard development lifecycle.,O*NET / Industry Standard,https://www.onetonline.org/
+R001,Software Developer,Software Testing,Software Engineering,Preferred,3,Beginner,Medium,Important for code quality.,O*NET / Industry Standard,https://www.onetonline.org/
+R002,Backend Developer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R002,Backend Developer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R002,Backend Developer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R002,Backend Developer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R002,Backend Developer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R002,Backend Developer,Git,Tools,Required,5,Intermediate,High,Standard version control system.,O*NET / Industry Standard,https://www.onetonline.org/
+R002,Backend Developer,Data Structures,CS Fundamentals,Required,5,Intermediate,High,Core CS foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R002,Backend Developer,Algorithms,CS Fundamentals,Required,4,Intermediate,Medium,Core CS foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R002,Backend Developer,Agile Methodologies,Software Engineering,Required,3,Beginner,High,Standard development lifecycle.,O*NET / Industry Standard,https://www.onetonline.org/
+R002,Backend Developer,Software Testing,Software Engineering,Preferred,3,Beginner,Medium,Important for code quality.,O*NET / Industry Standard,https://www.onetonline.org/
+R002,Backend Developer,REST APIs,Web Development,Required,5,Intermediate,High,Core for backend services.,O*NET / Industry Standard,https://www.onetonline.org/
+R002,Backend Developer,SQL,Database,Required,5,Intermediate,High,Standard database querying.,O*NET / Industry Standard,https://www.onetonline.org/
+R002,Backend Developer,Database Design,Database,Required,4,Intermediate,High,Required for backend architecture.,O*NET / Industry Standard,https://www.onetonline.org/
+R002,Backend Developer,Linux,Operating Systems,Preferred,3,Intermediate,Medium,Standard deployment environment.,O*NET / Industry Standard,https://www.onetonline.org/
+R002,Backend Developer,Docker,DevOps,Preferred,3,Beginner,High,Modern containerization.,O*NET / Industry Standard,https://www.onetonline.org/
+R003,Frontend Developer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R003,Frontend Developer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R003,Frontend Developer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R003,Frontend Developer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R003,Frontend Developer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R003,Frontend Developer,HTML5,Web Development,Required,5,Intermediate,High,Core web markup.,O*NET / Industry Standard,https://www.onetonline.org/
+R003,Frontend Developer,CSS3,Web Development,Required,5,Intermediate,High,Core web styling.,O*NET / Industry Standard,https://www.onetonline.org/
+R003,Frontend Developer,JavaScript,Programming Language,Required,5,Intermediate,High,Core web scripting.,O*NET / Industry Standard,https://www.onetonline.org/
+R003,Frontend Developer,Responsive Design,Web Development,Required,4,Intermediate,High,Modern web requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R003,Frontend Developer,React,Framework,Preferred,4,Intermediate,High,Dominant frontend framework.,O*NET / Industry Standard,https://www.onetonline.org/
+R004,Full Stack Developer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R004,Full Stack Developer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R004,Full Stack Developer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R004,Full Stack Developer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R004,Full Stack Developer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R004,Full Stack Developer,Project Management,Soft Skills,Preferred,2,Beginner,Medium,Useful for all IT roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R004,Full Stack Developer,Operating Systems,IT Fundamentals,Required,3,Beginner,High,Basic requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Git,Tools,Required,5,Intermediate,High,Standard version control system.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Data Structures,CS Fundamentals,Required,5,Intermediate,High,Core CS foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Algorithms,CS Fundamentals,Required,4,Intermediate,Medium,Core CS foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Agile Methodologies,Software Engineering,Required,3,Beginner,High,Standard development lifecycle.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Software Testing,Software Engineering,Preferred,3,Beginner,Medium,Important for code quality.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,REST APIs,Web Development,Required,5,Intermediate,High,Core for backend services.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,SQL,Database,Required,5,Intermediate,High,Standard database querying.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Database Design,Database,Required,4,Intermediate,High,Required for backend architecture.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Linux,Operating Systems,Preferred,3,Intermediate,Medium,Standard deployment environment.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Docker,DevOps,Preferred,3,Beginner,High,Modern containerization.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Python,Programming Language,Required,5,Advanced,High,Primary language.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Django,Framework,Preferred,4,Intermediate,Medium,Popular Python framework.,O*NET / Industry Standard,https://www.onetonline.org/
+R005,Python Developer,Flask,Framework,Preferred,3,Intermediate,Medium,Popular microframework.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Git,Tools,Required,5,Intermediate,High,Standard version control system.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Data Structures,CS Fundamentals,Required,5,Intermediate,High,Core CS foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Algorithms,CS Fundamentals,Required,4,Intermediate,Medium,Core CS foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Agile Methodologies,Software Engineering,Required,3,Beginner,High,Standard development lifecycle.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Software Testing,Software Engineering,Preferred,3,Beginner,Medium,Important for code quality.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,REST APIs,Web Development,Required,5,Intermediate,High,Core for backend services.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,SQL,Database,Required,5,Intermediate,High,Standard database querying.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Database Design,Database,Required,4,Intermediate,High,Required for backend architecture.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Linux,Operating Systems,Preferred,3,Intermediate,Medium,Standard deployment environment.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Docker,DevOps,Preferred,3,Beginner,High,Modern containerization.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Java,Programming Language,Required,5,Advanced,High,Primary language.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Spring Boot,Framework,Required,4,Intermediate,High,Dominant Java framework.,O*NET / Industry Standard,https://www.onetonline.org/
+R006,Java Developer,Microservices,Software Engineering,Preferred,4,Intermediate,High,Modern architecture.,O*NET / Industry Standard,https://www.onetonline.org/
+R007,C/C++ Developer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R007,C/C++ Developer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R007,C/C++ Developer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R007,C/C++ Developer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R007,C/C++ Developer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R007,C/C++ Developer,Git,Tools,Required,5,Intermediate,High,Standard version control system.,O*NET / Industry Standard,https://www.onetonline.org/
+R007,C/C++ Developer,Data Structures,CS Fundamentals,Required,5,Intermediate,High,Core CS foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R007,C/C++ Developer,Algorithms,CS Fundamentals,Required,4,Intermediate,Medium,Core CS foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R007,C/C++ Developer,Agile Methodologies,Software Engineering,Required,3,Beginner,High,Standard development lifecycle.,O*NET / Industry Standard,https://www.onetonline.org/
+R007,C/C++ Developer,Software Testing,Software Engineering,Preferred,3,Beginner,Medium,Important for code quality.,O*NET / Industry Standard,https://www.onetonline.org/
+R007,C/C++ Developer,C++,Programming Language,Required,5,Advanced,High,Primary language.,O*NET / Industry Standard,https://www.onetonline.org/
+R007,C/C++ Developer,C,Programming Language,Required,4,Intermediate,High,Core language.,O*NET / Industry Standard,https://www.onetonline.org/
+R007,C/C++ Developer,Memory Management,CS Fundamentals,Required,5,Advanced,High,Critical for C++.,O*NET / Industry Standard,https://www.onetonline.org/
+R008,Mobile App Developer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R008,Mobile App Developer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R008,Mobile App Developer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R008,Mobile App Developer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R008,Mobile App Developer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R008,Mobile App Developer,Project Management,Soft Skills,Preferred,2,Beginner,Medium,Useful for all IT roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R008,Mobile App Developer,Operating Systems,IT Fundamentals,Required,3,Beginner,High,Basic requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R009,Android Developer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R009,Android Developer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R009,Android Developer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R009,Android Developer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R009,Android Developer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R009,Android Developer,Kotlin,Programming Language,Required,5,Intermediate,High,Primary modern Android language.,O*NET / Industry Standard,https://www.onetonline.org/
+R009,Android Developer,Java,Programming Language,Preferred,3,Intermediate,High,Legacy Android language.,O*NET / Industry Standard,https://www.onetonline.org/
+R009,Android Developer,Android SDK,Framework,Required,5,Intermediate,High,Core SDK.,O*NET / Industry Standard,https://www.onetonline.org/
+R009,Android Developer,Project Management,Soft Skills,Preferred,2,Beginner,Medium,Useful for all IT roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R009,Android Developer,Operating Systems,IT Fundamentals,Required,3,Beginner,High,Basic requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R010,iOS Developer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R010,iOS Developer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R010,iOS Developer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R010,iOS Developer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R010,iOS Developer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R010,iOS Developer,Swift,Programming Language,Required,5,Intermediate,High,Primary iOS language.,O*NET / Industry Standard,https://www.onetonline.org/
+R010,iOS Developer,Objective-C,Programming Language,Preferred,2,Beginner,Low,Legacy iOS language.,O*NET / Industry Standard,https://www.onetonline.org/
+R010,iOS Developer,iOS SDK,Framework,Required,5,Intermediate,High,Core SDK.,O*NET / Industry Standard,https://www.onetonline.org/
+R010,iOS Developer,Project Management,Soft Skills,Preferred,2,Beginner,Medium,Useful for all IT roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R010,iOS Developer,Operating Systems,IT Fundamentals,Required,3,Beginner,High,Basic requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R011,Game Developer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R011,Game Developer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R011,Game Developer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R011,Game Developer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R011,Game Developer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R011,Game Developer,Git,Tools,Required,5,Intermediate,High,Standard version control system.,O*NET / Industry Standard,https://www.onetonline.org/
+R011,Game Developer,Data Structures,CS Fundamentals,Required,5,Intermediate,High,Core CS foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R011,Game Developer,Algorithms,CS Fundamentals,Required,4,Intermediate,Medium,Core CS foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R011,Game Developer,Agile Methodologies,Software Engineering,Required,3,Beginner,High,Standard development lifecycle.,O*NET / Industry Standard,https://www.onetonline.org/
+R011,Game Developer,Software Testing,Software Engineering,Preferred,3,Beginner,Medium,Important for code quality.,O*NET / Industry Standard,https://www.onetonline.org/
+R012,Cybersecurity Analyst,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R012,Cybersecurity Analyst,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R012,Cybersecurity Analyst,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R012,Cybersecurity Analyst,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R012,Cybersecurity Analyst,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R012,Cybersecurity Analyst,Networking,Networking,Required,5,Intermediate,High,Foundational for security.,O*NET / Industry Standard,https://www.onetonline.org/
+R012,Cybersecurity Analyst,TCP/IP,Networking,Required,4,Intermediate,High,Core network protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R012,Cybersecurity Analyst,Linux,Operating Systems,Required,4,Intermediate,High,Primary OS for security tools.,O*NET / Industry Standard,https://www.onetonline.org/
+R012,Cybersecurity Analyst,Security Principles,Cybersecurity,Required,5,Intermediate,High,Core CIA triad concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R012,Cybersecurity Analyst,Vulnerability Management,Cybersecurity,Required,4,Beginner,High,Standard security practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R013,SOC Analyst,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R013,SOC Analyst,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R013,SOC Analyst,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R013,SOC Analyst,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R013,SOC Analyst,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R013,SOC Analyst,Networking,Networking,Required,5,Intermediate,High,Foundational for security.,O*NET / Industry Standard,https://www.onetonline.org/
+R013,SOC Analyst,TCP/IP,Networking,Required,4,Intermediate,High,Core network protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R013,SOC Analyst,Linux,Operating Systems,Required,4,Intermediate,High,Primary OS for security tools.,O*NET / Industry Standard,https://www.onetonline.org/
+R013,SOC Analyst,Security Principles,Cybersecurity,Required,5,Intermediate,High,Core CIA triad concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R013,SOC Analyst,Vulnerability Management,Cybersecurity,Required,4,Beginner,High,Standard security practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R013,SOC Analyst,SIEM,Tools,Required,5,Intermediate,High,Core operational tool.,O*NET / Industry Standard,https://www.onetonline.org/
+R013,SOC Analyst,Splunk,Tools,Preferred,4,Beginner,High,Dominant SIEM platform.,O*NET / Industry Standard,https://www.onetonline.org/
+R013,SOC Analyst,Log Analysis,Cybersecurity,Required,5,Intermediate,High,Core day-to-day task.,O*NET / Industry Standard,https://www.onetonline.org/
+R014,Security Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R014,Security Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R014,Security Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R014,Security Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R014,Security Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R014,Security Engineer,Networking,Networking,Required,5,Intermediate,High,Foundational for security.,O*NET / Industry Standard,https://www.onetonline.org/
+R014,Security Engineer,TCP/IP,Networking,Required,4,Intermediate,High,Core network protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R014,Security Engineer,Linux,Operating Systems,Required,4,Intermediate,High,Primary OS for security tools.,O*NET / Industry Standard,https://www.onetonline.org/
+R014,Security Engineer,Security Principles,Cybersecurity,Required,5,Intermediate,High,Core CIA triad concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R014,Security Engineer,Vulnerability Management,Cybersecurity,Required,4,Beginner,High,Standard security practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R015,Security Consultant,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R015,Security Consultant,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R015,Security Consultant,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R015,Security Consultant,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R015,Security Consultant,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R015,Security Consultant,Networking,Networking,Required,5,Intermediate,High,Foundational for security.,O*NET / Industry Standard,https://www.onetonline.org/
+R015,Security Consultant,TCP/IP,Networking,Required,4,Intermediate,High,Core network protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R015,Security Consultant,Linux,Operating Systems,Required,4,Intermediate,High,Primary OS for security tools.,O*NET / Industry Standard,https://www.onetonline.org/
+R015,Security Consultant,Security Principles,Cybersecurity,Required,5,Intermediate,High,Core CIA triad concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R015,Security Consultant,Vulnerability Management,Cybersecurity,Required,4,Beginner,High,Standard security practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R016,Penetration Tester,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R016,Penetration Tester,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R016,Penetration Tester,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R016,Penetration Tester,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R016,Penetration Tester,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R016,Penetration Tester,Networking,Networking,Required,5,Intermediate,High,Foundational for security.,O*NET / Industry Standard,https://www.onetonline.org/
+R016,Penetration Tester,TCP/IP,Networking,Required,4,Intermediate,High,Core network protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R016,Penetration Tester,Linux,Operating Systems,Required,4,Intermediate,High,Primary OS for security tools.,O*NET / Industry Standard,https://www.onetonline.org/
+R016,Penetration Tester,Security Principles,Cybersecurity,Required,5,Intermediate,High,Core CIA triad concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R016,Penetration Tester,Vulnerability Management,Cybersecurity,Required,4,Beginner,High,Standard security practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R016,Penetration Tester,Metasploit,Tools,Required,4,Intermediate,High,Standard exploitation framework.,O*NET / Industry Standard,https://www.onetonline.org/
+R016,Penetration Tester,Nmap,Tools,Required,4,Intermediate,High,Standard scanning tool.,O*NET / Industry Standard,https://www.onetonline.org/
+R016,Penetration Tester,Burp Suite,Tools,Required,5,Intermediate,High,Web vulnerability testing.,O*NET / Industry Standard,https://www.onetonline.org/
+R017,Vulnerability Analyst,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R017,Vulnerability Analyst,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R017,Vulnerability Analyst,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R017,Vulnerability Analyst,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R017,Vulnerability Analyst,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R017,Vulnerability Analyst,Networking,Networking,Required,5,Intermediate,High,Foundational for security.,O*NET / Industry Standard,https://www.onetonline.org/
+R017,Vulnerability Analyst,TCP/IP,Networking,Required,4,Intermediate,High,Core network protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R017,Vulnerability Analyst,Linux,Operating Systems,Required,4,Intermediate,High,Primary OS for security tools.,O*NET / Industry Standard,https://www.onetonline.org/
+R017,Vulnerability Analyst,Security Principles,Cybersecurity,Required,5,Intermediate,High,Core CIA triad concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R017,Vulnerability Analyst,Vulnerability Management,Cybersecurity,Required,4,Beginner,High,Standard security practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R018,Application Security Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R018,Application Security Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R018,Application Security Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R018,Application Security Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R018,Application Security Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R018,Application Security Engineer,Networking,Networking,Required,5,Intermediate,High,Foundational for security.,O*NET / Industry Standard,https://www.onetonline.org/
+R018,Application Security Engineer,TCP/IP,Networking,Required,4,Intermediate,High,Core network protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R018,Application Security Engineer,Linux,Operating Systems,Required,4,Intermediate,High,Primary OS for security tools.,O*NET / Industry Standard,https://www.onetonline.org/
+R018,Application Security Engineer,Security Principles,Cybersecurity,Required,5,Intermediate,High,Core CIA triad concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R018,Application Security Engineer,Vulnerability Management,Cybersecurity,Required,4,Beginner,High,Standard security practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R019,Cloud Security Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R019,Cloud Security Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R019,Cloud Security Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R019,Cloud Security Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R019,Cloud Security Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R019,Cloud Security Engineer,Networking,Networking,Required,5,Intermediate,High,Foundational for security.,O*NET / Industry Standard,https://www.onetonline.org/
+R019,Cloud Security Engineer,TCP/IP,Networking,Required,4,Intermediate,High,Core network protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R019,Cloud Security Engineer,Linux,Operating Systems,Required,4,Intermediate,High,Primary OS for security tools.,O*NET / Industry Standard,https://www.onetonline.org/
+R019,Cloud Security Engineer,Security Principles,Cybersecurity,Required,5,Intermediate,High,Core CIA triad concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R019,Cloud Security Engineer,Vulnerability Management,Cybersecurity,Required,4,Beginner,High,Standard security practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R020,Network Security Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R020,Network Security Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R020,Network Security Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R020,Network Security Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R020,Network Security Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R020,Network Security Engineer,Networking,Networking,Required,5,Intermediate,High,Foundational for security.,O*NET / Industry Standard,https://www.onetonline.org/
+R020,Network Security Engineer,TCP/IP,Networking,Required,4,Intermediate,High,Core network protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R020,Network Security Engineer,Linux,Operating Systems,Required,4,Intermediate,High,Primary OS for security tools.,O*NET / Industry Standard,https://www.onetonline.org/
+R020,Network Security Engineer,Security Principles,Cybersecurity,Required,5,Intermediate,High,Core CIA triad concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R020,Network Security Engineer,Vulnerability Management,Cybersecurity,Required,4,Beginner,High,Standard security practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R021,Incident Response Analyst,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R021,Incident Response Analyst,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R021,Incident Response Analyst,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R021,Incident Response Analyst,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R021,Incident Response Analyst,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R021,Incident Response Analyst,Networking,Networking,Required,5,Intermediate,High,Foundational for security.,O*NET / Industry Standard,https://www.onetonline.org/
+R021,Incident Response Analyst,TCP/IP,Networking,Required,4,Intermediate,High,Core network protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R021,Incident Response Analyst,Linux,Operating Systems,Required,4,Intermediate,High,Primary OS for security tools.,O*NET / Industry Standard,https://www.onetonline.org/
+R021,Incident Response Analyst,Security Principles,Cybersecurity,Required,5,Intermediate,High,Core CIA triad concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R021,Incident Response Analyst,Vulnerability Management,Cybersecurity,Required,4,Beginner,High,Standard security practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R022,Digital Forensics Analyst,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R022,Digital Forensics Analyst,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R022,Digital Forensics Analyst,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R022,Digital Forensics Analyst,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R022,Digital Forensics Analyst,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R022,Digital Forensics Analyst,Networking,Networking,Required,5,Intermediate,High,Foundational for security.,O*NET / Industry Standard,https://www.onetonline.org/
+R022,Digital Forensics Analyst,TCP/IP,Networking,Required,4,Intermediate,High,Core network protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R022,Digital Forensics Analyst,Linux,Operating Systems,Required,4,Intermediate,High,Primary OS for security tools.,O*NET / Industry Standard,https://www.onetonline.org/
+R022,Digital Forensics Analyst,Security Principles,Cybersecurity,Required,5,Intermediate,High,Core CIA triad concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R022,Digital Forensics Analyst,Vulnerability Management,Cybersecurity,Required,4,Beginner,High,Standard security practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R023,Threat Intelligence Analyst,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R023,Threat Intelligence Analyst,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R023,Threat Intelligence Analyst,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R023,Threat Intelligence Analyst,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R023,Threat Intelligence Analyst,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R023,Threat Intelligence Analyst,Networking,Networking,Required,5,Intermediate,High,Foundational for security.,O*NET / Industry Standard,https://www.onetonline.org/
+R023,Threat Intelligence Analyst,TCP/IP,Networking,Required,4,Intermediate,High,Core network protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R023,Threat Intelligence Analyst,Linux,Operating Systems,Required,4,Intermediate,High,Primary OS for security tools.,O*NET / Industry Standard,https://www.onetonline.org/
+R023,Threat Intelligence Analyst,Security Principles,Cybersecurity,Required,5,Intermediate,High,Core CIA triad concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R023,Threat Intelligence Analyst,Vulnerability Management,Cybersecurity,Required,4,Beginner,High,Standard security practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R024,Malware Analyst,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R024,Malware Analyst,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R024,Malware Analyst,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R024,Malware Analyst,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R024,Malware Analyst,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R024,Malware Analyst,Networking,Networking,Required,5,Intermediate,High,Foundational for security.,O*NET / Industry Standard,https://www.onetonline.org/
+R024,Malware Analyst,TCP/IP,Networking,Required,4,Intermediate,High,Core network protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R024,Malware Analyst,Linux,Operating Systems,Required,4,Intermediate,High,Primary OS for security tools.,O*NET / Industry Standard,https://www.onetonline.org/
+R024,Malware Analyst,Security Principles,Cybersecurity,Required,5,Intermediate,High,Core CIA triad concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R024,Malware Analyst,Vulnerability Management,Cybersecurity,Required,4,Beginner,High,Standard security practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R025,Security Architect,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R025,Security Architect,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R025,Security Architect,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R025,Security Architect,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R025,Security Architect,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R025,Security Architect,Networking,Networking,Required,5,Intermediate,High,Foundational for security.,O*NET / Industry Standard,https://www.onetonline.org/
+R025,Security Architect,TCP/IP,Networking,Required,4,Intermediate,High,Core network protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R025,Security Architect,Linux,Operating Systems,Required,4,Intermediate,High,Primary OS for security tools.,O*NET / Industry Standard,https://www.onetonline.org/
+R025,Security Architect,Security Principles,Cybersecurity,Required,5,Intermediate,High,Core CIA triad concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R025,Security Architect,Vulnerability Management,Cybersecurity,Required,4,Beginner,High,Standard security practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R026,GRC Analyst,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R026,GRC Analyst,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R026,GRC Analyst,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R026,GRC Analyst,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R026,GRC Analyst,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R026,GRC Analyst,Networking,Networking,Required,5,Intermediate,High,Foundational for security.,O*NET / Industry Standard,https://www.onetonline.org/
+R026,GRC Analyst,TCP/IP,Networking,Required,4,Intermediate,High,Core network protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R026,GRC Analyst,Linux,Operating Systems,Required,4,Intermediate,High,Primary OS for security tools.,O*NET / Industry Standard,https://www.onetonline.org/
+R026,GRC Analyst,Security Principles,Cybersecurity,Required,5,Intermediate,High,Core CIA triad concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R026,GRC Analyst,Vulnerability Management,Cybersecurity,Required,4,Beginner,High,Standard security practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R027,Data Analyst,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R027,Data Analyst,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R027,Data Analyst,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R027,Data Analyst,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R027,Data Analyst,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R027,Data Analyst,SQL,Database,Required,5,Intermediate,High,Universal data querying language.,O*NET / Industry Standard,https://www.onetonline.org/
+R027,Data Analyst,Python,Programming Language,Required,5,Intermediate,High,Dominant data language.,O*NET / Industry Standard,https://www.onetonline.org/
+R027,Data Analyst,Statistics,Data Science,Required,4,Intermediate,High,Core mathematical foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R027,Data Analyst,Data Cleaning,Data Science,Required,4,Intermediate,High,Required for all data roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R027,Data Analyst,Data Visualization,Data Science,Required,3,Intermediate,High,Communicating insights.,O*NET / Industry Standard,https://www.onetonline.org/
+R028,Data Scientist,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R028,Data Scientist,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R028,Data Scientist,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R028,Data Scientist,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R028,Data Scientist,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R028,Data Scientist,SQL,Database,Required,5,Intermediate,High,Universal data querying language.,O*NET / Industry Standard,https://www.onetonline.org/
+R028,Data Scientist,Python,Programming Language,Required,5,Intermediate,High,Dominant data language.,O*NET / Industry Standard,https://www.onetonline.org/
+R028,Data Scientist,Statistics,Data Science,Required,4,Intermediate,High,Core mathematical foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R028,Data Scientist,Data Cleaning,Data Science,Required,4,Intermediate,High,Required for all data roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R028,Data Scientist,Data Visualization,Data Science,Required,3,Intermediate,High,Communicating insights.,O*NET / Industry Standard,https://www.onetonline.org/
+R028,Data Scientist,Machine Learning,AI/ML,Required,5,Intermediate,High,Core requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R028,Data Scientist,Pandas,Data Science,Required,4,Intermediate,High,Core Python library.,O*NET / Industry Standard,https://www.onetonline.org/
+R028,Data Scientist,Scikit-learn,Data Science,Required,4,Intermediate,High,Core ML library.,O*NET / Industry Standard,https://www.onetonline.org/
+R029,Data Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R029,Data Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R029,Data Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R029,Data Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R029,Data Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R029,Data Engineer,SQL,Database,Required,5,Intermediate,High,Universal data querying language.,O*NET / Industry Standard,https://www.onetonline.org/
+R029,Data Engineer,Python,Programming Language,Required,5,Intermediate,High,Dominant data language.,O*NET / Industry Standard,https://www.onetonline.org/
+R029,Data Engineer,Statistics,Data Science,Required,4,Intermediate,High,Core mathematical foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R029,Data Engineer,Data Cleaning,Data Science,Required,4,Intermediate,High,Required for all data roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R029,Data Engineer,Data Visualization,Data Science,Required,3,Intermediate,High,Communicating insights.,O*NET / Industry Standard,https://www.onetonline.org/
+R030,Machine Learning Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R030,Machine Learning Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R030,Machine Learning Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R030,Machine Learning Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R030,Machine Learning Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R030,Machine Learning Engineer,SQL,Database,Required,5,Intermediate,High,Universal data querying language.,O*NET / Industry Standard,https://www.onetonline.org/
+R030,Machine Learning Engineer,Python,Programming Language,Required,5,Intermediate,High,Dominant data language.,O*NET / Industry Standard,https://www.onetonline.org/
+R030,Machine Learning Engineer,Statistics,Data Science,Required,4,Intermediate,High,Core mathematical foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R030,Machine Learning Engineer,Data Cleaning,Data Science,Required,4,Intermediate,High,Required for all data roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R030,Machine Learning Engineer,Data Visualization,Data Science,Required,3,Intermediate,High,Communicating insights.,O*NET / Industry Standard,https://www.onetonline.org/
+R030,Machine Learning Engineer,Machine Learning,AI/ML,Required,5,Advanced,High,Core requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R030,Machine Learning Engineer,Deep Learning,AI/ML,Preferred,4,Intermediate,High,Advanced ML models.,O*NET / Industry Standard,https://www.onetonline.org/
+R030,Machine Learning Engineer,TensorFlow/PyTorch,Framework,Required,5,Intermediate,High,Dominant ML frameworks.,O*NET / Industry Standard,https://www.onetonline.org/
+R031,AI Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R031,AI Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R031,AI Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R031,AI Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R031,AI Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R031,AI Engineer,SQL,Database,Required,5,Intermediate,High,Universal data querying language.,O*NET / Industry Standard,https://www.onetonline.org/
+R031,AI Engineer,Python,Programming Language,Required,5,Intermediate,High,Dominant data language.,O*NET / Industry Standard,https://www.onetonline.org/
+R031,AI Engineer,Statistics,Data Science,Required,4,Intermediate,High,Core mathematical foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R031,AI Engineer,Data Cleaning,Data Science,Required,4,Intermediate,High,Required for all data roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R031,AI Engineer,Data Visualization,Data Science,Required,3,Intermediate,High,Communicating insights.,O*NET / Industry Standard,https://www.onetonline.org/
+R032,NLP Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R032,NLP Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R032,NLP Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R032,NLP Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R032,NLP Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R032,NLP Engineer,SQL,Database,Required,5,Intermediate,High,Universal data querying language.,O*NET / Industry Standard,https://www.onetonline.org/
+R032,NLP Engineer,Python,Programming Language,Required,5,Intermediate,High,Dominant data language.,O*NET / Industry Standard,https://www.onetonline.org/
+R032,NLP Engineer,Statistics,Data Science,Required,4,Intermediate,High,Core mathematical foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R032,NLP Engineer,Data Cleaning,Data Science,Required,4,Intermediate,High,Required for all data roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R032,NLP Engineer,Data Visualization,Data Science,Required,3,Intermediate,High,Communicating insights.,O*NET / Industry Standard,https://www.onetonline.org/
+R033,Computer Vision Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R033,Computer Vision Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R033,Computer Vision Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R033,Computer Vision Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R033,Computer Vision Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R033,Computer Vision Engineer,SQL,Database,Required,5,Intermediate,High,Universal data querying language.,O*NET / Industry Standard,https://www.onetonline.org/
+R033,Computer Vision Engineer,Python,Programming Language,Required,5,Intermediate,High,Dominant data language.,O*NET / Industry Standard,https://www.onetonline.org/
+R033,Computer Vision Engineer,Statistics,Data Science,Required,4,Intermediate,High,Core mathematical foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R033,Computer Vision Engineer,Data Cleaning,Data Science,Required,4,Intermediate,High,Required for all data roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R033,Computer Vision Engineer,Data Visualization,Data Science,Required,3,Intermediate,High,Communicating insights.,O*NET / Industry Standard,https://www.onetonline.org/
+R034,MLOps Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R034,MLOps Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R034,MLOps Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R034,MLOps Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R034,MLOps Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R034,MLOps Engineer,SQL,Database,Required,5,Intermediate,High,Universal data querying language.,O*NET / Industry Standard,https://www.onetonline.org/
+R034,MLOps Engineer,Python,Programming Language,Required,5,Intermediate,High,Dominant data language.,O*NET / Industry Standard,https://www.onetonline.org/
+R034,MLOps Engineer,Statistics,Data Science,Required,4,Intermediate,High,Core mathematical foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R034,MLOps Engineer,Data Cleaning,Data Science,Required,4,Intermediate,High,Required for all data roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R034,MLOps Engineer,Data Visualization,Data Science,Required,3,Intermediate,High,Communicating insights.,O*NET / Industry Standard,https://www.onetonline.org/
+R035,AI Researcher,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R035,AI Researcher,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R035,AI Researcher,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R035,AI Researcher,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R035,AI Researcher,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R035,AI Researcher,SQL,Database,Required,5,Intermediate,High,Universal data querying language.,O*NET / Industry Standard,https://www.onetonline.org/
+R035,AI Researcher,Python,Programming Language,Required,5,Intermediate,High,Dominant data language.,O*NET / Industry Standard,https://www.onetonline.org/
+R035,AI Researcher,Statistics,Data Science,Required,4,Intermediate,High,Core mathematical foundation.,O*NET / Industry Standard,https://www.onetonline.org/
+R035,AI Researcher,Data Cleaning,Data Science,Required,4,Intermediate,High,Required for all data roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R035,AI Researcher,Data Visualization,Data Science,Required,3,Intermediate,High,Communicating insights.,O*NET / Industry Standard,https://www.onetonline.org/
+R036,Cloud Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R036,Cloud Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R036,Cloud Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R036,Cloud Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R036,Cloud Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R036,Cloud Engineer,Linux,Operating Systems,Required,5,Intermediate,High,Core infrastructure OS.,O*NET / Industry Standard,https://www.onetonline.org/
+R036,Cloud Engineer,AWS,Cloud,Required,5,Intermediate,High,Dominant cloud provider.,O*NET / Industry Standard,https://www.onetonline.org/
+R036,Cloud Engineer,Networking,Networking,Required,4,Intermediate,High,Cloud networking concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R036,Cloud Engineer,Infrastructure as Code (IaC),DevOps,Required,4,Intermediate,High,Modern provisioning.,O*NET / Industry Standard,https://www.onetonline.org/
+R036,Cloud Engineer,Bash Scripting,Programming Language,Preferred,3,Intermediate,Medium,Automation scripting.,O*NET / Industry Standard,https://www.onetonline.org/
+R037,Cloud Architect,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R037,Cloud Architect,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R037,Cloud Architect,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R037,Cloud Architect,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R037,Cloud Architect,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R037,Cloud Architect,Linux,Operating Systems,Required,5,Intermediate,High,Core infrastructure OS.,O*NET / Industry Standard,https://www.onetonline.org/
+R037,Cloud Architect,AWS,Cloud,Required,5,Intermediate,High,Dominant cloud provider.,O*NET / Industry Standard,https://www.onetonline.org/
+R037,Cloud Architect,Networking,Networking,Required,4,Intermediate,High,Cloud networking concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R037,Cloud Architect,Infrastructure as Code (IaC),DevOps,Required,4,Intermediate,High,Modern provisioning.,O*NET / Industry Standard,https://www.onetonline.org/
+R037,Cloud Architect,Bash Scripting,Programming Language,Preferred,3,Intermediate,Medium,Automation scripting.,O*NET / Industry Standard,https://www.onetonline.org/
+R038,DevOps Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R038,DevOps Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R038,DevOps Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R038,DevOps Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R038,DevOps Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R038,DevOps Engineer,Linux,Operating Systems,Required,5,Intermediate,High,Core infrastructure OS.,O*NET / Industry Standard,https://www.onetonline.org/
+R038,DevOps Engineer,AWS,Cloud,Required,5,Intermediate,High,Dominant cloud provider.,O*NET / Industry Standard,https://www.onetonline.org/
+R038,DevOps Engineer,Networking,Networking,Required,4,Intermediate,High,Cloud networking concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R038,DevOps Engineer,Infrastructure as Code (IaC),DevOps,Required,4,Intermediate,High,Modern provisioning.,O*NET / Industry Standard,https://www.onetonline.org/
+R038,DevOps Engineer,Bash Scripting,Programming Language,Preferred,3,Intermediate,Medium,Automation scripting.,O*NET / Industry Standard,https://www.onetonline.org/
+R038,DevOps Engineer,CI/CD,DevOps,Required,5,Intermediate,High,Core DevOps practice.,O*NET / Industry Standard,https://www.onetonline.org/
+R038,DevOps Engineer,Docker,DevOps,Required,5,Intermediate,High,Containerization.,O*NET / Industry Standard,https://www.onetonline.org/
+R038,DevOps Engineer,Kubernetes,DevOps,Required,4,Intermediate,High,Orchestration.,O*NET / Industry Standard,https://www.onetonline.org/
+R038,DevOps Engineer,Terraform,DevOps,Preferred,4,Intermediate,Medium,IaC standard.,O*NET / Industry Standard,https://www.onetonline.org/
+R039,Site Reliability Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R039,Site Reliability Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R039,Site Reliability Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R039,Site Reliability Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R039,Site Reliability Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R039,Site Reliability Engineer,Linux,Operating Systems,Required,5,Intermediate,High,Core infrastructure OS.,O*NET / Industry Standard,https://www.onetonline.org/
+R039,Site Reliability Engineer,AWS,Cloud,Required,5,Intermediate,High,Dominant cloud provider.,O*NET / Industry Standard,https://www.onetonline.org/
+R039,Site Reliability Engineer,Networking,Networking,Required,4,Intermediate,High,Cloud networking concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R039,Site Reliability Engineer,Infrastructure as Code (IaC),DevOps,Required,4,Intermediate,High,Modern provisioning.,O*NET / Industry Standard,https://www.onetonline.org/
+R039,Site Reliability Engineer,Bash Scripting,Programming Language,Preferred,3,Intermediate,Medium,Automation scripting.,O*NET / Industry Standard,https://www.onetonline.org/
+R040,Platform Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R040,Platform Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R040,Platform Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R040,Platform Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R040,Platform Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R040,Platform Engineer,Linux,Operating Systems,Required,5,Intermediate,High,Core infrastructure OS.,O*NET / Industry Standard,https://www.onetonline.org/
+R040,Platform Engineer,AWS,Cloud,Required,5,Intermediate,High,Dominant cloud provider.,O*NET / Industry Standard,https://www.onetonline.org/
+R040,Platform Engineer,Networking,Networking,Required,4,Intermediate,High,Cloud networking concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R040,Platform Engineer,Infrastructure as Code (IaC),DevOps,Required,4,Intermediate,High,Modern provisioning.,O*NET / Industry Standard,https://www.onetonline.org/
+R040,Platform Engineer,Bash Scripting,Programming Language,Preferred,3,Intermediate,Medium,Automation scripting.,O*NET / Industry Standard,https://www.onetonline.org/
+R041,Infrastructure Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R041,Infrastructure Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R041,Infrastructure Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R041,Infrastructure Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R041,Infrastructure Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R041,Infrastructure Engineer,Linux,Operating Systems,Required,5,Intermediate,High,Core infrastructure OS.,O*NET / Industry Standard,https://www.onetonline.org/
+R041,Infrastructure Engineer,AWS,Cloud,Required,5,Intermediate,High,Dominant cloud provider.,O*NET / Industry Standard,https://www.onetonline.org/
+R041,Infrastructure Engineer,Networking,Networking,Required,4,Intermediate,High,Cloud networking concepts.,O*NET / Industry Standard,https://www.onetonline.org/
+R041,Infrastructure Engineer,Infrastructure as Code (IaC),DevOps,Required,4,Intermediate,High,Modern provisioning.,O*NET / Industry Standard,https://www.onetonline.org/
+R041,Infrastructure Engineer,Bash Scripting,Programming Language,Preferred,3,Intermediate,Medium,Automation scripting.,O*NET / Industry Standard,https://www.onetonline.org/
+R042,Network Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R042,Network Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R042,Network Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R042,Network Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R042,Network Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R042,Network Engineer,Routing and Switching,Networking,Required,5,Advanced,High,Core requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R042,Network Engineer,BGP/OSPF,Networking,Required,4,Intermediate,High,Core routing protocols.,O*NET / Industry Standard,https://www.onetonline.org/
+R042,Network Engineer,Cisco IOS,Networking,Preferred,4,Intermediate,High,Dominant vendor OS.,O*NET / Industry Standard,https://www.onetonline.org/
+R042,Network Engineer,Project Management,Soft Skills,Preferred,2,Beginner,Medium,Useful for all IT roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R042,Network Engineer,Operating Systems,IT Fundamentals,Required,3,Beginner,High,Basic requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R043,Network Administrator,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R043,Network Administrator,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R043,Network Administrator,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R043,Network Administrator,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R043,Network Administrator,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R043,Network Administrator,Project Management,Soft Skills,Preferred,2,Beginner,Medium,Useful for all IT roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R043,Network Administrator,Operating Systems,IT Fundamentals,Required,3,Beginner,High,Basic requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R044,System Administrator,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R044,System Administrator,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R044,System Administrator,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R044,System Administrator,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R044,System Administrator,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R044,System Administrator,Project Management,Soft Skills,Preferred,2,Beginner,Medium,Useful for all IT roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R044,System Administrator,Operating Systems,IT Fundamentals,Required,3,Beginner,High,Basic requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R045,IT Support Specialist,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R045,IT Support Specialist,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R045,IT Support Specialist,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R045,IT Support Specialist,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R045,IT Support Specialist,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R045,IT Support Specialist,Project Management,Soft Skills,Preferred,2,Beginner,Medium,Useful for all IT roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R045,IT Support Specialist,Operating Systems,IT Fundamentals,Required,3,Beginner,High,Basic requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R046,Systems Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R046,Systems Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R046,Systems Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R046,Systems Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R046,Systems Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R046,Systems Engineer,Project Management,Soft Skills,Preferred,2,Beginner,Medium,Useful for all IT roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R046,Systems Engineer,Operating Systems,IT Fundamentals,Required,3,Beginner,High,Basic requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R047,Database Administrator,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R047,Database Administrator,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R047,Database Administrator,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R047,Database Administrator,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R047,Database Administrator,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R047,Database Administrator,SQL,Database,Required,5,Advanced,High,Core requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R047,Database Administrator,Database Performance Tuning,Database,Required,5,Intermediate,High,Core DBA task.,O*NET / Industry Standard,https://www.onetonline.org/
+R047,Database Administrator,Backup and Recovery,Database,Required,5,Intermediate,High,Critical DBA responsibility.,O*NET / Industry Standard,https://www.onetonline.org/
+R047,Database Administrator,Project Management,Soft Skills,Preferred,2,Beginner,Medium,Useful for all IT roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R047,Database Administrator,Operating Systems,IT Fundamentals,Required,3,Beginner,High,Basic requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R048,Database Engineer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R048,Database Engineer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R048,Database Engineer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R048,Database Engineer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R048,Database Engineer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R048,Database Engineer,Project Management,Soft Skills,Preferred,2,Beginner,Medium,Useful for all IT roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R048,Database Engineer,Operating Systems,IT Fundamentals,Required,3,Beginner,High,Basic requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R049,SQL Developer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R049,SQL Developer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R049,SQL Developer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R049,SQL Developer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R049,SQL Developer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R049,SQL Developer,Project Management,Soft Skills,Preferred,2,Beginner,Medium,Useful for all IT roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R049,SQL Developer,Operating Systems,IT Fundamentals,Required,3,Beginner,High,Basic requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R050,Data Architect,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R050,Data Architect,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R050,Data Architect,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R050,Data Architect,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R050,Data Architect,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R050,Data Architect,Project Management,Soft Skills,Preferred,2,Beginner,Medium,Useful for all IT roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R050,Data Architect,Operating Systems,IT Fundamentals,Required,3,Beginner,High,Basic requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R051,Web Developer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R051,Web Developer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R051,Web Developer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R051,Web Developer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R051,Web Developer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R051,Web Developer,Project Management,Soft Skills,Preferred,2,Beginner,Medium,Useful for all IT roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R051,Web Developer,Operating Systems,IT Fundamentals,Required,3,Beginner,High,Basic requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R052,Web Application Developer,Problem Solving,Soft Skills,Required,5,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R052,Web Application Developer,Communication,Soft Skills,Required,4,Intermediate,High,Universal tech requirement.,O*NET / Industry Standard,https://www.onetonline.org/
+R052,Web Application Developer,Version Control,Tools,Preferred,3,Beginner,High,Fundamental for modern IT.,O*NET / Industry Standard,https://www.onetonline.org/
+R052,Web Application Developer,Technical Documentation,Soft Skills,Preferred,3,Beginner,Medium,Important for all tech roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R052,Web Application Developer,Troubleshooting,Soft Skills,Required,4,Intermediate,High,Core diagnostic skill.,O*NET / Industry Standard,https://www.onetonline.org/
+R052,Web Application Developer,Project Management,Soft Skills,Preferred,2,Beginner,Medium,Useful for all IT roles.,O*NET / Industry Standard,https://www.onetonline.org/
+R052,Web Application Developer,Operating Systems,IT Fundamentals,Required,3,Beginner,High,Basic requirement.,O*NET / Industry Standard,https://www.onetonline.org/

@@ -1,0 +1,20 @@
+role_id,job_role,skill,importance,priority,minimum_level
+R0001,Full Stack Developer,JavaScript,Required,5,Advanced
+R0001,Full Stack Developer,React,Required,5,Intermediate
+R0001,Full Stack Developer,Node.js,Required,4,Intermediate
+R0001,Full Stack Developer,FastAPI,Preferred,3,Intermediate
+R0001,Full Stack Developer,PostgreSQL,Required,4,Intermediate
+R0001,Full Stack Developer,Docker,Preferred,3,Beginner
+R0001,Full Stack Developer,Git,Required,5,Intermediate
+R0011,Data Scientist,Python,Required,5,Advanced
+R0011,Data Scientist,Pandas,Required,5,Advanced
+R0011,Data Scientist,NumPy,Required,4,Advanced
+R0011,Data Scientist,Scikit-Learn,Required,5,Intermediate
+R0011,Data Scientist,SQL,Required,4,Intermediate
+R0011,Data Scientist,PyTorch,Preferred,3,Intermediate
+R0021,DevOps Engineer,Docker,Required,5,Advanced
+R0021,DevOps Engineer,Kubernetes,Required,5,Intermediate
+R0021,DevOps Engineer,AWS,Required,4,Intermediate
+R0021,DevOps Engineer,Terraform,Preferred,4,Intermediate
+R0021,DevOps Engineer,Linux,Required,5,Advanced
+R0021,DevOps Engineer,CI/CD Pipelines,Required,5,Advanced

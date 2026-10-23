@@ -1,0 +1,1414 @@
+alias,canonical_skill_id,canonical_skill,confidence,notes
+python,S0001,Python,Exact,Canonical name
+python 3,S0001,Python,High,From skills_master
+python3,S0001,Python,High,From skills_master
+python programming,S0001,Python,High,From skills_master
+python,S0001,Python,High,From skills_master
+py,S0001,Python,High,From skills_master
+java,S0002,Java,Exact,Canonical name
+java,S0002,Java,High,From skills_master
+java se,S0002,Java,High,From skills_master
+java ee,S0002,Java,High,From skills_master
+core java,S0002,Java,High,From skills_master
+javascript,S0003,JavaScript,Exact,Canonical name
+javascript,S0003,JavaScript,High,From skills_master
+js,S0003,JavaScript,High,From skills_master
+ecmascript,S0003,JavaScript,High,From skills_master
+es6,S0003,JavaScript,High,From skills_master
+typescript,S0004,TypeScript,Exact,Canonical name
+typescript,S0004,TypeScript,High,From skills_master
+ts,S0004,TypeScript,High,From skills_master
+c,S0005,C,Exact,Canonical name
+c language,S0005,C,High,From skills_master
+c programming,S0005,C,High,From skills_master
+c,S0005,C,High,From skills_master
+c++,S0006,C++,Exact,Canonical name
+c++,S0006,C++,High,From skills_master
+cpp,S0006,C++,High,From skills_master
+c plus plus,S0006,C++,High,From skills_master
+c#,S0007,C#,Exact,Canonical name
+c#,S0007,C#,High,From skills_master
+csharp,S0007,C#,High,From skills_master
+c sharp,S0007,C#,High,From skills_master
+c-sharp,S0007,C#,High,From skills_master
+go,S0008,Go,Exact,Canonical name
+go,S0008,Go,High,From skills_master
+golang,S0008,Go,High,From skills_master
+go language,S0008,Go,High,From skills_master
+rust,S0009,Rust,Exact,Canonical name
+rust,S0009,Rust,High,From skills_master
+rust-lang,S0009,Rust,High,From skills_master
+r,S0010,R,Exact,Canonical name
+r,S0010,R,High,From skills_master
+r language,S0010,R,High,From skills_master
+r programming,S0010,R,High,From skills_master
+php,S0011,PHP,Exact,Canonical name
+php,S0011,PHP,High,From skills_master
+php7,S0011,PHP,High,From skills_master
+php8,S0011,PHP,High,From skills_master
+ruby,S0012,Ruby,Exact,Canonical name
+ruby,S0012,Ruby,High,From skills_master
+ruby-lang,S0012,Ruby,High,From skills_master
+scala,S0013,Scala,Exact,Canonical name
+scala,S0013,Scala,High,From skills_master
+scala programming,S0013,Scala,High,From skills_master
+swift,S0014,Swift,Exact,Canonical name
+swift,S0014,Swift,High,From skills_master
+apple swift,S0014,Swift,High,From skills_master
+kotlin,S0015,Kotlin,Exact,Canonical name
+kotlin,S0015,Kotlin,High,From skills_master
+bash,S0016,Bash,Exact,Canonical name
+bash,S0016,Bash,High,From skills_master
+shell scripting,S0016,Bash,High,From skills_master
+bash scripting,S0016,Bash,High,From skills_master
+sh,S0016,Bash,High,From skills_master
+zsh,S0016,Bash,High,From skills_master
+sql,S0017,SQL,Exact,Canonical name
+sql,S0017,SQL,High,From skills_master
+structured query language,S0017,SQL,High,From skills_master
+ansi sql,S0017,SQL,High,From skills_master
+dart,S0018,Dart,Exact,Canonical name
+dart,S0018,Dart,High,From skills_master
+dartlang,S0018,Dart,High,From skills_master
+matlab,S0019,MATLAB,Exact,Canonical name
+matlab,S0019,MATLAB,High,From skills_master
+sas,S0020,SAS,Exact,Canonical name
+sas,S0020,SAS,High,From skills_master
+sas programming,S0020,SAS,High,From skills_master
+julia,S0021,Julia,Exact,Canonical name
+julia,S0021,Julia,High,From skills_master
+julialang,S0021,Julia,High,From skills_master
+aws,S0022,AWS,Exact,Canonical name
+amazon web services,S0022,AWS,High,From skills_master
+aws cloud,S0022,AWS,High,From skills_master
+aws,S0022,AWS,High,From skills_master
+amazon aws,S0022,AWS,High,From skills_master
+azure,S0023,Azure,Exact,Canonical name
+microsoft azure,S0023,Azure,High,From skills_master
+azure cloud,S0023,Azure,High,From skills_master
+azure,S0023,Azure,High,From skills_master
+ms azure,S0023,Azure,High,From skills_master
+gcp,S0024,GCP,Exact,Canonical name
+google cloud platform,S0024,GCP,High,From skills_master
+gcp,S0024,GCP,High,From skills_master
+google cloud,S0024,GCP,High,From skills_master
+snowflake,S0025,Snowflake,Exact,Canonical name
+snowflake,S0025,Snowflake,High,From skills_master
+snowflake data cloud,S0025,Snowflake,High,From skills_master
+databricks,S0026,Databricks,Exact,Canonical name
+databricks,S0026,Databricks,High,From skills_master
+lakehouse,S0026,Databricks,High,From skills_master
+oracle cloud,S0027,Oracle Cloud,Exact,Canonical name
+oracle cloud,S0027,Oracle Cloud,High,From skills_master
+oci,S0027,Oracle Cloud,High,From skills_master
+postgresql,S0028,PostgreSQL,Exact,Canonical name
+postgresql,S0028,PostgreSQL,High,From skills_master
+postgres,S0028,PostgreSQL,High,From skills_master
+psql,S0028,PostgreSQL,High,From skills_master
+mysql,S0029,MySQL,Exact,Canonical name
+mysql,S0029,MySQL,High,From skills_master
+microsoft sql server,S0030,Microsoft SQL Server,Exact,Canonical name
+microsoft sql server,S0030,Microsoft SQL Server,High,From skills_master
+ms sql,S0030,Microsoft SQL Server,High,From skills_master
+mssql,S0030,Microsoft SQL Server,High,From skills_master
+sql server,S0030,Microsoft SQL Server,High,From skills_master
+oracle database,S0031,Oracle Database,Exact,Canonical name
+oracle database,S0031,Oracle Database,High,From skills_master
+oracle db,S0031,Oracle Database,High,From skills_master
+oracle rdbms,S0031,Oracle Database,High,From skills_master
+mongodb,S0032,MongoDB,Exact,Canonical name
+mongodb,S0032,MongoDB,High,From skills_master
+mongo db,S0032,MongoDB,High,From skills_master
+mongo,S0032,MongoDB,High,From skills_master
+redis,S0033,Redis,Exact,Canonical name
+redis,S0033,Redis,High,From skills_master
+redis cache,S0033,Redis,High,From skills_master
+apache cassandra,S0034,Apache Cassandra,Exact,Canonical name
+cassandra,S0034,Apache Cassandra,High,From skills_master
+apache cassandra,S0034,Apache Cassandra,High,From skills_master
+dynamodb,S0035,DynamoDB,Exact,Canonical name
+dynamodb,S0035,DynamoDB,High,From skills_master
+amazon dynamodb,S0035,DynamoDB,High,From skills_master
+elasticsearch,S0036,Elasticsearch,Exact,Canonical name
+elasticsearch,S0036,Elasticsearch,High,From skills_master
+elastic search,S0036,Elasticsearch,High,From skills_master
+neo4j,S0037,Neo4j,Exact,Canonical name
+neo4j,S0037,Neo4j,High,From skills_master
+graph database,S0037,Neo4j,High,From skills_master
+bigquery,S0038,BigQuery,Exact,Canonical name
+bigquery,S0038,BigQuery,High,From skills_master
+google bigquery,S0038,BigQuery,High,From skills_master
+redshift,S0039,Redshift,Exact,Canonical name
+amazon redshift,S0039,Redshift,High,From skills_master
+redshift,S0039,Redshift,High,From skills_master
+machine learning,S0040,Machine Learning,Exact,Canonical name
+machine learning,S0040,Machine Learning,High,From skills_master
+ml,S0040,Machine Learning,High,From skills_master
+deep learning,S0041,Deep Learning,Exact,Canonical name
+deep learning,S0041,Deep Learning,High,From skills_master
+dl,S0041,Deep Learning,High,From skills_master
+neural networks,S0041,Deep Learning,High,From skills_master
+artificial neural networks,S0041,Deep Learning,High,From skills_master
+natural language processing,S0042,Natural Language Processing,Exact,Canonical name
+natural language processing,S0042,Natural Language Processing,High,From skills_master
+nlp,S0042,Natural Language Processing,High,From skills_master
+computational linguistics,S0042,Natural Language Processing,High,From skills_master
+computer vision,S0043,Computer Vision,Exact,Canonical name
+computer vision,S0043,Computer Vision,High,From skills_master
+cv,S0043,Computer Vision,High,From skills_master
+image processing,S0043,Computer Vision,High,From skills_master
+generative ai,S0044,Generative AI,Exact,Canonical name
+generative ai,S0044,Generative AI,High,From skills_master
+genai,S0044,Generative AI,High,From skills_master
+large language models,S0044,Generative AI,High,From skills_master
+llms,S0044,Generative AI,High,From skills_master
+llm,S0044,Generative AI,High,From skills_master
+pytorch,S0045,PyTorch,Exact,Canonical name
+pytorch,S0045,PyTorch,High,From skills_master
+torch,S0045,PyTorch,High,From skills_master
+tensorflow,S0046,TensorFlow,Exact,Canonical name
+tensorflow,S0046,TensorFlow,High,From skills_master
+tf,S0046,TensorFlow,High,From skills_master
+keras,S0047,Keras,Exact,Canonical name
+keras,S0047,Keras,High,From skills_master
+scikit-learn,S0048,Scikit-Learn,Exact,Canonical name
+scikit-learn,S0048,Scikit-Learn,High,From skills_master
+sklearn,S0048,Scikit-Learn,High,From skills_master
+scikit learn,S0048,Scikit-Learn,High,From skills_master
+xgboost,S0049,XGBoost,Exact,Canonical name
+xgboost,S0049,XGBoost,High,From skills_master
+extreme gradient boosting,S0049,XGBoost,High,From skills_master
+lightgbm,S0050,LightGBM,Exact,Canonical name
+lightgbm,S0050,LightGBM,High,From skills_master
+hugging face,S0051,Hugging Face,Exact,Canonical name
+hugging face,S0051,Hugging Face,High,From skills_master
+huggingface,S0051,Hugging Face,High,From skills_master
+transformers,S0051,Hugging Face,High,From skills_master
+opencv,S0052,OpenCV,Exact,Canonical name
+opencv,S0052,OpenCV,High,From skills_master
+spacy,S0053,spaCy,Exact,Canonical name
+spacy,S0053,spaCy,High,From skills_master
+nltk,S0054,NLTK,Exact,Canonical name
+nltk,S0054,NLTK,High,From skills_master
+natural language toolkit,S0054,NLTK,High,From skills_master
+langchain,S0055,LangChain,Exact,Canonical name
+langchain,S0055,LangChain,High,From skills_master
+react,S0056,React,Exact,Canonical name
+react,S0056,React,High,From skills_master
+react.js,S0056,React,High,From skills_master
+reactjs,S0056,React,High,From skills_master
+react native,S0057,React Native,Exact,Canonical name
+react native,S0057,React Native,High,From skills_master
+react-native,S0057,React Native,High,From skills_master
+angular,S0058,Angular,Exact,Canonical name
+angular,S0058,Angular,High,From skills_master
+angularjs,S0058,Angular,High,From skills_master
+angular 2+,S0058,Angular,High,From skills_master
+vue.js,S0059,Vue.js,Exact,Canonical name
+vue,S0059,Vue.js,High,From skills_master
+vue.js,S0059,Vue.js,High,From skills_master
+vuejs,S0059,Vue.js,High,From skills_master
+node.js,S0060,Node.js,Exact,Canonical name
+node.js,S0060,Node.js,High,From skills_master
+nodejs,S0060,Node.js,High,From skills_master
+node,S0060,Node.js,High,From skills_master
+express.js,S0061,Express.js,Exact,Canonical name
+express,S0061,Express.js,High,From skills_master
+express.js,S0061,Express.js,High,From skills_master
+expressjs,S0061,Express.js,High,From skills_master
+django,S0062,Django,Exact,Canonical name
+django,S0062,Django,High,From skills_master
+django framework,S0062,Django,High,From skills_master
+flask,S0063,Flask,Exact,Canonical name
+flask,S0063,Flask,High,From skills_master
+flask framework,S0063,Flask,High,From skills_master
+fastapi,S0064,FastAPI,Exact,Canonical name
+fastapi,S0064,FastAPI,High,From skills_master
+spring boot,S0065,Spring Boot,Exact,Canonical name
+spring boot,S0065,Spring Boot,High,From skills_master
+spring framework,S0065,Spring Boot,High,From skills_master
+spring,S0065,Spring Boot,High,From skills_master
+asp.net,S0066,ASP.NET,Exact,Canonical name
+asp.net,S0066,ASP.NET,High,From skills_master
+asp.net core,S0066,ASP.NET,High,From skills_master
+.net core,S0066,ASP.NET,High,From skills_master
+.net,S0066,ASP.NET,High,From skills_master
+next.js,S0067,Next.js,Exact,Canonical name
+next.js,S0067,Next.js,High,From skills_master
+nextjs,S0067,Next.js,High,From skills_master
+html/css,S0068,HTML/CSS,Exact,Canonical name
+html,S0068,HTML/CSS,High,From skills_master
+html5,S0068,HTML/CSS,High,From skills_master
+css,S0068,HTML/CSS,High,From skills_master
+css3,S0068,HTML/CSS,High,From skills_master
+pandas,S0069,Pandas,Exact,Canonical name
+pandas,S0069,Pandas,High,From skills_master
+python pandas,S0069,Pandas,High,From skills_master
+numpy,S0070,NumPy,Exact,Canonical name
+numpy,S0070,NumPy,High,From skills_master
+python numpy,S0070,NumPy,High,From skills_master
+tableau,S0071,Tableau,Exact,Canonical name
+tableau,S0071,Tableau,High,From skills_master
+tableau software,S0071,Tableau,High,From skills_master
+tableau desktop,S0071,Tableau,High,From skills_master
+power bi,S0072,Power BI,Exact,Canonical name
+power bi,S0072,Power BI,High,From skills_master
+powerbi,S0072,Power BI,High,From skills_master
+microsoft power bi,S0072,Power BI,High,From skills_master
+microsoft excel,S0073,Microsoft Excel,Exact,Canonical name
+excel,S0073,Microsoft Excel,High,From skills_master
+microsoft excel,S0073,Microsoft Excel,High,From skills_master
+ms excel,S0073,Microsoft Excel,High,From skills_master
+business intelligence,S0074,Business Intelligence,Exact,Canonical name
+business intelligence,S0074,Business Intelligence,High,From skills_master
+bi,S0074,Business Intelligence,High,From skills_master
+data warehousing,S0075,Data Warehousing,Exact,Canonical name
+data warehousing,S0075,Data Warehousing,High,From skills_master
+data warehouse,S0075,Data Warehousing,High,From skills_master
+dwh,S0075,Data Warehousing,High,From skills_master
+etl,S0075,Data Warehousing,High,From skills_master
+docker,S0076,Docker,Exact,Canonical name
+docker,S0076,Docker,High,From skills_master
+docker containers,S0076,Docker,High,From skills_master
+kubernetes,S0077,Kubernetes,Exact,Canonical name
+kubernetes,S0077,Kubernetes,High,From skills_master
+k8s,S0077,Kubernetes,High,From skills_master
+git,S0078,Git,Exact,Canonical name
+git,S0078,Git,High,From skills_master
+git version control,S0078,Git,High,From skills_master
+github,S0079,GitHub,Exact,Canonical name
+github,S0079,GitHub,High,From skills_master
+gitlab,S0080,GitLab,Exact,Canonical name
+gitlab,S0080,GitLab,High,From skills_master
+ci/cd,S0081,CI/CD,Exact,Canonical name
+ci/cd,S0081,CI/CD,High,From skills_master
+ci cd,S0081,CI/CD,High,From skills_master
+continuous integration,S0081,CI/CD,High,From skills_master
+continuous delivery,S0081,CI/CD,High,From skills_master
+jenkins,S0082,Jenkins,Exact,Canonical name
+jenkins,S0082,Jenkins,High,From skills_master
+terraform,S0083,Terraform,Exact,Canonical name
+terraform,S0083,Terraform,High,From skills_master
+hashicorp terraform,S0083,Terraform,High,From skills_master
+ansible,S0084,Ansible,Exact,Canonical name
+ansible,S0084,Ansible,High,From skills_master
+apache spark,S0085,Apache Spark,Exact,Canonical name
+spark,S0085,Apache Spark,High,From skills_master
+apache spark,S0085,Apache Spark,High,From skills_master
+pyspark,S0085,Apache Spark,High,From skills_master
+apache kafka,S0086,Apache Kafka,Exact,Canonical name
+kafka,S0086,Apache Kafka,High,From skills_master
+apache kafka,S0086,Apache Kafka,High,From skills_master
+apache airflow,S0087,Apache Airflow,Exact,Canonical name
+airflow,S0087,Apache Airflow,High,From skills_master
+apache airflow,S0087,Apache Airflow,High,From skills_master
+apache hadoop,S0088,Apache Hadoop,Exact,Canonical name
+hadoop,S0088,Apache Hadoop,High,From skills_master
+apache hadoop,S0088,Apache Hadoop,High,From skills_master
+hdfs,S0088,Apache Hadoop,High,From skills_master
+linux,S0089,Linux,Exact,Canonical name
+linux,S0089,Linux,High,From skills_master
+unix,S0089,Linux,High,From skills_master
+ubuntu,S0089,Linux,High,From skills_master
+centos,S0089,Linux,High,From skills_master
+redhat,S0089,Linux,High,From skills_master
+jira,S0090,Jira,Exact,Canonical name
+jira,S0090,Jira,High,From skills_master
+atlassian jira,S0090,Jira,High,From skills_master
+critical thinking,S0091,Critical Thinking,Exact,Canonical name
+critical thinking,S0091,Critical Thinking,High,From skills_master
+analytical thinking,S0091,Critical Thinking,High,From skills_master
+analytical skills,S0091,Critical Thinking,High,From skills_master
+complex problem solving,S0092,Complex Problem Solving,Exact,Canonical name
+complex problem solving,S0092,Complex Problem Solving,High,From skills_master
+problem solving,S0092,Complex Problem Solving,High,From skills_master
+troubleshooting,S0092,Complex Problem Solving,High,From skills_master
+data structures & algorithms,S0093,Data Structures & Algorithms,Exact,Canonical name
+data structures,S0093,Data Structures & Algorithms,High,From skills_master
+algorithms,S0093,Data Structures & Algorithms,High,From skills_master
+dsa,S0093,Data Structures & Algorithms,High,From skills_master
+data structures and algorithms,S0093,Data Structures & Algorithms,High,From skills_master
+system design & architecture,S0094,System Design & Architecture,Exact,Canonical name
+system design,S0094,System Design & Architecture,High,From skills_master
+software architecture,S0094,System Design & Architecture,High,From skills_master
+systems analysis,S0094,System Design & Architecture,High,From skills_master
+communication skills,S0095,Communication Skills,Exact,Canonical name
+communication,S0095,Communication Skills,High,From skills_master
+verbal communication,S0095,Communication Skills,High,From skills_master
+written communication,S0095,Communication Skills,High,From skills_master
+presentation skills,S0095,Communication Skills,High,From skills_master
+collaboration & teamwork,S0096,Collaboration & Teamwork,Exact,Canonical name
+teamwork,S0096,Collaboration & Teamwork,High,From skills_master
+collaboration,S0096,Collaboration & Teamwork,High,From skills_master
+cross-functional collaboration,S0096,Collaboration & Teamwork,High,From skills_master
+interpersonal skills,S0096,Collaboration & Teamwork,High,From skills_master
+agile & scrum,S0097,Agile & Scrum,Exact,Canonical name
+agile,S0097,Agile & Scrum,High,From skills_master
+scrum,S0097,Agile & Scrum,High,From skills_master
+kanban,S0097,Agile & Scrum,High,From skills_master
+sprint planning,S0097,Agile & Scrum,High,From skills_master
+active learning,S0098,Active Learning,Exact,Canonical name
+active learning,S0098,Active Learning,High,From skills_master
+continuous learning,S0098,Active Learning,High,From skills_master
+version control,S0099,Version Control,Exact,From role_skills
+technical documentation,S0100,Technical Documentation,Exact,From role_skills
+agile methodologies,S0101,Agile Methodologies,Exact,From role_skills
+software testing,S0102,Software Testing,Exact,From role_skills
+rest apis,S0103,REST APIs,Exact,From role_skills
+database design,S0104,Database Design,Exact,From role_skills
+responsive design,S0105,Responsive Design,Exact,From role_skills
+project management,S0106,Project Management,Exact,From role_skills
+operating systems,S0107,Operating Systems,Exact,From role_skills
+microservices,S0108,Microservices,Exact,From role_skills
+memory management,S0109,Memory Management,Exact,From role_skills
+android sdk,S0110,Android SDK,Exact,From role_skills
+objective-c,S0111,Objective-C,Exact,From role_skills
+ios sdk,S0112,iOS SDK,Exact,From role_skills
+networking,S0113,Networking,Exact,From role_skills
+tcp/ip,S0114,TCP/IP,Exact,From role_skills
+security principles,S0115,Security Principles,Exact,From role_skills
+vulnerability management,S0116,Vulnerability Management,Exact,From role_skills
+siem,S0117,SIEM,Exact,From role_skills
+splunk,S0118,Splunk,Exact,From role_skills
+log analysis,S0119,Log Analysis,Exact,From role_skills
+metasploit,S0120,Metasploit,Exact,From role_skills
+nmap,S0121,Nmap,Exact,From role_skills
+burp suite,S0122,Burp Suite,Exact,From role_skills
+statistics,S0123,Statistics,Exact,From role_skills
+data cleaning,S0124,Data Cleaning,Exact,From role_skills
+data visualization,S0125,Data Visualization,Exact,From role_skills
+tensorflow/pytorch,S0126,TensorFlow/PyTorch,Exact,From role_skills
+infrastructure as code (iac),S0127,Infrastructure as Code (IaC),Exact,From role_skills
+routing and switching,S0128,Routing and Switching,Exact,From role_skills
+bgp/ospf,S0129,BGP/OSPF,Exact,From role_skills
+cisco ios,S0130,Cisco IOS,Exact,From role_skills
+database performance tuning,S0131,Database Performance Tuning,Exact,From role_skills
+backup and recovery,S0132,Backup and Recovery,Exact,From role_skills
+"""sales""",S0133,"""sales""",Exact,New canonical from resumes
+"""autocad""",S0134,"""autocad""",Exact,New canonical from resumes
+"""marketing""",S0135,"""marketing""",Exact,New canonical from resumes
+"""project management""",S0136,"""project management""",Exact,New canonical from resumes
+"""quality""",S0137,"""quality""",Exact,New canonical from resumes
+"""mechanical""",S0138,"""mechanical""",Exact,New canonical from resumes
+"""budgeting""",S0139,"""budgeting""",Exact,New canonical from resumes
+"""proposals""",S0140,"""proposals""",Exact,New canonical from resumes
+"""insurance""",S0141,"""insurance""",Exact,New canonical from resumes
+"""process improvement""",S0142,"""process improvement""",Exact,New canonical from resumes
+"""network""",S0143,"""network""",Exact,New canonical from resumes
+"""quality control""",S0144,"""quality control""",Exact,New canonical from resumes
+"""presentations""",S0145,"""presentations""",Exact,New canonical from resumes
+"""database""",S0146,"""database""",Exact,New canonical from resumes
+"""materials""",S0147,"""materials""",Exact,New canonical from resumes
+"""business development""",S0148,"""business development""",Exact,New canonical from resumes
+"""policies""",S0149,"""policies""",Exact,New canonical from resumes
+"""contracts""",S0150,"""contracts""",Exact,New canonical from resumes
+"""market""",S0151,"""market""",Exact,New canonical from resumes
+"""mechanical engineering""",S0152,"""mechanical engineering""",Exact,New canonical from resumes
+"""six sigma""",S0153,"""six sigma""",Exact,New canonical from resumes
+"""budget""",S0154,"""budget""",Exact,New canonical from resumes
+"""selling""",S0155,"""selling""",Exact,New canonical from resumes
+"""technical support""",S0156,"""technical support""",Exact,New canonical from resumes
+"""staffing""",S0157,"""staffing""",Exact,New canonical from resumes
+"""account management""",S0158,"""account management""",Exact,New canonical from resumes
+"""maintenance""",S0159,"""maintenance""",Exact,New canonical from resumes
+"""budgets""",S0160,"""budgets""",Exact,New canonical from resumes
+"""accounting""",S0161,"""accounting""",Exact,New canonical from resumes
+"""database management""",S0162,"""database management""",Exact,New canonical from resumes
+"""scheduling""",S0163,"""scheduling""",Exact,New canonical from resumes
+"""finance""",S0164,"""finance""",Exact,New canonical from resumes
+"""personnel""",S0165,"""personnel""",Exact,New canonical from resumes
+"""delivery""",S0166,"""delivery""",Exact,New canonical from resumes
+"""drafting""",S0167,"""drafting""",Exact,New canonical from resumes
+"""customer relationship management""",S0168,"""customer relationship management""",Exact,New canonical from resumes
+"""safety""",S0169,"""safety""",Exact,New canonical from resumes
+"""gpon""",S0170,"""gpon""",Exact,New canonical from resumes
+"""hardware networking""",S0171,"""hardware networking""",Exact,New canonical from resumes
+"""iig""",S0172,"""iig""",Exact,New canonical from resumes
+"""isp""",S0173,"""isp""",Exact,New canonical from resumes
+"""it enabled services""",S0174,"""it enabled services""",Exact,New canonical from resumes
+"""functional""",S0175,"""functional""",Exact,New canonical from resumes
+"""managing""",S0176,"""managing""",Exact,New canonical from resumes
+"""ios app developer""",S0177,"""ios app developer""",Exact,New canonical from resumes
+"""ios application development""",S0178,"""ios application development""",Exact,New canonical from resumes
+"""ios development""",S0179,"""ios development""",Exact,New canonical from resumes
+"""mobile apps developer ios""",S0180,"""mobile apps developer ios""",Exact,New canonical from resumes
+"""native ios""",S0181,"""native ios""",Exact,New canonical from resumes
+"""swift ios""",S0182,"""swift ios""",Exact,New canonical from resumes
+"""coordination""",S0183,"""coordination""",Exact,New canonical from resumes
+"""ccna cisco certified network associate""",S0184,"""ccna cisco certified network associate""",Exact,New canonical from resumes
+"""human resource management""",S0185,"""human resource management""",Exact,New canonical from resumes
+"""communication and negotiation skills""",S0186,"""communication and negotiation skills""",Exact,New canonical from resumes
+"""internet""",S0187,"""internet""",Exact,New canonical from resumes
+"""good communication skills""",S0188,"""good communication skills""",Exact,New canonical from resumes
+"""etabs""",S0189,"""etabs""",Exact,New canonical from resumes
+"""logistics""",S0190,"""logistics""",Exact,New canonical from resumes
+"""ios""",S0191,"""ios""",Exact,New canonical from resumes
+"""civil 3d""",S0192,"""civil 3d""",Exact,New canonical from resumes
+"""civil construction""",S0193,"""civil construction""",Exact,New canonical from resumes
+"""banking""",S0194,"""banking""",Exact,New canonical from resumes
+"""engineer""",S0195,"""engineer""",Exact,New canonical from resumes
+"""processes""",S0196,"""processes""",Exact,New canonical from resumes
+"""microsoft office suite""",S0197,"""microsoft office suite""",Exact,New canonical from resumes
+"""ms office""",S0198,"""ms office""",Exact,New canonical from resumes
+"""clients""",S0199,"""clients""",Exact,New canonical from resumes
+"""computer skill""",S0200,"""computer skill""",Exact,New canonical from resumes
+"""networking""",S0201,"""networking""",Exact,New canonical from resumes
+"""crm""",S0202,"""crm""",Exact,New canonical from resumes
+"""team building""",S0203,"""team building""",Exact,New canonical from resumes
+"""auto cad 2d 3d""",S0204,"""auto cad 2d 3d""",Exact,New canonical from resumes
+"""maintenance and troubleshooting""",S0205,"""maintenance and troubleshooting""",Exact,New canonical from resumes
+"""risk management""",S0206,"""risk management""",Exact,New canonical from resumes
+"""inspection""",S0207,"""inspection""",Exact,New canonical from resumes
+"""microsoft access""",S0208,"""microsoft access""",Exact,New canonical from resumes
+"""utilities""",S0209,"""utilities""",Exact,New canonical from resumes
+"""consulting""",S0210,"""consulting""",Exact,New canonical from resumes
+"""preventive maintenance""",S0211,"""preventive maintenance""",Exact,New canonical from resumes
+"""installation""",S0212,"""installation""",Exact,New canonical from resumes
+"""systems engineering""",S0213,"""systems engineering""",Exact,New canonical from resumes
+"""lean manufacturing""",S0214,"""lean manufacturing""",Exact,New canonical from resumes
+"""hardware""",S0215,"""hardware""",Exact,New canonical from resumes
+"""continuous improvement""",S0216,"""continuous improvement""",Exact,New canonical from resumes
+"""estimating""",S0217,"""estimating""",Exact,New canonical from resumes
+"""leadership development""",S0218,"""leadership development""",Exact,New canonical from resumes
+"""producing""",S0219,"""producing""",Exact,New canonical from resumes
+"""project planning""",S0220,"""project planning""",Exact,New canonical from resumes
+"""schematics""",S0221,"""schematics""",Exact,New canonical from resumes
+"""new product development""",S0222,"""new product development""",Exact,New canonical from resumes
+"""process development""",S0223,"""process development""",Exact,New canonical from resumes
+"""product development""",S0224,"""product development""",Exact,New canonical from resumes
+"""portfolio management""",S0225,"""portfolio management""",Exact,New canonical from resumes
+"""laser""",S0226,"""laser""",Exact,New canonical from resumes
+"""integration""",S0227,"""integration""",Exact,New canonical from resumes
+"""strategic planning""",S0228,"""strategic planning""",Exact,New canonical from resumes
+"""bonds""",S0229,"""bonds""",Exact,New canonical from resumes
+"""inventory""",S0230,"""inventory""",Exact,New canonical from resumes
+"""vendor management""",S0231,"""vendor management""",Exact,New canonical from resumes
+"""sap""",S0232,"""sap""",Exact,New canonical from resumes
+"""sharepoint""",S0233,"""sharepoint""",Exact,New canonical from resumes
+"""data management""",S0234,"""data management""",Exact,New canonical from resumes
+"""forms""",S0235,"""forms""",Exact,New canonical from resumes
+"""director""",S0236,"""director""",Exact,New canonical from resumes
+"""promotion""",S0237,"""promotion""",Exact,New canonical from resumes
+"""natural gas""",S0238,"""natural gas""",Exact,New canonical from resumes
+"""supervisory""",S0239,"""supervisory""",Exact,New canonical from resumes
+"""fundraising""",S0240,"""fundraising""",Exact,New canonical from resumes
+"""machinery""",S0241,"""machinery""",Exact,New canonical from resumes
+"""filing""",S0242,"""filing""",Exact,New canonical from resumes
+"""direct marketing""",S0243,"""direct marketing""",Exact,New canonical from resumes
+"[""microsoft office suite""",S0244,"[""microsoft office suite""",Exact,New canonical from resumes
+"""program management""",S0245,"""program management""",Exact,New canonical from resumes
+"""development""",S0246,"""development""",Exact,New canonical from resumes
+"""public relations""",S0247,"""public relations""",Exact,New canonical from resumes
+"""billing""",S0248,"""billing""",Exact,New canonical from resumes
+"""campaign management""",S0249,"""campaign management""",Exact,New canonical from resumes
+"""field supervision""",S0250,"""field supervision""",Exact,New canonical from resumes
+"""merchandising""",S0251,"""merchandising""",Exact,New canonical from resumes
+"""promotional activities""",S0252,"""promotional activities""",Exact,New canonical from resumes
+"""teamviewer""",S0253,"""teamviewer""",Exact,New canonical from resumes
+"""recuva""",S0254,"""recuva""",Exact,New canonical from resumes
+"""teaching""",S0255,"""teaching""",Exact,New canonical from resumes
+"""financial statements""",S0256,"""financial statements""",Exact,New canonical from resumes
+"""supervision""",S0257,"""supervision""",Exact,New canonical from resumes
+"""email""",S0258,"""email""",Exact,New canonical from resumes
+"""health safety and environment""",S0259,"""health safety and environment""",Exact,New canonical from resumes
+"""messaging""",S0260,"""messaging""",Exact,New canonical from resumes
+"""organizational""",S0261,"""organizational""",Exact,New canonical from resumes
+"""team leadership""",S0262,"""team leadership""",Exact,New canonical from resumes
+"""procurement""",S0263,"""procurement""",Exact,New canonical from resumes
+"""brand promotion""",S0264,"""brand promotion""",Exact,New canonical from resumes
+"""reading""",S0265,"""reading""",Exact,New canonical from resumes
+"""having cacc from reputed ca firm""",S0266,"""having cacc from reputed ca firm""",Exact,New canonical from resumes
+"""new business development""",S0267,"""new business development""",Exact,New canonical from resumes
+"""facebook ads manager""",S0268,"""facebook ads manager""",Exact,New canonical from resumes
+"""facebook campaign""",S0269,"""facebook campaign""",Exact,New canonical from resumes
+"""facebook marketing""",S0270,"""facebook marketing""",Exact,New canonical from resumes
+"""google ads""",S0271,"""google ads""",Exact,New canonical from resumes
+"""google analytics""",S0272,"""google analytics""",Exact,New canonical from resumes
+"""market researc""",S0273,"""market researc""",Exact,New canonical from resumes
+"""administrative support""",S0274,"""administrative support""",Exact,New canonical from resumes
+"""fast""",S0275,"""fast""",Exact,New canonical from resumes
+"""strategic""",S0276,"""strategic""",Exact,New canonical from resumes
+"""corporate marketing""",S0277,"""corporate marketing""",Exact,New canonical from resumes
+"""mentor""",S0278,"""mentor""",Exact,New canonical from resumes
+"""mentoring""",S0279,"""mentoring""",Exact,New canonical from resumes
+"""relationship building""",S0280,"""relationship building""",Exact,New canonical from resumes
+"""detail-oriented""",S0281,"""detail-oriented""",Exact,New canonical from resumes
+"""phone""",S0282,"""phone""",Exact,New canonical from resumes
+"""payroll""",S0283,"""payroll""",Exact,New canonical from resumes
+"""progress""",S0284,"""progress""",Exact,New canonical from resumes
+"""organizing""",S0285,"""organizing""",Exact,New canonical from resumes
+"""olt and onu""",S0286,"""olt and onu""",Exact,New canonical from resumes
+"""swift ui""",S0287,"""swift ui""",Exact,New canonical from resumes
+"""hrm report""",S0288,"""hrm report""",Exact,New canonical from resumes
+"""fast typing skill""",S0289,"""fast typing skill""",Exact,New canonical from resumes
+"""quick learner and hard working""",S0290,"""quick learner and hard working""",Exact,New canonical from resumes
+"""process improvement""]",S0291,"""process improvement""]",Exact,New canonical from resumes
+"""inventory management""",S0292,"""inventory management""",Exact,New canonical from resumes
+"""client""",S0293,"""client""",Exact,New canonical from resumes
+"""audit and inspection""",S0294,"""audit and inspection""",Exact,New canonical from resumes
+"""strategy""",S0295,"""strategy""",Exact,New canonical from resumes
+"""statistical process control""",S0296,"""statistical process control""",Exact,New canonical from resumes
+"""civil engineering""",S0297,"""civil engineering""",Exact,New canonical from resumes
+"""ms project""",S0298,"""ms project""",Exact,New canonical from resumes
+"""radar""",S0299,"""radar""",Exact,New canonical from resumes
+"""information security""",S0300,"""information security""",Exact,New canonical from resumes
+"""quality assurance""",S0301,"""quality assurance""",Exact,New canonical from resumes
+"""networks""",S0302,"""networks""",Exact,New canonical from resumes
+"""olt and onu""]",S0303,"""olt and onu""]",Exact,New canonical from resumes
+"""strong interpersonal skills""",S0304,"""strong interpersonal skills""",Exact,New canonical from resumes
+"""sales forecasting""",S0305,"""sales forecasting""",Exact,New canonical from resumes
+"""change management""",S0306,"""change management""",Exact,New canonical from resumes
+"""ms office""]",S0307,"""ms office""]",Exact,New canonical from resumes
+"""ms project""]",S0308,"""ms project""]",Exact,New canonical from resumes
+"""swift ui""]",S0309,"""swift ui""]",Exact,New canonical from resumes
+"""instructor""",S0310,"""instructor""",Exact,New canonical from resumes
+"[""project management""",S0311,"[""project management""",Exact,New canonical from resumes
+"""staff development""",S0312,"""staff development""",Exact,New canonical from resumes
+"""civil engineering""]",S0313,"""civil engineering""]",Exact,New canonical from resumes
+"""quick learner and hard working""]",S0314,"""quick learner and hard working""]",Exact,New canonical from resumes
+"""information technology""",S0315,"""information technology""",Exact,New canonical from resumes
+"""solidworks""",S0316,"""solidworks""",Exact,New canonical from resumes
+"[""arcview""",S0317,"[""arcview""",Exact,New canonical from resumes
+"""gps""",S0318,"""gps""",Exact,New canonical from resumes
+"""graphic""",S0319,"""graphic""",Exact,New canonical from resumes
+"""microstation""",S0320,"""microstation""",Exact,New canonical from resumes
+"""file maintenance""",S0321,"""file maintenance""",Exact,New canonical from resumes
+"""repairs""",S0322,"""repairs""",Exact,New canonical from resumes
+"""surveys""",S0323,"""surveys""",Exact,New canonical from resumes
+"""design""",S0324,"""design""",Exact,New canonical from resumes
+"""geopak""",S0325,"""geopak""",Exact,New canonical from resumes
+"""survey""",S0326,"""survey""",Exact,New canonical from resumes
+"""trimble gps""",S0327,"""trimble gps""",Exact,New canonical from resumes
+"""topcon total station""",S0328,"""topcon total station""",Exact,New canonical from resumes
+"""topo graphic surveys""",S0329,"""topo graphic surveys""",Exact,New canonical from resumes
+"""land surveys""",S0330,"""land surveys""",Exact,New canonical from resumes
+"""construction surveys""",S0331,"""construction surveys""",Exact,New canonical from resumes
+"""ashtec gps""",S0332,"""ashtec gps""",Exact,New canonical from resumes
+"""trimble 5600 total station""",S0333,"""trimble 5600 total station""",Exact,New canonical from resumes
+"""eagle point""",S0334,"""eagle point""",Exact,New canonical from resumes
+"""surveying""",S0335,"""surveying""",Exact,New canonical from resumes
+"""geodimeter total station""",S0336,"""geodimeter total station""",Exact,New canonical from resumes
+"""environmental sampling""",S0337,"""environmental sampling""",Exact,New canonical from resumes
+"""construction inspection""",S0338,"""construction inspection""",Exact,New canonical from resumes
+"""stream gauging""]",S0339,"""stream gauging""]",Exact,New canonical from resumes
+"[""streamline""",S0340,"[""streamline""",Exact,New canonical from resumes
+"""approach""",S0341,"""approach""",Exact,New canonical from resumes
+"""balance sheet""",S0342,"""balance sheet""",Exact,New canonical from resumes
+"""cash flow""",S0343,"""cash flow""",Exact,New canonical from resumes
+"""clinical research""",S0344,"""clinical research""",Exact,New canonical from resumes
+"""clinical trials""",S0345,"""clinical trials""",Exact,New canonical from resumes
+"""com""",S0346,"""com""",Exact,New canonical from resumes
+"""corporate finance""",S0347,"""corporate finance""",Exact,New canonical from resumes
+"""equities""",S0348,"""equities""",Exact,New canonical from resumes
+"""financials""",S0349,"""financials""",Exact,New canonical from resumes
+"""financing""",S0350,"""financing""",Exact,New canonical from resumes
+"""financial""",S0351,"""financial""",Exact,New canonical from resumes
+"""funds""",S0352,"""funds""",Exact,New canonical from resumes
+"""graphical user interface""",S0353,"""graphical user interface""",Exact,New canonical from resumes
+"""information systems""",S0354,"""information systems""",Exact,New canonical from resumes
+"""innovation""",S0355,"""innovation""",Exact,New canonical from resumes
+"""neural""",S0356,"""neural""",Exact,New canonical from resumes
+"""next""",S0357,"""next""",Exact,New canonical from resumes
+"""speaker""",S0358,"""speaker""",Exact,New canonical from resumes
+"""scientific""",S0359,"""scientific""",Exact,New canonical from resumes
+"""spanish""",S0360,"""spanish""",Exact,New canonical from resumes
+"""websites""",S0361,"""websites""",Exact,New canonical from resumes
+"""safety and security management""",S0362,"""safety and security management""",Exact,New canonical from resumes
+"""financial projections""",S0363,"""financial projections""",Exact,New canonical from resumes
+"""financial model""]",S0364,"""financial model""]",Exact,New canonical from resumes
+"[""basic and advanced supervision training courses""",S0365,"[""basic and advanced supervision training courses""",Exact,New canonical from resumes
+"""cbmet""",S0366,"""cbmet""",Exact,New canonical from resumes
+"""aramark service trained on ge 9600 9800 9900 portable c-arm""",S0367,"""aramark service trained on ge 9600 9800 9900 portable c-arm""",Exact,New canonical from resumes
+"""microsoft applications""",S0368,"""microsoft applications""",Exact,New canonical from resumes
+"""foresight imaging systems trained on dicom protocols""",S0369,"""foresight imaging systems trained on dicom protocols""",Exact,New canonical from resumes
+"""skilled in the operation of networks""",S0370,"""skilled in the operation of networks""",Exact,New canonical from resumes
+"""skilled in the operation of workstations and servers""",S0371,"""skilled in the operation of workstations and servers""",Exact,New canonical from resumes
+"""operational efficiency""",S0372,"""operational efficiency""",Exact,New canonical from resumes
+"""medical equipment management""",S0373,"""medical equipment management""",Exact,New canonical from resumes
+"""regulatory compliance""",S0374,"""regulatory compliance""",Exact,New canonical from resumes
+"""personnel management""",S0375,"""personnel management""",Exact,New canonical from resumes
+"""repair service""",S0376,"""repair service""",Exact,New canonical from resumes
+"""customer relationships""",S0377,"""customer relationships""",Exact,New canonical from resumes
+"""technical skills""",S0378,"""technical skills""",Exact,New canonical from resumes
+"""lan and wlan management""",S0379,"""lan and wlan management""",Exact,New canonical from resumes
+"""dicom protocol""",S0380,"""dicom protocol""",Exact,New canonical from resumes
+"""equipment repair""",S0381,"""equipment repair""",Exact,New canonical from resumes
+"""electrical safety""",S0382,"""electrical safety""",Exact,New canonical from resumes
+"""diagnostic monitoring""]",S0383,"""diagnostic monitoring""]",Exact,New canonical from resumes
+"[""know-your-consumer kyc""",S0384,"[""know-your-consumer kyc""",Exact,New canonical from resumes
+"""cost reduction and avoidance""",S0385,"""cost reduction and avoidance""",Exact,New canonical from resumes
+"""systems engineering management""",S0386,"""systems engineering management""",Exact,New canonical from resumes
+"""software systems engineering""",S0387,"""software systems engineering""",Exact,New canonical from resumes
+"""failure analysis""",S0388,"""failure analysis""",Exact,New canonical from resumes
+"""tools of operations research""",S0389,"""tools of operations research""",Exact,New canonical from resumes
+"""auto cad""",S0134,"""autocad""",Fuzzy,"Fuzzy matched to ""autocad"""
+"""process control""",S0390,"""process control""",Exact,New canonical from resumes
+"""process design""",S0391,"""process design""",Exact,New canonical from resumes
+"""simulation""",S0392,"""simulation""",Exact,New canonical from resumes
+"""system configuration""",S0393,"""system configuration""",Exact,New canonical from resumes
+"""lean techniques""",S0394,"""lean techniques""",Exact,New canonical from resumes
+"""kaizen events""",S0395,"""kaizen events""",Exact,New canonical from resumes
+"""extraction""",S0396,"""extraction""",Exact,New canonical from resumes
+"""nutraceuticals""",S0397,"""nutraceuticals""",Exact,New canonical from resumes
+"""sub-critical carbon-di-oxide""]",S0398,"""sub-critical carbon-di-oxide""]",Exact,New canonical from resumes
+"""quality management system implementation""",S0399,"""quality management system implementation""",Exact,New canonical from resumes
+"""production and engineering management""",S0400,"""production and engineering management""",Exact,New canonical from resumes
+"""cost reduction""",S0401,"""cost reduction""",Exact,New canonical from resumes
+"""process development and documentation""",S0402,"""process development and documentation""",Exact,New canonical from resumes
+"""process improvement/simplification""",S0403,"""process improvement/simplification""",Exact,New canonical from resumes
+"""source evaluation and selection""",S0404,"""source evaluation and selection""",Exact,New canonical from resumes
+"""experience with autocad""",S0405,"""experience with autocad""",Exact,New canonical from resumes
+"""various erp systems""",S0406,"""various erp systems""",Exact,New canonical from resumes
+"[""microsoft project""",S0407,"[""microsoft project""",Exact,New canonical from resumes
+"""microsoft visio""",S0408,"""microsoft visio""",Exact,New canonical from resumes
+"""ibm rationale doors""",S0409,"""ibm rationale doors""",Exact,New canonical from resumes
+"""communication/presentations""",S0410,"""communication/presentations""",Exact,New canonical from resumes
+"""risk analysis""",S0411,"""risk analysis""",Exact,New canonical from resumes
+"""cmpro""",S0412,"""cmpro""",Exact,New canonical from resumes
+"""air force""",S0413,"""air force""",Exact,New canonical from resumes
+"""conflict management""",S0414,"""conflict management""",Exact,New canonical from resumes
+"""dc""",S0415,"""dc""",Exact,New canonical from resumes
+"""doors""",S0416,"""doors""",Exact,New canonical from resumes
+"""electrical engineering""",S0417,"""electrical engineering""",Exact,New canonical from resumes
+"""electrical systems""",S0418,"""electrical systems""",Exact,New canonical from resumes
+"""senior management""",S0419,"""senior management""",Exact,New canonical from resumes
+"""drawing""",S0420,"""drawing""",Exact,New canonical from resumes
+"""hardware design""",S0421,"""hardware design""",Exact,New canonical from resumes
+"""ibm""",S0422,"""ibm""",Exact,New canonical from resumes
+"""navy""",S0423,"""navy""",Exact,New canonical from resumes
+"""peer review""",S0424,"""peer review""",Exact,New canonical from resumes
+"""power distribution""",S0425,"""power distribution""",Exact,New canonical from resumes
+"""power supplies""",S0426,"""power supplies""",Exact,New canonical from resumes
+"""siemens""",S0427,"""siemens""",Exact,New canonical from resumes
+"""software engineering""",S0428,"""software engineering""",Exact,New canonical from resumes
+"""video""",S0429,"""video""",Exact,New canonical from resumes
+"""hardware solutions""",S0430,"""hardware solutions""",Exact,New canonical from resumes
+"""cost savings""",S0431,"""cost savings""",Exact,New canonical from resumes
+"""design""]",S0432,"""design""]",Exact,New canonical from resumes
+"[""architecting best practice technical solutions""",S0433,"[""architecting best practice technical solutions""",Exact,New canonical from resumes
+"""technical program management""",S0434,"""technical program management""",Exact,New canonical from resumes
+"""qa/qm""",S0435,"""qa/qm""",Exact,New canonical from resumes
+"""client management""",S0436,"""client management""",Exact,New canonical from resumes
+"""testing and commissioning planning and execution""",S0437,"""testing and commissioning planning and execution""",Exact,New canonical from resumes
+"""team leadership / cross-team collaboration""",S0438,"""team leadership / cross-team collaboration""",Exact,New canonical from resumes
+"""engineering cost estimating""",S0439,"""engineering cost estimating""",Exact,New canonical from resumes
+"""engineering resource management and forecasting""",S0440,"""engineering resource management and forecasting""",Exact,New canonical from resumes
+"[""executive decision maker""",S0441,"[""executive decision maker""",Exact,New canonical from resumes
+"""process design improvement""",S0442,"""process design improvement""",Exact,New canonical from resumes
+"""strategic planning development""",S0443,"""strategic planning development""",Exact,New canonical from resumes
+"""lean six sigma practitioner""",S0444,"""lean six sigma practitioner""",Exact,New canonical from resumes
+"""product design""",S0445,"""product design""",Exact,New canonical from resumes
+"""budgetary and policy development""",S0446,"""budgetary and policy development""",Exact,New canonical from resumes
+"""automation design""",S0447,"""automation design""",Exact,New canonical from resumes
+"""project management execution""",S0448,"""project management execution""",Exact,New canonical from resumes
+"""economic analysis""",S0449,"""economic analysis""",Exact,New canonical from resumes
+"""ergonomic and safety conscious""",S0450,"""ergonomic and safety conscious""",Exact,New canonical from resumes
+"""design engineering""",S0451,"""design engineering""",Exact,New canonical from resumes
+"""resource allocation""",S0452,"""resource allocation""",Exact,New canonical from resumes
+"""productivity improvement""",S0453,"""productivity improvement""",Exact,New canonical from resumes
+"""resource capability""",S0454,"""resource capability""",Exact,New canonical from resumes
+"""lean""",S0455,"""lean""",Exact,New canonical from resumes
+"""cost containment""]",S0456,"""cost containment""]",Exact,New canonical from resumes
+"[""electronic mechanical technology""",S0457,"[""electronic mechanical technology""",Exact,New canonical from resumes
+"""maintenance management""",S0458,"""maintenance management""",Exact,New canonical from resumes
+"""lean/six sigma principles""",S0459,"""lean/six sigma principles""",Exact,New canonical from resumes
+"""mechanical component troubleshooting""",S0460,"""mechanical component troubleshooting""",Exact,New canonical from resumes
+"""quality assurance/control""",S0461,"""quality assurance/control""",Exact,New canonical from resumes
+"""material management""",S0462,"""material management""",Exact,New canonical from resumes
+"""staff development/leadership""",S0463,"""staff development/leadership""",Exact,New canonical from resumes
+"""technical interface""",S0464,"""technical interface""",Exact,New canonical from resumes
+"""safety compliance""",S0465,"""safety compliance""",Exact,New canonical from resumes
+"""microsoft project""",S0466,"""microsoft project""",Exact,New canonical from resumes
+"""engineering""",S0467,"""engineering""",Exact,New canonical from resumes
+"""technical coordination""",S0468,"""technical coordination""",Exact,New canonical from resumes
+"""aircraft maintenance""",S0469,"""aircraft maintenance""",Exact,New canonical from resumes
+"""engineering change management""",S0470,"""engineering change management""",Exact,New canonical from resumes
+"""technical supervision""",S0471,"""technical supervision""",Exact,New canonical from resumes
+"""system calibration""]",S0472,"""system calibration""]",Exact,New canonical from resumes
+"[""program management""",S0473,"[""program management""",Exact,New canonical from resumes
+"""process analysis""",S0474,"""process analysis""",Exact,New canonical from resumes
+"""solution design""",S0475,"""solution design""",Exact,New canonical from resumes
+"""enterprise software""",S0476,"""enterprise software""",Exact,New canonical from resumes
+"""systems integration""",S0477,"""systems integration""",Exact,New canonical from resumes
+"""product excellence""",S0478,"""product excellence""",Exact,New canonical from resumes
+"""agile methodology""",S0479,"""agile methodology""",Exact,New canonical from resumes
+"""people development""",S0480,"""people development""",Exact,New canonical from resumes
+"[""cae softwares hypermesh abaqus ansys optistruct""",S0481,"[""cae softwares hypermesh abaqus ansys optistruct""",Exact,New canonical from resumes
+"""sheet metal""",S0482,"""sheet metal""",Exact,New canonical from resumes
+"""design for manufacturing""",S0483,"""design for manufacturing""",Exact,New canonical from resumes
+"""generating bill of materials""",S0484,"""generating bill of materials""",Exact,New canonical from resumes
+"""dfmea""",S0485,"""dfmea""",Exact,New canonical from resumes
+"""sculpting""",S0486,"""sculpting""",Exact,New canonical from resumes
+"""advanced material selection for rapid prototyping""",S0487,"""advanced material selection for rapid prototyping""",Exact,New canonical from resumes
+"""advanced manufacturing""",S0488,"""advanced manufacturing""",Exact,New canonical from resumes
+"""welding""",S0489,"""welding""",Exact,New canonical from resumes
+"""3d printing""",S0490,"""3d printing""",Exact,New canonical from resumes
+"""finite element analysis""",S0491,"""finite element analysis""",Exact,New canonical from resumes
+"""static analysis""",S0492,"""static analysis""",Exact,New canonical from resumes
+"""dynamic analysis""",S0493,"""dynamic analysis""",Exact,New canonical from resumes
+"""optimization""",S0494,"""optimization""",Exact,New canonical from resumes
+"""reliability engineering analysis""",S0495,"""reliability engineering analysis""",Exact,New canonical from resumes
+"""fluid analysis""",S0496,"""fluid analysis""",Exact,New canonical from resumes
+"""reliability engineering""",S0497,"""reliability engineering""",Exact,New canonical from resumes
+"""taguchi analysis""",S0498,"""taguchi analysis""",Exact,New canonical from resumes
+"""failure mode effect analysis fmea""",S0499,"""failure mode effect analysis fmea""",Exact,New canonical from resumes
+"""gearbox design""",S0500,"""gearbox design""",Exact,New canonical from resumes
+"""dynamic simulation""",S0501,"""dynamic simulation""",Exact,New canonical from resumes
+"""material assignment""",S0502,"""material assignment""",Exact,New canonical from resumes
+"""failure investigation""",S0503,"""failure investigation""",Exact,New canonical from resumes
+"""maintenance coordination""",S0504,"""maintenance coordination""",Exact,New canonical from resumes
+"""gd t""",S0505,"""gd t""",Exact,New canonical from resumes
+"""safety procedures""",S0506,"""safety procedures""",Exact,New canonical from resumes
+"""vibration analysis""",S0507,"""vibration analysis""",Exact,New canonical from resumes
+"""automation analysis""",S0508,"""automation analysis""",Exact,New canonical from resumes
+"""process parameters analysis""",S0509,"""process parameters analysis""",Exact,New canonical from resumes
+"""shop floor design""",S0510,"""shop floor design""",Exact,New canonical from resumes
+"""statistical analysis""]",S0511,"""statistical analysis""]",Exact,New canonical from resumes
+"[""microsoft windows 10""",S0512,"[""microsoft windows 10""",Exact,New canonical from resumes
+"""memtest86""",S0513,"""memtest86""",Exact,New canonical from resumes
+"""mcafee endpoint security""",S0514,"""mcafee endpoint security""",Exact,New canonical from resumes
+"""acronis true image""",S0515,"""acronis true image""",Exact,New canonical from resumes
+"""wireshark""",S0516,"""wireshark""",Exact,New canonical from resumes
+"""hwinfo""",S0517,"""hwinfo""",Exact,New canonical from resumes
+"""vmware workstation""",S0518,"""vmware workstation""",Exact,New canonical from resumes
+"""powershell""",S0519,"""powershell""",Exact,New canonical from resumes
+"""hardware troubleshooting""",S0520,"""hardware troubleshooting""",Exact,New canonical from resumes
+"""software troubleshooting""",S0521,"""software troubleshooting""",Exact,New canonical from resumes
+"""it infrastructure management""",S0522,"""it infrastructure management""",Exact,New canonical from resumes
+"""network analysis""",S0523,"""network analysis""",Exact,New canonical from resumes
+"""customer support""]",S0524,"""customer support""]",Exact,New canonical from resumes
+"[""client engagement""",S0525,"[""client engagement""",Exact,New canonical from resumes
+"""analytical and business acumen""",S0526,"""analytical and business acumen""",Exact,New canonical from resumes
+"""demand creation pursuits""",S0527,"""demand creation pursuits""",Exact,New canonical from resumes
+"""federal government experience""",S0528,"""federal government experience""",Exact,New canonical from resumes
+"""it support services""",S0529,"""it support services""",Exact,New canonical from resumes
+"""data storage""",S0530,"""data storage""",Exact,New canonical from resumes
+"""interoperability""",S0531,"""interoperability""",Exact,New canonical from resumes
+"""advanced data analytics""",S0532,"""advanced data analytics""",Exact,New canonical from resumes
+"""healthcare""",S0533,"""healthcare""",Exact,New canonical from resumes
+"""data acquisition""",S0534,"""data acquisition""",Exact,New canonical from resumes
+"""data mining""",S0535,"""data mining""",Exact,New canonical from resumes
+"""saas""",S0536,"""saas""",Exact,New canonical from resumes
+"""repository services""",S0537,"""repository services""",Exact,New canonical from resumes
+"""software solutions""",S0538,"""software solutions""",Exact,New canonical from resumes
+"""records management""",S0539,"""records management""",Exact,New canonical from resumes
+"""interoperability networks""",S0540,"""interoperability networks""",Exact,New canonical from resumes
+"""digital technology""",S0541,"""digital technology""",Exact,New canonical from resumes
+"""storage""",S0542,"""storage""",Exact,New canonical from resumes
+"""revenue generation""",S0543,"""revenue generation""",Exact,New canonical from resumes
+"""industrial engineering""",S0544,"""industrial engineering""",Exact,New canonical from resumes
+"""statistical release testing""",S0545,"""statistical release testing""",Exact,New canonical from resumes
+"""client engineering support services""",S0546,"""client engineering support services""",Exact,New canonical from resumes
+"""sales management""",S0547,"""sales management""",Exact,New canonical from resumes
+"""hipaa compliance""]",S0548,"""hipaa compliance""]",Exact,New canonical from resumes
+"[""academic""",S0549,"[""academic""",Exact,New canonical from resumes
+"""edge""",S0550,"""edge""",Exact,New canonical from resumes
+"""fiber optics""",S0551,"""fiber optics""",Exact,New canonical from resumes
+"""scanning""",S0552,"""scanning""",Exact,New canonical from resumes
+"""measurement""",S0553,"""measurement""",Exact,New canonical from resumes
+"""tooling""",S0554,"""tooling""",Exact,New canonical from resumes
+"""collaborative""",S0555,"""collaborative""",Exact,New canonical from resumes
+"""etching""",S0556,"""etching""",Exact,New canonical from resumes
+"""cmp""",S0557,"""cmp""",Exact,New canonical from resumes
+"""wet etch""",S0558,"""wet etch""",Exact,New canonical from resumes
+"""fabrication""",S0559,"""fabrication""",Exact,New canonical from resumes
+"""n/a""]",S0560,"""n/a""]",Exact,New canonical from resumes
+"[""visio""",S0561,"[""visio""",Exact,New canonical from resumes
+"""inventor""",S0562,"""inventor""",Exact,New canonical from resumes
+"""ergonomics""",S0563,"""ergonomics""",Exact,New canonical from resumes
+"""manufacturing processes""",S0564,"""manufacturing processes""",Exact,New canonical from resumes
+"""contract administration""",S0565,"""contract administration""",Exact,New canonical from resumes
+"[""troubleshooting and problem solving""",S0566,"[""troubleshooting and problem solving""",Exact,New canonical from resumes
+"""exceptional telephone etiquette""",S0567,"""exceptional telephone etiquette""",Exact,New canonical from resumes
+"""professional demeanor""",S0568,"""professional demeanor""",Exact,New canonical from resumes
+"""self-starter""",S0569,"""self-starter""",Exact,New canonical from resumes
+"""time management ability""",S0570,"""time management ability""",Exact,New canonical from resumes
+"""ability to prioritize""",S0571,"""ability to prioritize""",Exact,New canonical from resumes
+"""deadline-oriented""",S0572,"""deadline-oriented""",Exact,New canonical from resumes
+"""employee training and development""",S0573,"""employee training and development""",Exact,New canonical from resumes
+"""sales software salesforce.com paperless proposals""",S0574,"""sales software salesforce.com paperless proposals""",Exact,New canonical from resumes
+"""administrative microsoft office suite concur""",S0575,"""administrative microsoft office suite concur""",Exact,New canonical from resumes
+"""trade marketing""",S0576,"""trade marketing""",Exact,New canonical from resumes
+"[""training program implementation""",S0577,"[""training program implementation""",Exact,New canonical from resumes
+"""drilling engineering""",S0578,"""drilling engineering""",Exact,New canonical from resumes
+"""building commissioning experience""",S0579,"""building commissioning experience""",Exact,New canonical from resumes
+"""a highly motivated and energetic personality.""",S0580,"""a highly motivated and energetic personality.""",Exact,New canonical from resumes
+"""ability to take initiative and exhibit flexibility.""",S0581,"""ability to take initiative and exhibit flexibility.""",Exact,New canonical from resumes
+"""excellent customer service skills.""",S0582,"""excellent customer service skills.""",Exact,New canonical from resumes
+"""leadership development program""",S0583,"""leadership development program""",Exact,New canonical from resumes
+"""interpersonal communication skills""",S0584,"""interpersonal communication skills""",Exact,New canonical from resumes
+"""demonstrated organizational/planning skills""",S0585,"""demonstrated organizational/planning skills""",Exact,New canonical from resumes
+"""adaptability""",S0586,"""adaptability""",Exact,New canonical from resumes
+"""directing""",S0587,"""directing""",Exact,New canonical from resumes
+"""business management""",S0588,"""business management""",Exact,New canonical from resumes
+"""mechanical""]",S0589,"""mechanical""]",Exact,New canonical from resumes
+"[""operational analysis""",S0590,"[""operational analysis""",Exact,New canonical from resumes
+"""exceptional time management""",S0591,"""exceptional time management""",Exact,New canonical from resumes
+"""geometric dimensioning""",S0592,"""geometric dimensioning""",Exact,New canonical from resumes
+"""strong leader""",S0593,"""strong leader""",Exact,New canonical from resumes
+"""manufacturing process controls""",S0594,"""manufacturing process controls""",Exact,New canonical from resumes
+"""analog and digital circuitry""",S0595,"""analog and digital circuitry""",Exact,New canonical from resumes
+"""detail drawings""",S0596,"""detail drawings""",Exact,New canonical from resumes
+"""comfortable working at heights and odd locations""",S0597,"""comfortable working at heights and odd locations""",Exact,New canonical from resumes
+"""technical plan execution aptitude""",S0598,"""technical plan execution aptitude""",Exact,New canonical from resumes
+"""understand overtime and on-call basis may be required""",S0599,"""understand overtime and on-call basis may be required""",Exact,New canonical from resumes
+"""rigging""",S0600,"""rigging""",Exact,New canonical from resumes
+"""soldering drilling- tapping""",S0601,"""soldering drilling- tapping""",Exact,New canonical from resumes
+"""measurement and layout""",S0602,"""measurement and layout""",Exact,New canonical from resumes
+"""test and measurement equipment""",S0603,"""test and measurement equipment""",Exact,New canonical from resumes
+"""equipment calibration""",S0604,"""equipment calibration""",Exact,New canonical from resumes
+"""assembly""",S0605,"""assembly""",Exact,New canonical from resumes
+"""broadcast""",S0606,"""broadcast""",Exact,New canonical from resumes
+"""calibration""",S0607,"""calibration""",Exact,New canonical from resumes
+"""concept""",S0608,"""concept""",Exact,New canonical from resumes
+"""modeling""",S0609,"""modeling""",Exact,New canonical from resumes
+"""naval""",S0610,"""naval""",Exact,New canonical from resumes
+"""oscilloscopes""",S0611,"""oscilloscopes""",Exact,New canonical from resumes
+"""record keeping""",S0612,"""record keeping""",Exact,New canonical from resumes
+"""fm""",S0613,"""fm""",Exact,New canonical from resumes
+"""sps""",S0614,"""sps""",Exact,New canonical from resumes
+"""test equipment""",S0615,"""test equipment""",Exact,New canonical from resumes
+"""uhf""",S0616,"""uhf""",Exact,New canonical from resumes
+"""wiring""",S0617,"""wiring""",Exact,New canonical from resumes
+"""rf systems""",S0618,"""rf systems""",Exact,New canonical from resumes
+"""component level testing""",S0619,"""component level testing""",Exact,New canonical from resumes
+"""calibrations""",S0620,"""calibrations""",Exact,New canonical from resumes
+"""low voltage control wiring""",S0621,"""low voltage control wiring""",Exact,New canonical from resumes
+"""field service engineering""",S0622,"""field service engineering""",Exact,New canonical from resumes
+"""engineering project issues""",S0623,"""engineering project issues""",Exact,New canonical from resumes
+"""collaboration with engineers""",S0624,"""collaboration with engineers""",Exact,New canonical from resumes
+"""research and development""",S0625,"""research and development""",Exact,New canonical from resumes
+"""component testing""",S0626,"""component testing""",Exact,New canonical from resumes
+"""proof of performance test""",S0627,"""proof of performance test""",Exact,New canonical from resumes
+"""repair""",S0628,"""repair""",Exact,New canonical from resumes
+"""manuals""",S0629,"""manuals""",Exact,New canonical from resumes
+"""operate radar""",S0630,"""operate radar""",Exact,New canonical from resumes
+"""communications equipment""",S0631,"""communications equipment""",Exact,New canonical from resumes
+"""naval tactical data systems operator""]",S0632,"""naval tactical data systems operator""]",Exact,New canonical from resumes
+"[""microsoft excel project and visio""",S0633,"[""microsoft excel project and visio""",Exact,New canonical from resumes
+"""adobe""",S0634,"""adobe""",Exact,New canonical from resumes
+"""engineering standards""",S0635,"""engineering standards""",Exact,New canonical from resumes
+"""osha regulations""",S0636,"""osha regulations""",Exact,New canonical from resumes
+"""ms office proficient""",S0637,"""ms office proficient""",Exact,New canonical from resumes
+"""competency in procedure development""",S0638,"""competency in procedure development""",Exact,New canonical from resumes
+"""advanced anatomy knowledge""",S0639,"""advanced anatomy knowledge""",Exact,New canonical from resumes
+"""advanced knowledge of embedded systems""",S0640,"""advanced knowledge of embedded systems""",Exact,New canonical from resumes
+"""vast technical knowledge""",S0641,"""vast technical knowledge""",Exact,New canonical from resumes
+"""windows xp/vista""",S0642,"""windows xp/vista""",Exact,New canonical from resumes
+"""dhcp/dns ethernet and firewall proficient""",S0643,"""dhcp/dns ethernet and firewall proficient""",Exact,New canonical from resumes
+"""lan aptitude""",S0644,"""lan aptitude""",Exact,New canonical from resumes
+"""proficient in avg printers pc security systems""",S0645,"""proficient in avg printers pc security systems""",Exact,New canonical from resumes
+"""knowledge of manufacturing test methodologies.""",S0646,"""knowledge of manufacturing test methodologies.""",Exact,New canonical from resumes
+"""database servers""",S0647,"""database servers""",Exact,New canonical from resumes
+"""local remoter systems support""",S0648,"""local remoter systems support""",Exact,New canonical from resumes
+"""proficiency in tcp/ip protocols""",S0649,"""proficiency in tcp/ip protocols""",Exact,New canonical from resumes
+"""document management""",S0650,"""document management""",Exact,New canonical from resumes
+"""ability to stand and walk for hours at time.""",S0651,"""ability to stand and walk for hours at time.""",Exact,New canonical from resumes
+"""biomedical equipment repair""",S0652,"""biomedical equipment repair""",Exact,New canonical from resumes
+"""networking systems integration""",S0653,"""networking systems integration""",Exact,New canonical from resumes
+"""customer relations""",S0654,"""customer relations""",Exact,New canonical from resumes
+"""technical knowledge""",S0655,"""technical knowledge""",Exact,New canonical from resumes
+"""patient care""",S0656,"""patient care""",Exact,New canonical from resumes
+"""schedule management""",S0657,"""schedule management""",Exact,New canonical from resumes
+"""clerical""]",S0658,"""clerical""]",Exact,New canonical from resumes
+"""internal audit and compliance""",S0659,"""internal audit and compliance""",Exact,New canonical from resumes
+"[""biology""",S0660,"[""biology""",Exact,New canonical from resumes
+"""charts""",S0661,"""charts""",Exact,New canonical from resumes
+"""oral""",S0662,"""oral""",Exact,New canonical from resumes
+"""cost analysis""",S0663,"""cost analysis""",Exact,New canonical from resumes
+"""data analysis""",S0664,"""data analysis""",Exact,New canonical from resumes
+"""equipment operation""",S0665,"""equipment operation""",Exact,New canonical from resumes
+"""experiments""",S0666,"""experiments""",Exact,New canonical from resumes
+"""graphs""",S0667,"""graphs""",Exact,New canonical from resumes
+"""oil""",S0668,"""oil""",Exact,New canonical from resumes
+"""pq""",S0669,"""pq""",Exact,New canonical from resumes
+"""process-engineering""",S0670,"""process-engineering""",Exact,New canonical from resumes
+"""protocols""",S0671,"""protocols""",Exact,New canonical from resumes
+"""technician""",S0672,"""technician""",Exact,New canonical from resumes
+"""trouble shooting""",S0673,"""trouble shooting""",Exact,New canonical from resumes
+"""validation""",S0674,"""validation""",Exact,New canonical from resumes
+"""outlook""",S0675,"""outlook""",Exact,New canonical from resumes
+"""salesforce.com crm""",S0676,"""salesforce.com crm""",Exact,New canonical from resumes
+"""closing""",S0677,"""closing""",Exact,New canonical from resumes
+"""e-mail""",S0258,"""email""",Fuzzy,"Fuzzy matched to ""email"""
+"""energy saving""",S0678,"""energy saving""",Exact,New canonical from resumes
+"""focus""",S0679,"""focus""",Exact,New canonical from resumes
+"""newsletter""",S0680,"""newsletter""",Exact,New canonical from resumes
+"""strong relationships""",S0681,"""strong relationships""",Exact,New canonical from resumes
+"""name brand awareness""",S0682,"""name brand awareness""",Exact,New canonical from resumes
+"""c-suite""",S0683,"""c-suite""",Exact,New canonical from resumes
+"""building owners""",S0684,"""building owners""",Exact,New canonical from resumes
+"""solution skills""",S0685,"""solution skills""",Exact,New canonical from resumes
+"""lean six sigma""",S0686,"""lean six sigma""",Exact,New canonical from resumes
+"""network computer software and hardware systems""",S0687,"""network computer software and hardware systems""",Exact,New canonical from resumes
+"""managed services""",S0688,"""managed services""",Exact,New canonical from resumes
+"""c-level executives""",S0689,"""c-level executives""",Exact,New canonical from resumes
+"""it manager""",S0690,"""it manager""",Exact,New canonical from resumes
+"""engineers""",S0691,"""engineers""",Exact,New canonical from resumes
+"""growing sales""",S0692,"""growing sales""",Exact,New canonical from resumes
+"""vertical marketing""",S0693,"""vertical marketing""",Exact,New canonical from resumes
+"""medical practices""",S0694,"""medical practices""",Exact,New canonical from resumes
+"""opening new accounts""",S0695,"""opening new accounts""",Exact,New canonical from resumes
+"""managing long-term client relationships""",S0696,"""managing long-term client relationships""",Exact,New canonical from resumes
+"""cross-functional teams""",S0697,"""cross-functional teams""",Exact,New canonical from resumes
+"""design engineers""",S0698,"""design engineers""",Exact,New canonical from resumes
+"""new markets""",S0699,"""new markets""",Exact,New canonical from resumes
+"""key oem accounts""]",S0700,"""key oem accounts""]",Exact,New canonical from resumes
+"[""business systems analysis""",S0701,"[""business systems analysis""",Exact,New canonical from resumes
+"""business process improvement""",S0702,"""business process improvement""",Exact,New canonical from resumes
+"""forecasting and planning""",S0703,"""forecasting and planning""",Exact,New canonical from resumes
+"""requirements gathering""",S0704,"""requirements gathering""",Exact,New canonical from resumes
+"""scope and project definition""",S0705,"""scope and project definition""",Exact,New canonical from resumes
+"""technology architecture analysis""",S0706,"""technology architecture analysis""",Exact,New canonical from resumes
+"""integrated reporting information system iris""",S0707,"""integrated reporting information system iris""",Exact,New canonical from resumes
+"""cost-benefit analysis""",S0708,"""cost-benefit analysis""",Exact,New canonical from resumes
+"""functional requirements""",S0709,"""functional requirements""",Exact,New canonical from resumes
+"""requirement tracing""",S0710,"""requirement tracing""",Exact,New canonical from resumes
+"""business analysis""",S0711,"""business analysis""",Exact,New canonical from resumes
+"""big data""",S0712,"""big data""",Exact,New canonical from resumes
+"""business administration""",S0713,"""business administration""",Exact,New canonical from resumes
+"""business consulting""",S0714,"""business consulting""",Exact,New canonical from resumes
+"""business solutions""",S0715,"""business solutions""",Exact,New canonical from resumes
+"""business systems""",S0716,"""business systems""",Exact,New canonical from resumes
+"""client relations development""",S0717,"""client relations development""",Exact,New canonical from resumes
+"""law""",S0718,"""law""",Exact,New canonical from resumes
+"""market evaluation""",S0719,"""market evaluation""",Exact,New canonical from resumes
+"""enterprise""",S0720,"""enterprise""",Exact,New canonical from resumes
+"""performance reviews""",S0721,"""performance reviews""",Exact,New canonical from resumes
+"""performance management""",S0722,"""performance management""",Exact,New canonical from resumes
+"""proposal writing""",S0723,"""proposal writing""",Exact,New canonical from resumes
+"""speaking""",S0724,"""speaking""",Exact,New canonical from resumes
+"""professor""",S0725,"""professor""",Exact,New canonical from resumes
+"""recruitment""",S0726,"""recruitment""",Exact,New canonical from resumes
+"""scheme""",S0727,"""scheme""",Exact,New canonical from resumes
+"""strategic plans""",S0728,"""strategic plans""",Exact,New canonical from resumes
+"""supply chain management""",S0729,"""supply chain management""",Exact,New canonical from resumes
+"""tables""",S0730,"""tables""",Exact,New canonical from resumes
+"[""assembly""",S0731,"[""assembly""",Exact,New canonical from resumes
+"""automation""",S0732,"""automation""",Exact,New canonical from resumes
+"""cnc""",S0733,"""cnc""",Exact,New canonical from resumes
+"""electronics""",S0734,"""electronics""",Exact,New canonical from resumes
+"""layout""",S0735,"""layout""",Exact,New canonical from resumes
+"""machine tools""",S0736,"""machine tools""",Exact,New canonical from resumes
+"""mathematics""",S0737,"""mathematics""",Exact,New canonical from resumes
+"""packaging""",S0738,"""packaging""",Exact,New canonical from resumes
+"""plc""",S0739,"""plc""",Exact,New canonical from resumes
+"""programming""",S0740,"""programming""",Exact,New canonical from resumes
+"""recording""",S0741,"""recording""",Exact,New canonical from resumes
+"""spreadsheet""",S0742,"""spreadsheet""",Exact,New canonical from resumes
+"""team work""",S0743,"""team work""",Exact,New canonical from resumes
+"""mechanical design""",S0744,"""mechanical design""",Exact,New canonical from resumes
+"""production""",S0745,"""production""",Exact,New canonical from resumes
+"""precision machining""",S0746,"""precision machining""",Exact,New canonical from resumes
+"""g-code programming""",S0747,"""g-code programming""",Exact,New canonical from resumes
+"""production control""]",S0748,"""production control""]",Exact,New canonical from resumes
+"""search engine optimization seo""",S0749,"""search engine optimization seo""",Exact,New canonical from resumes
+"[""administrative support""",S0750,"[""administrative support""",Exact,New canonical from resumes
+"""scheduling appointments""",S0751,"""scheduling appointments""",Exact,New canonical from resumes
+"""benefits""",S0752,"""benefits""",Exact,New canonical from resumes
+"""conferences""",S0753,"""conferences""",Exact,New canonical from resumes
+"""data base""",S0146,"""database""",Fuzzy,"Fuzzy matched to ""database"""
+"""home care""",S0754,"""home care""",Exact,New canonical from resumes
+"""home health""",S0755,"""home health""",Exact,New canonical from resumes
+"""human resources""",S0756,"""human resources""",Exact,New canonical from resumes
+"""hr""",S0757,"""hr""",Exact,New canonical from resumes
+"""maintaining inventory""",S0758,"""maintaining inventory""",Exact,New canonical from resumes
+"""management skills""",S0759,"""management skills""",Exact,New canonical from resumes
+"""internet research""",S0760,"""internet research""",Exact,New canonical from resumes
+"""patient safety""",S0761,"""patient safety""",Exact,New canonical from resumes
+"""pricing""",S0762,"""pricing""",Exact,New canonical from resumes
+"""purchasing""",S0763,"""purchasing""",Exact,New canonical from resumes
+"""transportation""",S0764,"""transportation""",Exact,New canonical from resumes
+"""travel arrangements""",S0765,"""travel arrangements""",Exact,New canonical from resumes
+"""social media""",S0766,"""social media""",Exact,New canonical from resumes
+"""powerpoint""",S0767,"""powerpoint""",Exact,New canonical from resumes
+"""hr compliance""",S0768,"""hr compliance""",Exact,New canonical from resumes
+"""managed care""",S0769,"""managed care""",Exact,New canonical from resumes
+"""nursing scheduling""",S0770,"""nursing scheduling""",Exact,New canonical from resumes
+"""file management""",S0771,"""file management""",Exact,New canonical from resumes
+"""clinic operations""",S0772,"""clinic operations""",Exact,New canonical from resumes
+"""patient support""",S0773,"""patient support""",Exact,New canonical from resumes
+"""phone management""",S0774,"""phone management""",Exact,New canonical from resumes
+"""verification""",S0775,"""verification""",Exact,New canonical from resumes
+"""liaison""",S0776,"""liaison""",Exact,New canonical from resumes
+"""pricing negotiation""]",S0777,"""pricing negotiation""]",Exact,New canonical from resumes
+"[""solidworks 2005""",S0778,"[""solidworks 2005""",Exact,New canonical from resumes
+"""electrical drafting""",S0779,"""electrical drafting""",Exact,New canonical from resumes
+"""tube furnaces""",S0780,"""tube furnaces""",Exact,New canonical from resumes
+"""administrative""",S0781,"""administrative""",Exact,New canonical from resumes
+"""cash receipts""",S0782,"""cash receipts""",Exact,New canonical from resumes
+"""instruction""",S0783,"""instruction""",Exact,New canonical from resumes
+"""police""",S0784,"""police""",Exact,New canonical from resumes
+"""reconciling""",S0785,"""reconciling""",Exact,New canonical from resumes
+"[""project coordination""",S0786,"[""project coordination""",Exact,New canonical from resumes
+"""forward-thinking mindset""",S0787,"""forward-thinking mindset""",Exact,New canonical from resumes
+"""microsoft office proficiency""",S0788,"""microsoft office proficiency""",Exact,New canonical from resumes
+"""business writing""",S0789,"""business writing""",Exact,New canonical from resumes
+"""results-oriented""",S0790,"""results-oriented""",Exact,New canonical from resumes
+"""self-directed""",S0791,"""self-directed""",Exact,New canonical from resumes
+"""organized and detail-oriented""",S0792,"""organized and detail-oriented""",Exact,New canonical from resumes
+"""accounting systems""",S0793,"""accounting systems""",Exact,New canonical from resumes
+"""aia""",S0794,"""aia""",Exact,New canonical from resumes
+"""as400""",S0795,"""as400""",Exact,New canonical from resumes
+"""billings""",S0796,"""billings""",Exact,New canonical from resumes
+"""bluebeam""",S0797,"""bluebeam""",Exact,New canonical from resumes
+"""clerical""",S0798,"""clerical""",Exact,New canonical from resumes
+"""construction management""",S0799,"""construction management""",Exact,New canonical from resumes
+"""special events""",S0800,"""special events""",Exact,New canonical from resumes
+"""imaging""",S0801,"""imaging""",Exact,New canonical from resumes
+"""jd edwards""",S0802,"""jd edwards""",Exact,New canonical from resumes
+"""microsoft""",S0803,"""microsoft""",Exact,New canonical from resumes
+"""negotiations""",S0804,"""negotiations""",Exact,New canonical from resumes
+"""coding""",S0805,"""coding""",Exact,New canonical from resumes
+"""property management""",S0806,"""property management""",Exact,New canonical from resumes
+"""rfi""",S0807,"""rfi""",Exact,New canonical from resumes
+"""taxes""",S0808,"""taxes""",Exact,New canonical from resumes
+"""trade shows""",S0809,"""trade shows""",Exact,New canonical from resumes
+"""licensing""",S0810,"""licensing""",Exact,New canonical from resumes
+"""insurance management""",S0811,"""insurance management""",Exact,New canonical from resumes
+"""construction coordination""",S0812,"""construction coordination""",Exact,New canonical from resumes
+"""design phase planning""",S0813,"""design phase planning""",Exact,New canonical from resumes
+"""manual design""",S0814,"""manual design""",Exact,New canonical from resumes
+"""clerical support""",S0815,"""clerical support""",Exact,New canonical from resumes
+"""document management""]",S0816,"""document management""]",Exact,New canonical from resumes
+"""relationship management""",S0817,"""relationship management""",Exact,New canonical from resumes
+"""training programs""",S0818,"""training programs""",Exact,New canonical from resumes
+"""vat and tax""",S0819,"""vat and tax""",Exact,New canonical from resumes
+"""ngo""",S0820,"""ngo""",Exact,New canonical from resumes
+"""marketing strategies""",S0821,"""marketing strategies""",Exact,New canonical from resumes
+"""safety and security management""]",S0822,"""safety and security management""]",Exact,New canonical from resumes
+"[""data analysis""",S0823,"[""data analysis""",Exact,New canonical from resumes
+"""data analytics""",S0824,"""data analytics""",Exact,New canonical from resumes
+"""linear regression""",S0825,"""linear regression""",Exact,New canonical from resumes
+"""logistic regression""",S0826,"""logistic regression""",Exact,New canonical from resumes
+"""predictive modeling""",S0827,"""predictive modeling""",Exact,New canonical from resumes
+[],S0828,[],Exact,New canonical from resumes
+"[""marketing""",S0829,"[""marketing""",Exact,New canonical from resumes
+"""promotional""",S0830,"""promotional""",Exact,New canonical from resumes
+"""and marketing""",S0831,"""and marketing""",Exact,New canonical from resumes
+"""sales and""",S0832,"""sales and""",Exact,New canonical from resumes
+"""aviation""",S0833,"""aviation""",Exact,New canonical from resumes
+"""class""",S0834,"""class""",Exact,New canonical from resumes
+"""comprehensive large array data stewardship system""",S0835,"""comprehensive large array data stewardship system""",Exact,New canonical from resumes
+"""excellent multitasker""",S0836,"""excellent multitasker""",Exact,New canonical from resumes
+"""simultaneous""",S0837,"""simultaneous""",Exact,New canonical from resumes
+"""accounts and""",S0838,"""accounts and""",Exact,New canonical from resumes
+"""advertising""",S0839,"""advertising""",Exact,New canonical from resumes
+"""branding""",S0840,"""branding""",Exact,New canonical from resumes
+"""community outreach""",S0841,"""community outreach""",Exact,New canonical from resumes
+"""from sales""",S0842,"""from sales""",Exact,New canonical from resumes
+"""its""",S0843,"""its""",Exact,New canonical from resumes
+"""managed sales""",S0844,"""managed sales""",Exact,New canonical from resumes
+"""of sales""",S0845,"""of sales""",Exact,New canonical from resumes
+"""increase""",S0846,"""increase""",Exact,New canonical from resumes
+"""audit""",S0847,"""audit""",Exact,New canonical from resumes
+"""cost control""",S0848,"""cost control""",Exact,New canonical from resumes
+"""executive assistant""",S0849,"""executive assistant""",Exact,New canonical from resumes
+"""for selling""",S0850,"""for selling""",Exact,New canonical from resumes
+"""ordering""",S0851,"""ordering""",Exact,New canonical from resumes
+"""selling and""",S0852,"""selling and""",Exact,New canonical from resumes
+"""accountable for""",S0853,"""accountable for""",Exact,New canonical from resumes
+"""forecasting""",S0854,"""forecasting""",Exact,New canonical from resumes
+"""implemented sales""",S0855,"""implemented sales""",Exact,New canonical from resumes
+"""key accounts""",S0856,"""key accounts""",Exact,New canonical from resumes
+"""market trends""",S0857,"""market trends""",Exact,New canonical from resumes
+"""sale and""",S0858,"""sale and""",Exact,New canonical from resumes
+"""sales objectives""",S0859,"""sales objectives""",Exact,New canonical from resumes
+"""sales strategies""",S0860,"""sales strategies""",Exact,New canonical from resumes
+"""the sale""",S0861,"""the sale""",Exact,New canonical from resumes
+"""the sales""",S0862,"""the sales""",Exact,New canonical from resumes
+"""marketing plan""",S0863,"""marketing plan""",Exact,New canonical from resumes
+"""overall sales""",S0864,"""overall sales""",Exact,New canonical from resumes
+"""project development""",S0865,"""project development""",Exact,New canonical from resumes
+"""sales plan""",S0866,"""sales plan""",Exact,New canonical from resumes
+"""energetic""",S0867,"""energetic""",Exact,New canonical from resumes
+"""highly organized""",S0868,"""highly organized""",Exact,New canonical from resumes
+"""mac""",S0869,"""mac""",Exact,New canonical from resumes
+"""quicken""",S0870,"""quicken""",Exact,New canonical from resumes
+"""san""",S0871,"""san""",Exact,New canonical from resumes
+"""self motivated""",S0872,"""self motivated""",Exact,New canonical from resumes
+"""storage area network""",S0873,"""storage area network""",Exact,New canonical from resumes
+"""very organized""",S0874,"""very organized""",Exact,New canonical from resumes
+"""shipping""",S0875,"""shipping""",Exact,New canonical from resumes
+"""translation""",S0876,"""translation""",Exact,New canonical from resumes
+"""client management""]",S0877,"""client management""]",Exact,New canonical from resumes
+"""videoscribe software""",S0878,"""videoscribe software""",Exact,New canonical from resumes
+"""peoplesoft finance applications""",S0879,"""peoplesoft finance applications""",Exact,New canonical from resumes
+"""client relations""",S0880,"""client relations""",Exact,New canonical from resumes
+"""eclipse""",S0881,"""eclipse""",Exact,New canonical from resumes
+"""financial reporting""",S0882,"""financial reporting""",Exact,New canonical from resumes
+"""front office""",S0883,"""front office""",Exact,New canonical from resumes
+"""hiring""",S0884,"""hiring""",Exact,New canonical from resumes
+"""instructional design""",S0885,"""instructional design""",Exact,New canonical from resumes
+"""leadership training""",S0886,"""leadership training""",Exact,New canonical from resumes
+"""needs analysis""",S0887,"""needs analysis""",Exact,New canonical from resumes
+"""payables""",S0888,"""payables""",Exact,New canonical from resumes
+"""peoplesoft hrms""",S0889,"""peoplesoft hrms""",Exact,New canonical from resumes
+"""peoplesoft""",S0890,"""peoplesoft""",Exact,New canonical from resumes
+"""project plans""",S0891,"""project plans""",Exact,New canonical from resumes
+"""training materials""",S0892,"""training materials""",Exact,New canonical from resumes
+"""training design and development""",S0893,"""training design and development""",Exact,New canonical from resumes
+"""training material""",S0894,"""training material""",Exact,New canonical from resumes
+"""upgrade""",S0895,"""upgrade""",Exact,New canonical from resumes
+"""view""",S0896,"""view""",Exact,New canonical from resumes
+"""training facilitation""",S0897,"""training facilitation""",Exact,New canonical from resumes
+"""training management""",S0898,"""training management""",Exact,New canonical from resumes
+"""online course instruction""]",S0899,"""online course instruction""]",Exact,New canonical from resumes
+"""internal audit and compliance""]",S0900,"""internal audit and compliance""]",Exact,New canonical from resumes
+"""ieltsinternet browsing online work ability.""",S0901,"""ieltsinternet browsing online work ability.""",Exact,New canonical from resumes
+"[""account reconciliation processes""",S0902,"[""account reconciliation processes""",Exact,New canonical from resumes
+"""interpersonal active-listening and critical thinking skills""",S0903,"""interpersonal active-listening and critical thinking skills""",Exact,New canonical from resumes
+"""proficient in polish language""",S0904,"""proficient in polish language""",Exact,New canonical from resumes
+"""data entry""",S0905,"""data entry""",Exact,New canonical from resumes
+"""superior analytical skills""",S0906,"""superior analytical skills""",Exact,New canonical from resumes
+"""general ledger proficiency""",S0907,"""general ledger proficiency""",Exact,New canonical from resumes
+"""trade marketing""]",S0908,"""trade marketing""]",Exact,New canonical from resumes
+"[""ifixit pro tech toolkit""",S0909,"[""ifixit pro tech toolkit""",Exact,New canonical from resumes
+"""passmark memtest86""",S0910,"""passmark memtest86""",Exact,New canonical from resumes
+"""malwarebytes""",S0911,"""malwarebytes""",Exact,New canonical from resumes
+"""ultimate boot cd ubcd""",S0912,"""ultimate boot cd ubcd""",Exact,New canonical from resumes
+"""windows installation usb/dvd""",S0913,"""windows installation usb/dvd""",Exact,New canonical from resumes
+"""driver booster""",S0914,"""driver booster""",Exact,New canonical from resumes
+"""falcon dust-off compressed gas duster""",S0915,"""falcon dust-off compressed gas duster""",Exact,New canonical from resumes
+"[""dasylab""",S0916,"[""dasylab""",Exact,New canonical from resumes
+"""labview""",S0917,"""labview""",Exact,New canonical from resumes
+"""electrical""",S0918,"""electrical""",Exact,New canonical from resumes
+"""lean/5s""",S0919,"""lean/5s""",Exact,New canonical from resumes
+"""hydraulic testing""",S0920,"""hydraulic testing""",Exact,New canonical from resumes
+"""internal audit""",S0921,"""internal audit""",Exact,New canonical from resumes
+"""coaching/mentoring""",S0922,"""coaching/mentoring""",Exact,New canonical from resumes
+"""technical vantive clarify""",S0923,"""technical vantive clarify""",Exact,New canonical from resumes
+"""ability to translate technical specifications""",S0924,"""ability to translate technical specifications""",Exact,New canonical from resumes
+"""iso9001 and as9100 auditing""",S0925,"""iso9001 and as9100 auditing""",Exact,New canonical from resumes
+"""waste reduction""",S0926,"""waste reduction""",Exact,New canonical from resumes
+"""underwriting""",S0927,"""underwriting""",Exact,New canonical from resumes
+"[""3d modeling""",S0928,"[""3d modeling""",Exact,New canonical from resumes
+"""architectural drafting""",S0929,"""architectural drafting""",Exact,New canonical from resumes
+"""read blueprints""",S0930,"""read blueprints""",Exact,New canonical from resumes
+"""carpentry""",S0931,"""carpentry""",Exact,New canonical from resumes
+"""floor plans""",S0932,"""floor plans""",Exact,New canonical from resumes
+"""frame""",S0933,"""frame""",Exact,New canonical from resumes
+"""3dsmax""",S0934,"""3dsmax""",Exact,New canonical from resumes
+"""microsoft office applications""",S0935,"""microsoft office applications""",Exact,New canonical from resumes
+"""multi-tasking""",S0936,"""multi-tasking""",Exact,New canonical from resumes
+"""painting""",S0937,"""painting""",Exact,New canonical from resumes
+"""problem solving skills""",S0938,"""problem solving skills""",Exact,New canonical from resumes
+"""renovation""",S0939,"""renovation""",Exact,New canonical from resumes
+"""revit""",S0940,"""revit""",Exact,New canonical from resumes
+"""self-motivated""",S0872,"""self motivated""",Fuzzy,"Fuzzy matched to ""self motivated"""
+"""supervisor""",S0941,"""supervisor""",Exact,New canonical from resumes
+"""creating and finalizing drawings""",S0942,"""creating and finalizing drawings""",Exact,New canonical from resumes
+"""review projects""",S0943,"""review projects""",Exact,New canonical from resumes
+"""assisting customers""",S0944,"""assisting customers""",Exact,New canonical from resumes
+"""loaded and unloaded packages""",S0945,"""loaded and unloaded packages""",Exact,New canonical from resumes
+"""maintained campus upkeep""",S0946,"""maintained campus upkeep""",Exact,New canonical from resumes
+"""repaired replaced and installed signs""",S0947,"""repaired replaced and installed signs""",Exact,New canonical from resumes
+"""maintained building appearance""",S0948,"""maintained building appearance""",Exact,New canonical from resumes
+"""involved in renovation projects""",S0949,"""involved in renovation projects""",Exact,New canonical from resumes
+"""janitorial work""]",S0950,"""janitorial work""]",Exact,New canonical from resumes
+"""customer satisfaction""",S0951,"""customer satisfaction""",Exact,New canonical from resumes
+"[""careful and active listener""",S0952,"[""careful and active listener""",Exact,New canonical from resumes
+"""self-starter self-motivated""",S0953,"""self-starter self-motivated""",Exact,New canonical from resumes
+"""hungry for growth and continuous learning""",S0954,"""hungry for growth and continuous learning""",Exact,New canonical from resumes
+"""proactive and energetic""",S0955,"""proactive and energetic""",Exact,New canonical from resumes
+"[""microsoft word/excel""",S0956,"[""microsoft word/excel""",Exact,New canonical from resumes
+"""great plains dynamics""",S0957,"""great plains dynamics""",Exact,New canonical from resumes
+"""bi360 businessintelligence tool""",S0958,"""bi360 businessintelligence tool""",Exact,New canonical from resumes
+"[""skill 1""",S0959,"[""skill 1""",Exact,New canonical from resumes
+"""skill 3""",S0960,"""skill 3""",Exact,New canonical from resumes
+"""skill 5""",S0961,"""skill 5""",Exact,New canonical from resumes
+"""skill 2""",S0962,"""skill 2""",Exact,New canonical from resumes
+"""skill 4""",S0963,"""skill 4""",Exact,New canonical from resumes
+"""p l management""",S0964,"""p l management""",Exact,New canonical from resumes
+"[""cpr first aid certified""",S0965,"[""cpr first aid certified""",Exact,New canonical from resumes
+"""proficient in microsoft word""",S0966,"""proficient in microsoft word""",Exact,New canonical from resumes
+"""basic knowledge of microsoft powerpoint and excel""",S0967,"""basic knowledge of microsoft powerpoint and excel""",Exact,New canonical from resumes
+"""educational support""",S0968,"""educational support""",Exact,New canonical from resumes
+"""cpr first aid""]",S0969,"""cpr first aid""]",Exact,New canonical from resumes
+"""business analytics""",S0970,"""business analytics""",Exact,New canonical from resumes
+"[""key decision making""",S0971,"[""key decision making""",Exact,New canonical from resumes
+"""verbal and written communication""",S0972,"""verbal and written communication""",Exact,New canonical from resumes
+"""excellent at networking""",S0973,"""excellent at networking""",Exact,New canonical from resumes
+"""relationship building and management""",S0974,"""relationship building and management""",Exact,New canonical from resumes
+"""conflict resolution""",S0975,"""conflict resolution""",Exact,New canonical from resumes
+"""goals and performance""",S0976,"""goals and performance""",Exact,New canonical from resumes
+"""territory management""",S0977,"""territory management""",Exact,New canonical from resumes
+"""account management and development""",S0978,"""account management and development""",Exact,New canonical from resumes
+"""product and service sales""",S0979,"""product and service sales""",Exact,New canonical from resumes
+"""swot analysis""",S0980,"""swot analysis""",Exact,New canonical from resumes
+"""software""",S0981,"""software""",Exact,New canonical from resumes
+"""program management""]",S0982,"""program management""]",Exact,New canonical from resumes
+"[""agency""",S0983,"[""agency""",Exact,New canonical from resumes
+"""roofing""",S0984,"""roofing""",Exact,New canonical from resumes
+"""solidworks""]",S0985,"""solidworks""]",Exact,New canonical from resumes
+"""fluke 115 compact true-rms digital multimeter""",S0986,"""fluke 115 compact true-rms digital multimeter""",Exact,New canonical from resumes
+"""operations management""",S0987,"""operations management""",Exact,New canonical from resumes
+"""test stand fabrication""",S0988,"""test stand fabrication""",Exact,New canonical from resumes
+"""search engine optimization seo""]",S0989,"""search engine optimization seo""]",Exact,New canonical from resumes
+"""vat and tax""]",S0990,"""vat and tax""]",Exact,New canonical from resumes
+"[""seasoned leadership""",S0991,"[""seasoned leadership""",Exact,New canonical from resumes
+"""experienced manager""",S0992,"""experienced manager""",Exact,New canonical from resumes
+"""motivated""",S0993,"""motivated""",Exact,New canonical from resumes
+"[""organizational and planning skills""",S0994,"[""organizational and planning skills""",Exact,New canonical from resumes
+"""it skills shopper tally voyager""",S0995,"""it skills shopper tally voyager""",Exact,New canonical from resumes
+"""creativity and imagination""",S0996,"""creativity and imagination""",Exact,New canonical from resumes
+"""business and commercial acumen""",S0997,"""business and commercial acumen""",Exact,New canonical from resumes
+"""drive motivation and initiative""",S0998,"""drive motivation and initiative""",Exact,New canonical from resumes
+"""good team player""",S0999,"""good team player""",Exact,New canonical from resumes
+"""oral and written communication""",S1000,"""oral and written communication""",Exact,New canonical from resumes
+"""numerical and analytical ability""",S1001,"""numerical and analytical ability""",Exact,New canonical from resumes
+"""ability to lead and motivate a team""",S1002,"""ability to lead and motivate a team""",Exact,New canonical from resumes
+"""influencing and negotiation""",S1003,"""influencing and negotiation""",Exact,New canonical from resumes
+"""work under pressure and deadlines""",S1004,"""work under pressure and deadlines""",Exact,New canonical from resumes
+"""proficient in ms-office word/excel/powerpoint""",S1005,"""proficient in ms-office word/excel/powerpoint""",Exact,New canonical from resumes
+"""focus integrated erp software for retail garment stores""",S1006,"""focus integrated erp software for retail garment stores""",Exact,New canonical from resumes
+"""sales and marketing strategies""",S1007,"""sales and marketing strategies""",Exact,New canonical from resumes
+"""distribution network management""",S1008,"""distribution network management""",Exact,New canonical from resumes
+"""sales team management""",S1009,"""sales team management""",Exact,New canonical from resumes
+"""market research""",S1010,"""market research""",Exact,New canonical from resumes
+"""retail parameter management""",S1011,"""retail parameter management""",Exact,New canonical from resumes
+"""business expansion""",S1012,"""business expansion""",Exact,New canonical from resumes
+"""trade marketing strategy development""",S1013,"""trade marketing strategy development""",Exact,New canonical from resumes
+"""visual merchandising""",S1014,"""visual merchandising""",Exact,New canonical from resumes
+"""local marketing""",S1015,"""local marketing""",Exact,New canonical from resumes
+"""team motivation""",S1016,"""team motivation""",Exact,New canonical from resumes
+"""target achievement""",S1017,"""target achievement""",Exact,New canonical from resumes
+"""staff supervision""]",S1018,"""staff supervision""]",Exact,New canonical from resumes
+"[""advertising""",S1019,"[""advertising""",Exact,New canonical from resumes
+"""competitive""",S1020,"""competitive""",Exact,New canonical from resumes
+"""content""",S1021,"""content""",Exact,New canonical from resumes
+"""customer support""",S1022,"""customer support""",Exact,New canonical from resumes
+"""fashion""",S1023,"""fashion""",Exact,New canonical from resumes
+"""marketing material""",S1024,"""marketing material""",Exact,New canonical from resumes
+"""script""",S1025,"""script""",Exact,New canonical from resumes
+"""telephone""",S1026,"""telephone""",Exact,New canonical from resumes
+"""training manuals""",S1027,"""training manuals""",Exact,New canonical from resumes
+"""content marketing""",S1028,"""content marketing""",Exact,New canonical from resumes
+"""cross-functional work""",S1029,"""cross-functional work""",Exact,New canonical from resumes
+"""product knowledge""",S1030,"""product knowledge""",Exact,New canonical from resumes
+"""service quality""]",S1031,"""service quality""]",Exact,New canonical from resumes
+"[""assisted living""",S1032,"[""assisted living""",Exact,New canonical from resumes
+"""interpersonal and communication""",S1033,"""interpersonal and communication""",Exact,New canonical from resumes
+"""internal medicine""",S1034,"""internal medicine""",Exact,New canonical from resumes
+"""marketing/sales""",S1035,"""marketing/sales""",Exact,New canonical from resumes
+"""meetings""",S1036,"""meetings""",Exact,New canonical from resumes
+"""orthopedics""",S1037,"""orthopedics""",Exact,New canonical from resumes
+"""outside sales""",S1038,"""outside sales""",Exact,New canonical from resumes
+"""physical therapy""",S1039,"""physical therapy""",Exact,New canonical from resumes
+"""rehabilitation""",S1040,"""rehabilitation""",Exact,New canonical from resumes
+"""seminars""",S1041,"""seminars""",Exact,New canonical from resumes
+"""team player""",S1042,"""team player""",Exact,New canonical from resumes
+"""building referral relationships""",S1043,"""building referral relationships""",Exact,New canonical from resumes
+"""customer needs""",S1044,"""customer needs""",Exact,New canonical from resumes
+"""organizing seminars""",S1045,"""organizing seminars""",Exact,New canonical from resumes
+"""same store growth""",S1046,"""same store growth""",Exact,New canonical from resumes
+"""market analysis""",S1047,"""market analysis""",Exact,New canonical from resumes
+"""representation""",S1048,"""representation""",Exact,New canonical from resumes
+"""growth management""",S1049,"""growth management""",Exact,New canonical from resumes
+"""recognition""",S1050,"""recognition""",Exact,New canonical from resumes
+"""customer facilitation""",S1051,"""customer facilitation""",Exact,New canonical from resumes
+"""census maintenance""]",S1052,"""census maintenance""]",Exact,New canonical from resumes
+"[""business to business""",S1053,"[""business to business""",Exact,New canonical from resumes
+"""business to customer""",S1054,"""business to customer""",Exact,New canonical from resumes
+"""contract negotiation""",S1055,"""contract negotiation""",Exact,New canonical from resumes
+"""calm under pressure""",S1056,"""calm under pressure""",Exact,New canonical from resumes
+"""total quality management""",S1057,"""total quality management""",Exact,New canonical from resumes
+"[""bilingual spanish fluent speak read and write""",S1058,"[""bilingual spanish fluent speak read and write""",Exact,New canonical from resumes
+"""quickbooks""",S1059,"""quickbooks""",Exact,New canonical from resumes
+"""tax software""",S1060,"""tax software""",Exact,New canonical from resumes
+"""analytical""",S1061,"""analytical""",Exact,New canonical from resumes
+"""thoroughness""",S1062,"""thoroughness""",Exact,New canonical from resumes
+"""reconciled various general ledger fund accounts""",S1063,"""reconciled various general ledger fund accounts""",Exact,New canonical from resumes
+"""prepared various specialty reports""",S1064,"""prepared various specialty reports""",Exact,New canonical from resumes
+"""documenting operational procedures""",S1065,"""documenting operational procedures""",Exact,New canonical from resumes
+"""ascertain accuracy of financial reporting""",S1066,"""ascertain accuracy of financial reporting""",Exact,New canonical from resumes
+"""recorded monthly transactions""",S1067,"""recorded monthly transactions""",Exact,New canonical from resumes
+"""developed reconciliation format""",S1068,"""developed reconciliation format""",Exact,New canonical from resumes
+"[""accounts receivable professional""",S1069,"[""accounts receivable professional""",Exact,New canonical from resumes
+"""sales software salesforce.com tapscan""",S1070,"""sales software salesforce.com tapscan""",Exact,New canonical from resumes
+"""public relations software bacon s mediasource factiva""",S1071,"""public relations software bacon s mediasource factiva""",Exact,New canonical from resumes
+"""desktop publishing software photoshop illustrator html""",S1072,"""desktop publishing software photoshop illustrator html""",Exact,New canonical from resumes
+"""accounts receivable reporting enhancements""",S1073,"""accounts receivable reporting enhancements""",Exact,New canonical from resumes
+"""reconciliation procedures""",S1074,"""reconciliation procedures""",Exact,New canonical from resumes
+"""evaluated accounting requirements""",S1075,"""evaluated accounting requirements""",Exact,New canonical from resumes
+"""received recorded and banked cash checks and vouchers""",S1076,"""received recorded and banked cash checks and vouchers""",Exact,New canonical from resumes
+"""processed and issued money orders""",S1077,"""processed and issued money orders""",Exact,New canonical from resumes
+"""created training manuals""",S1078,"""created training manuals""",Exact,New canonical from resumes
+"""successfully managed activities""",S1079,"""successfully managed activities""",Exact,New canonical from resumes
+"""monitored daily activities""",S1080,"""monitored daily activities""",Exact,New canonical from resumes
+"""interviewed hired and trained""]",S1081,"""interviewed hired and trained""]",Exact,New canonical from resumes
+sap,S1082,SAP,Exact,New canonical from resumes
+"""fluent in spanish""",S1083,"""fluent in spanish""",Exact,New canonical from resumes
+"[""autocad""",S1084,"[""autocad""",Exact,New canonical from resumes
+"""ngo""]",S1085,"""ngo""]",Exact,New canonical from resumes
+"""skill 6""",S1086,"""skill 6""",Exact,New canonical from resumes
+"""internal audit""]",S1087,"""internal audit""]",Exact,New canonical from resumes
+"""keane care""",S1088,"""keane care""",Exact,New canonical from resumes
+"""ieltsinternet browsing online work ability.""]",S1089,"""ieltsinternet browsing online work ability.""]",Exact,New canonical from resumes
+"""human resource management""]",S1090,"""human resource management""]",Exact,New canonical from resumes
+eclipse,S1091,Eclipse,Exact,New canonical from resumes
+microsoft office,S1092,Microsoft office,Exact,New canonical from resumes
+"[""brand development""",S1093,"[""brand development""",Exact,New canonical from resumes
+"""analyzing market trends""",S1094,"""analyzing market trends""",Exact,New canonical from resumes
+"""established track record of exceptional sales results""",S1095,"""established track record of exceptional sales results""",Exact,New canonical from resumes
+"""excellent negotiating tactics""",S1096,"""excellent negotiating tactics""",Exact,New canonical from resumes
+"""skilled multi-tasker""",S1097,"""skilled multi-tasker""",Exact,New canonical from resumes
+"""salesforce lead management""",S1098,"""salesforce lead management""",Exact,New canonical from resumes
+"""balanced""",S1099,"""balanced""",Exact,New canonical from resumes
+"""assured internal controls""",S1100,"""assured internal controls""",Exact,New canonical from resumes
+windows,S1101,Windows,Exact,New canonical from resumes
+chef,S1102,CHEF,Exact,New canonical from resumes
+soap ui,S1103,SOAP UI,Exact,New canonical from resumes
+xml,S1104,XML,Exact,New canonical from resumes
+excel (less than 1 year),S1105,EXCEL (Less than 1 year),Exact,New canonical from resumes
+"""iso9001 and as9100 auditing""]",S1106,"""iso9001 and as9100 auditing""]",Exact,New canonical from resumes
+"""keane care""]",S1107,"""keane care""]",Exact,New canonical from resumes
+"[""business development sales leadership""",S1108,"[""business development sales leadership""",Exact,New canonical from resumes
+"""sales presentations""",S1109,"""sales presentations""",Exact,New canonical from resumes
+"""client development""",S1110,"""client development""",Exact,New canonical from resumes
+"""market expansion""",S1111,"""market expansion""",Exact,New canonical from resumes
+"""team building leadership""",S1112,"""team building leadership""",Exact,New canonical from resumes
+"""client engagement""",S1113,"""client engagement""",Exact,New canonical from resumes
+"""market analysis/competitive positioning""",S1114,"""market analysis/competitive positioning""",Exact,New canonical from resumes
+"""vendor sourcing/relations""",S1115,"""vendor sourcing/relations""",Exact,New canonical from resumes
+"""profit improvement""",S1116,"""profit improvement""",Exact,New canonical from resumes
+"""streamline""",S1117,"""streamline""",Exact,New canonical from resumes
+"""cold calling""",S1118,"""cold calling""",Exact,New canonical from resumes
+"""compliance management""",S1119,"""compliance management""",Exact,New canonical from resumes
+"""inventory levels""",S1120,"""inventory levels""",Exact,New canonical from resumes
+"""inventory control""",S1121,"""inventory control""",Exact,New canonical from resumes
+"""mailing""",S1122,"""mailing""",Exact,New canonical from resumes
+"""process management""",S1123,"""process management""",Exact,New canonical from resumes
+"""voip""",S1124,"""voip""",Exact,New canonical from resumes
+"""strategies""",S1125,"""strategies""",Exact,New canonical from resumes
+"""market share growth""",S1126,"""market share growth""",Exact,New canonical from resumes
+"""sales techniques""",S1127,"""sales techniques""",Exact,New canonical from resumes
+"""vendor relationships""",S1128,"""vendor relationships""",Exact,New canonical from resumes
+"""staff management""",S1129,"""staff management""",Exact,New canonical from resumes
+"""dot compliance""",S1130,"""dot compliance""",Exact,New canonical from resumes
+"""sales activities""",S1131,"""sales activities""",Exact,New canonical from resumes
+"""qualifying""",S1132,"""qualifying""",Exact,New canonical from resumes
+"""prospecting""",S1133,"""prospecting""",Exact,New canonical from resumes
+"""drilling projects""",S1134,"""drilling projects""",Exact,New canonical from resumes
+"""strategic leadership""",S1135,"""strategic leadership""",Exact,New canonical from resumes
+"""team management""",S1136,"""team management""",Exact,New canonical from resumes
+"""sales goals""",S1137,"""sales goals""",Exact,New canonical from resumes
+"""promotional marketing""]",S1138,"""promotional marketing""]",Exact,New canonical from resumes
+"""supervision""]",S1139,"""supervision""]",Exact,New canonical from resumes
+"""fluent in spanish""]",S1140,"""fluent in spanish""]",Exact,New canonical from resumes
+"""administrative support""]",S1141,"""administrative support""]",Exact,New canonical from resumes
+"""technical vantive clarify""]",S1142,"""technical vantive clarify""]",Exact,New canonical from resumes
+"""business analytics""]",S1143,"""business analytics""]",Exact,New canonical from resumes
+"""sales""]",S1144,"""sales""]",Exact,New canonical from resumes
+"""underwriting""]",S1145,"""underwriting""]",Exact,New canonical from resumes
+"""test stand fabrication""]",S1146,"""test stand fabrication""]",Exact,New canonical from resumes
+"""ability to translate technical specifications""]",S1147,"""ability to translate technical specifications""]",Exact,New canonical from resumes
+"""waste reduction""]",S1148,"""waste reduction""]",Exact,New canonical from resumes
+"""coaching/mentoring""]",S1149,"""coaching/mentoring""]",Exact,New canonical from resumes
+"""skill 6""]",S1150,"""skill 6""]",Exact,New canonical from resumes
+"""fluke 115 compact true-rms digital multimeter""]",S1151,"""fluke 115 compact true-rms digital multimeter""]",Exact,New canonical from resumes
+html (less than 1 year),S1152,HTML (Less than 1 year),Exact,New canonical from resumes
+oracle,S1153,Oracle,Exact,New canonical from resumes
+dojo,S1154,DOJO,Exact,New canonical from resumes
+svn,S1155,SVN,Exact,New canonical from resumes
+velocity,S1156,Velocity,Exact,New canonical from resumes
