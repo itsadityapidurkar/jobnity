@@ -202,7 +202,7 @@ SAMPLE_PROFILES = {
         "name": "Alex Morgan",
         "email": "alex.morgan@example.com",
         "phone": "+1 (555) 234-5678",
-        "skills": ["Python", "FastAPI", "React", "JavaScript", "PostgreSQL", "Docker", "Git", "REST APIs", "HTML5", "CSS3", "Tailwind CSS", "Linux"],
+        "skills": ["Python", "FastAPI", "React", "JavaScript", "PostgreSQL", "SQL", "Docker", "Git", "REST APIs", "HTML5", "CSS3", "Tailwind CSS", "Linux", "Problem Solving", "Communication", "Data Structures", "Algorithms", "Agile Methodologies"],
         "education": [{"degree": "B.S. in Computer Science", "institution": "University of California, Berkeley", "details": "Focus on Distributed Systems and Software Engineering. GPA: 3.8/4.0"}],
         "experience": [
             {"role": "Full Stack Developer", "company": "Acme Cloud Solutions", "duration": "2022 - Present", "description": "Built and scaled high-performance RESTful microservices with FastAPI and PostgreSQL. Engineered responsive web applications with React and Tailwind CSS."},
