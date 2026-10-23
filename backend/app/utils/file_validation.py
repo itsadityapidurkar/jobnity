@@ -27,6 +27,13 @@ def validate_uploaded_file(file: UploadFile) -> Tuple[str, str, int]:
     filename = os.path.basename(file.filename)
     ext = os.path.splitext(filename)[1].lower()
 
+    IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".bmp", ".tiff", ".heic"}
+    if ext in IMAGE_EXTENSIONS:
+        raise HTTPException(
+            status_code=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
+            detail="Image files and scanned photos (.png, .jpg, etc.) cannot be processed. Please upload a digital PDF (.pdf) or DOCX (.docx) document with selectable text."
+        )
+
     if ext not in ALLOWED_EXTENSIONS:
         raise HTTPException(
             status_code=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,

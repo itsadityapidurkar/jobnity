@@ -31,7 +31,7 @@ export default function RoleRoadmapView({ roleTitle, onSelectSkill, onBack }) {
         <div className="role-header-meta">
           <p className="eyebrow">Career Roadmap</p>
           <h1>{roleTitle} Roadmap</h1>
-          <p>Complete skill roadmap derived from industry standard datasets for <strong>{roleTitle}</strong>. Click any skill to inspect learning paths &amp; resources.</p>
+          <p>Comprehensive skill breakdown for <strong>{roleTitle}</strong>. Select any skill to view step-by-step milestones, top courses, and documentation.</p>
         </div>
       </div>
 
@@ -39,7 +39,7 @@ export default function RoleRoadmapView({ roleTitle, onSelectSkill, onBack }) {
       <section className="role-skills-group">
         <div className="group-title">
           <span className="group-dot group-dot--required" />
-          <h2>Core &amp; Required Skills ({requiredSkills.length})</h2>
+          <h2>Essential Skills ({requiredSkills.length})</h2>
         </div>
 
         <div className="skills-interactive-grid">
@@ -70,7 +70,7 @@ export default function RoleRoadmapView({ roleTitle, onSelectSkill, onBack }) {
         <section className="role-skills-group">
           <div className="group-title">
             <span className="group-dot group-dot--preferred" />
-            <h2>Preferred &amp; Bonus Skills ({preferredSkills.length})</h2>
+            <h2>Recommended Bonus Skills ({preferredSkills.length})</h2>
           </div>
 
           <div className="skills-interactive-grid">

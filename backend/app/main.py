@@ -8,7 +8,7 @@ from fastapi.staticfiles import StaticFiles
 from app.core.config import settings
 from app.core.database import Base, engine
 from app.api.routes import (
-    health, resumes, roles, skills, analysis, roadmaps, resources
+    health, resumes, roles, skills, analysis, roadmaps, resources, interview
 )
 
 # Setup logging
@@ -53,6 +53,7 @@ app.include_router(skills.router, prefix=settings.API_V1_STR)
 app.include_router(analysis.router, prefix=settings.API_V1_STR)
 app.include_router(roadmaps.router, prefix=settings.API_V1_STR)
 app.include_router(resources.router, prefix=settings.API_V1_STR)
+app.include_router(interview.router, prefix=settings.API_V1_STR)
 
 # Static files & SPA fallback
 dist_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../dist"))

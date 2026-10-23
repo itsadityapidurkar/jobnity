@@ -1,0 +1,707 @@
+================================================================================
+                        JOBNITY - FULL PROJECT OVERVIEW
+================================================================================
+Document Version : 1.0
+Date             : September 2026
+Author           : Aditya Pidurkar
+Project Path     : /home/adityap/ai/Projects/Jobnity
+================================================================================
+
+
+--------------------------------------------------------------------------------
+1. WHAT IS JOBNITY?
+--------------------------------------------------------------------------------
+
+Jobnity is an AI-powered Career Readiness and Skill Gap Analysis Platform.
+It helps job seekers understand where they stand against any target job role by:
+
+  - Parsing their resume (PDF or DOCX)
+  - Automatically extracting their skills, education, and experience
+  - Comparing their extracted skills against a curated database of role-specific
+    skill requirements
+  - Generating a scored Skill Gap Report
+  - Recommending learning resources (YouTube, articles, roadmaps) for missing skills
+  - Providing skill-to-role roadmaps for career planning
+
+The application is designed to be fully deployable on Vercel (serverless) with
+no external paid API dependencies and no heavy ML framework requirements.
+
+
+--------------------------------------------------------------------------------
+2. SYNOPSIS / ORIGINAL PROPOSED TECH STACK
+--------------------------------------------------------------------------------
+
+  Frontend        : React.js
+  Backend         : Python + FastAPI
+  Database        : PostgreSQL
+  NLP             : spaCy
+  ML Models       : BERT / Transformer-based models
+  Skill Matching  : Sentence-BERT embeddings + cosine similarity
+  Data Processing : Python
+  Resume Input    : PDF / DOCX parsing
+
+
+--------------------------------------------------------------------------------
+3. ACTUAL IMPLEMENTED TECH STACK (AND DEVIATIONS EXPLAINED)
+--------------------------------------------------------------------------------
+
+  Component         Proposed             Implemented            Status
+  ---------------   ------------------   --------------------   --------
+  Frontend          React.js             React 18 + Vite        MATCH
+  Backend           Python + FastAPI     Python 3 + FastAPI     MATCH
+  Database          PostgreSQL           SQLite (+ SQLAlchemy)  DEVIATED*
+  NLP               spaCy                Regex + taxonomy DB    DEVIATED*
+  ML / Embeddings   BERT / Sentence-BERT Token boundary match   DEVIATED*
+  Skill Matching    Cosine similarity    Canonical normalization DEVIATED*
+  Data Processing   Python               Python scripts         MATCH
+  Resume Input      PDF / DOCX           pypdf + python-docx    MATCH
+
+  * Deviations were intentional for the following reasons:
+
+  DATABASE (PostgreSQL -> SQLite):
+    SQLite was chosen for Vercel serverless compatibility. Vercel functions do
+    not support long-lived TCP connections to PostgreSQL. The seeded SQLite
+    database (jobnity.db, ~860 KB) is bundled with the project and copied to
+    /tmp at runtime on serverless environments. Migration to PostgreSQL only
+    requires changing the DATABASE_URL environment variable.
+
+  NLP / ML MODELS (spaCy, BERT, Sentence-BERT -> Taxonomy Matching):
+    Heavy ML libraries (spacy, torch, sentence-transformers) exceed Vercel's
+    250 MB serverless function package size limit. The implemented approach
+    uses an exact token-boundary taxonomy matching system with canonical skill
+    normalization. This prevents false positives (e.g. "C" matching "C++",
+    "JS" matching "JSON") while remaining fast, accurate, and serverless-safe.
+
+
+--------------------------------------------------------------------------------
+4. PROJECT DIRECTORY STRUCTURE
+--------------------------------------------------------------------------------
+
+  Jobnity/
+  |-- backend/                    Backend Python application
+  |   |-- app/
+  |   |   |-- main.py             FastAPI application entry point
+  |   |   |-- core/
+  |   |   |   |-- config.py       Settings, environment detection, DB path
+  |   |   |   +-- database.py     SQLAlchemy engine and session setup
+  |   |   |-- models/
+  |   |   |   +-- __init__.py     All SQLAlchemy ORM models (7 tables)
+  |   |   |-- api/routes/
+  |   |   |   |-- health.py       GET /api/health
+  |   |   |   |-- resumes.py      POST /api/resumes/upload, GET /api/resumes
+  |   |   |   |-- roles.py        GET /api/roles, GET /api/roles/{id}
+  |   |   |   |-- skills.py       GET /api/skills, GET /api/skills/{id}
+  |   |   |   |-- analysis.py     POST /api/analysis/skill-gap
+  |   |   |   |-- roadmaps.py     GET /api/roadmaps
+  |   |   |   +-- resources.py    GET /api/resources/{skill}
+  |   |   |-- services/
+  |   |   |   |-- resume_parser.py    PDF and DOCX text extraction
+  |   |   |   |-- nlp_extractor.py    NLP profile extraction from raw text
+  |   |   |   |-- skill_gap.py        Core skill gap scoring engine
+  |   |   |   |-- skill_normalizer.py Canonical skill normalization
+  |   |   |   |-- roadmap.py          Role-based roadmap generation
+  |   |   |   +-- resource_service.py Learning resource retrieval
+  |   |   |-- schemas/            Pydantic request/response schemas
+  |   |   +-- utils/
+  |   |       |-- text_processing.py  Text cleaning, section splitting
+  |   |       +-- file_validation.py  Upload file type/size validation
+  |   |-- jobnity.db              Pre-seeded SQLite database (~860 KB)
+  |   |-- requirements.txt        Python dependencies
+  |   +-- scripts/                Database seeding scripts
+  |
+  |-- src/                        React frontend source
+  |   |-- main.jsx                React app bootstrap
+  |   |-- App.jsx                 Router with animated page transitions
+  |   |-- styles.css              Full design system (~79 KB)
+  |   |-- pages/
+  |   |   |-- LandingPage.jsx     Home / hero page
+  |   |   |-- AnalyseResumePage.jsx  Full multi-step resume analysis flow
+  |   |   |-- RoadmapPage.jsx     Career roadmap explorer
+  |   |   +-- DocsPage.jsx        Inline documentation page
+  |   |-- components/
+  |   |   |-- Navigation.jsx      Top navbar with Jobnity branding
+  |   |   |-- BackgroundLayout.jsx  Global animated background wrapper
+  |   |   |-- StepIndicator.jsx   Multi-step progress indicator
+  |   |   |-- LoadingSkeleton.jsx Skeleton loader component
+  |   |   +-- Toast.jsx           Notification toast component
+  |   +-- services/               API client utilities
+  |
+  |-- datasets/                   Raw datasets used to seed the database
+  |-- preprocessing/              Scripts used to clean and process datasets
+  |-- api/
+  |   +-- index.py                Vercel serverless entrypoint (wraps FastAPI)
+  |-- index.html                  Vite HTML entrypoint
+  |-- vercel.json                 Vercel deployment configuration
+  |-- Dockerfile                  Docker deployment configuration
+  |-- docker-compose.yml          Docker Compose setup
+  |-- package.json                Node.js / frontend dependencies
+  +-- jobnity.db                  Root-level SQLite database copy
+
+
+--------------------------------------------------------------------------------
+5. FRONTEND PAGES AND FEATURES
+--------------------------------------------------------------------------------
+
+  5.1 Landing Page  (/)
+      - Animated hero section with Jobnity branding and tagline
+      - Call-to-action buttons to start the resume analysis flow
+      - Dark glassmorphism design with gradient animations
+
+  5.2 Analyse Resume Page  (/analyse-resume)
+      The core feature of the application. A 4-step multi-step wizard:
+
+      STEP 1 - Upload Resume
+        - Drag-and-drop or click-to-upload interface
+        - Accepts PDF and DOCX files (max 10 MB)
+        - Real-time file validation feedback
+
+      STEP 2 - Confirm Your Profile
+        - Displays NLP-extracted candidate information:
+            * Name, Email, Phone
+            * Education history
+            * Work experience
+            * Extracted skills (from taxonomy matching)
+            * Projects and certifications
+        - User can edit and confirm the extracted data before analysis
+
+      STEP 3 - Select Target Role
+        - Dropdown/search to select a job role from the database (52 roles)
+        - Roles span categories: Engineering, Data Science, Management,
+          Design, Business, Security, DevOps, and more
+
+      STEP 4 - Skill Gap Report
+        - Readiness Score (0-100%) with animated gauge
+        - Skill Gap Score (inverse of readiness)
+        - Matched Skills list (green) - skills you already have
+        - Missing Required Skills list (red) - critical skill gaps
+        - Preferred / Nice-to-have Missing Skills (yellow)
+        - Statistics breakdown (required matched/missing, preferred matched/missing)
+        - Per-skill learning resource recommendations
+
+  5.3 Roadmaps Page  (/roadmaps)
+      - Browse career roadmaps by job role or individual skill
+      - View required and preferred skills for each role
+      - See resource counts per skill
+      - Click into any skill to get YouTube videos, articles, and roadmaps
+
+  5.4 Documentation Page  (/docs)
+      - Full inline documentation covering all API endpoints
+      - Dataset descriptions and methodology explanation
+      - Skill taxonomy overview
+
+
+--------------------------------------------------------------------------------
+6. BACKEND API ENDPOINTS
+--------------------------------------------------------------------------------
+
+  Base URL (local): http://localhost:8001/api
+  Base URL (prod):  https://<vercel-deployment>.vercel.app/api
+
+  HEALTH
+    GET  /api/health
+      Returns: {"status": "ok", "service": "Jobnity Backend API", "version": "1.0.0"}
+
+  RESUMES
+    POST /api/resumes/upload
+      Body: multipart/form-data with file (PDF or DOCX)
+      Returns: {resume_id, filename, file_type, file_size, raw_text, profile}
+      - Saves file to writable directory (/tmp on serverless, ./uploads locally)
+      - Extracts raw text using pypdf or python-docx
+      - Runs NLP extraction to generate CandidateProfile
+
+    GET  /api/resumes
+      Returns list of all uploaded resumes
+
+    GET  /api/resumes/{resume_id}
+      Returns details of a specific resume
+
+    PUT  /api/resumes/{resume_id}/profile
+      Body: Updated CandidateProfile JSON
+      Updates the user-confirmed candidate profile
+
+  ROLES
+    GET  /api/roles
+      Returns all 52 job roles (id, title, category, experience level)
+
+    GET  /api/roles/{role_id}
+      Returns full detail for a specific job role including required skills
+
+  SKILLS
+    GET  /api/skills
+      Returns all 1,156 canonical skills in the taxonomy
+
+    GET  /api/skills/{skill_id}
+      Returns skill detail including category, aliases, related skills
+
+  ANALYSIS
+    POST /api/analysis/skill-gap
+      Body: {"resume_id": "...", "role_id": "..."}
+      Returns: Full skill gap analysis with scores, matched/missing skill lists,
+               statistics, and persisted analysis_id
+
+    GET  /api/analysis/{analysis_id}
+      Returns a previously computed skill gap analysis
+
+  ROADMAPS
+    GET  /api/roadmaps
+      Returns list of all skills with available learning resources
+
+    GET  /api/roadmaps/{role_id}
+      Returns roadmap for a specific role with skill resource counts
+
+    GET  /api/roadmaps/analysis/{analysis_id}
+      Returns personalized learning recommendations for all missing skills
+      in a given skill gap analysis
+
+  RESOURCES
+    GET  /api/resources/{skill_id_or_name}
+      Returns YouTube videos, blog articles, and roadmap links for a skill
+
+
+--------------------------------------------------------------------------------
+7. DATABASE SCHEMA
+--------------------------------------------------------------------------------
+
+  The application uses a pre-seeded SQLite database with 7 tables:
+
+  TABLE: job_roles (52 rows)
+    role_id, job_role, category, sub_category, role_description,
+    experience_level, common_alternative_titles, industry, source
+
+  TABLE: skills (1,156 rows)
+    skill_id, skill, category, sub_category, description, aliases,
+    parent_skill, related_skills, prerequisite_skills, skill_type,
+    technical_domain
+
+  TABLE: skill_aliases (1,321 rows)
+    alias, canonical_skill_id, canonical_skill, confidence
+    (Maps alternate names to canonical skill names, e.g. "JS" -> "JavaScript")
+
+  TABLE: skill_relationships (0 rows - reserved for future use)
+    id, source_skill_id, source_skill, relationship_type,
+    target_skill_id, target_skill
+
+  TABLE: role_skills (527 rows)
+    id, role_id, job_role, skill_id, skill, skill_category,
+    importance (Required/Preferred), priority (1-5), minimum_level,
+    frequency, skill_evidence
+    (Maps which skills are needed for each role)
+
+  TABLE: learning_resources (125 rows)
+    resource_id, skill_id, skill, resource_type, title, url, provider,
+    difficulty, description, duration, quality_score, relevance_score, verified
+
+  TABLE: resumes (25 rows - seeded test data)
+    resume_id, filename, file_path, file_type, file_size,
+    raw_text, created_at
+
+  TABLE: candidate_profiles (25 rows - seeded test data)
+    id, resume_id, name, email, phone, education, experience,
+    skills, projects, certifications, updated_at
+
+  TABLE: skill_gap_analyses (4 rows - from live sessions)
+    analysis_id, resume_id, role_id, target_role, skill_gap_score,
+    readiness_score, matched_skills, missing_skills,
+    preferred_missing_skills, statistics, created_at
+
+
+--------------------------------------------------------------------------------
+8. CORE ALGORITHMS AND PROCESSING PIPELINE
+--------------------------------------------------------------------------------
+
+  8.1 RESUME TEXT EXTRACTION
+      - PDF files: pypdf library - reads all pages and concatenates text
+      - DOCX files: python-docx library - reads paragraphs and table cells
+      - Result: Raw text string, cleaned of non-printable characters
+
+  8.2 NLP PROFILE EXTRACTION (nlp_extractor.py)
+      The NLPExtractorService processes raw resume text through:
+
+      a) Section Detection (split_into_sections):
+         Identifies document sections using header keywords:
+         [education, experience, skills, projects, certifications, header]
+
+      b) Name Extraction:
+         Reads first 5 lines of the header section.
+         Identifies 2-4 word capitalized sequences (not containing @ or digits).
+
+      c) Contact Extraction:
+         Email: regex pattern for standard email format
+         Phone: regex for 7+ digit number sequences
+
+      d) Skill Extraction (KEY ALGORITHM):
+         - Loads all canonical skills (1,156) and aliases (1,321) from the DB
+         - Builds a unified mapping: alias/skill -> canonical_name
+         - Sorts terms by length (longest first) to prevent short-term false matches
+           e.g., prevents "C" from matching before "C++" is checked
+         - Applies word-boundary regex: \b<term>\b for multi-char skills
+         - Applies strict boundary for single-char skills (e.g., language "R")
+         - Also tokenizes the explicit "Skills" section for raw listed tokens
+         - Returns list of canonical skill names found in the resume
+
+      e) Education Parsing:
+         Pattern matching for degree keywords (bachelor, master, phd, b.tech...)
+         and institution keywords (university, college, iit, nit, mit...)
+         Extracts degree, institution, and duration (date ranges).
+
+      f) Experience Parsing:
+         Identifies job title lines using role keywords (engineer, developer,
+         analyst, manager, intern, scientist, etc.) and date ranges.
+         Extracts role, company, duration, and description bullets.
+
+      g) Projects & Certifications:
+         Parses structured project blocks (name, description, technologies)
+         and certification lines (name, issuer).
+
+  8.3 SKILL GAP ANALYSIS ENGINE (skill_gap.py)
+      The SkillGapService implements:
+
+      a) Candidate Skill Normalization:
+         User-confirmed skills are normalized to canonical form using
+         SkillNormalizerService (which queries the skill_aliases table).
+
+      b) Role Skill Fetching:
+         Queries role_skills table for the selected job role.
+         Each role skill has: importance (Required/Preferred), priority (1-5),
+         and minimum_level.
+
+      c) Skill Matching:
+         For each required role skill, checks against all candidate skills:
+           1. Exact canonical match (after normalization)
+           2. Substring/superstring match with token boundary
+              (handles "React" matching "React.js")
+           3. Distinct Guardrail Check - prevents false positives:
+              Java != JavaScript, Docker != Kubernetes, AWS != Azure,
+              Python != PyTorch, C != C++, C++ != C#, React != React Native,
+              SQL != NoSQL, HTML != CSS
+
+      d) Weighted Scoring Formula:
+         weight = priority * (1.5 if Required else 1.0)
+         readiness_score = (sum of earned weights / sum of total weights) * 100
+         skill_gap_score = 100 - readiness_score
+
+      e) Result Categorization:
+         - matched_skills: Role skills found in candidate profile
+         - missing_skills: Required role skills NOT found (priority ordered)
+         - preferred_missing_skills: Preferred role skills NOT found
+
+      f) Persistence:
+         Analysis result is saved to skill_gap_analyses table with a unique
+         analysis_id (format: A_<8-char-hex>).
+
+  8.4 LEARNING ROADMAP GENERATION (roadmap.py)
+      - Fetches all missing skills from a saved SkillGapAnalysis record
+      - Sorts by importance (Required first, then Preferred) and priority
+      - For each missing skill, retrieves curated learning resources:
+          * YouTube videos (resource_type = "YouTube")
+          * Blog articles (resource_type = "Blog")
+          * Roadmap guides (resource_type = "Roadmap")
+      - Returns personalized recommendation list
+
+
+--------------------------------------------------------------------------------
+9. DATASETS USED
+--------------------------------------------------------------------------------
+
+  The following datasets were used to build and seed the Jobnity database.
+  All datasets are stored in the /datasets directory.
+
+  PRIMARY DATASETS (seeded into production DB):
+
+  1. skills_taxonomy_dataset.csv  (~145 KB, custom-curated)
+     Source: Curated from O*NET, LinkedIn Skills Graph, and custom additions
+     Contains: 1,156 canonical skills with categories, descriptions,
+     skill type, technical domain, prerequisite and related skills.
+     Key columns: skill_id, skill, category, sub_category, skill_type,
+                  technical_domain, aliases, parent_skill
+
+  2. skill_alias_mapping.csv  (~110 KB, custom-generated)
+     Source: Derived from skills taxonomy + LinkedIn abbreviation conventions
+     Contains: 1,321 alias-to-canonical mappings
+     Key columns: alias, canonical_skill_id, canonical_skill, confidence
+     Purpose: Enables "JS" -> "JavaScript", "ML" -> "Machine Learning", etc.
+
+  3. role_skills_dataset.csv  (~84 KB, custom-curated)
+     Source: Curated from O*NET role skill matrices and LinkedIn job postings
+     Contains: 527 role-skill mappings across 52 job roles
+     Key columns: role_id, job_role, skill_id, skill, importance,
+                  priority, minimum_level, skill_evidence
+
+  4. job_roles_dataset.csv  (~14 KB, custom-curated)
+     Source: Curated from O*NET SOC codes, LinkedIn, and industry standards
+     Contains: 52 job roles across 8 categories
+     Categories: Engineering, Data Science & ML, Management, Design,
+                 Business, Cybersecurity, DevOps & Infrastructure, Other
+     Key columns: role_id, job_role, category, sub_category,
+                  experience_level, industry
+
+  5. learning_resources_dataset.csv  (~32 KB, manually curated)
+     Source: Manually verified YouTube channels, technical blogs, roadmap.sh
+     Contains: 125 curated learning resources
+     Key columns: resource_id, skill_id, skill, resource_type, title,
+                  url, provider, difficulty, quality_score, verified
+
+  REFERENCE DATASETS (used for research and training, not seeded):
+
+  6. UpdatedResumeDataSet.csv  (~3 MB)
+     2,484 labelled resumes across 25 job categories
+     Source: Kaggle (Resume Dataset)
+
+  7. resume_dataset.csv  (~23 MB)
+     Larger resume corpus with full text and metadata
+     Source: Multiple Kaggle resume datasets
+
+  8. job_resume_matches.csv  (~19 MB)
+     Pre-matched resume-to-job compatibility records
+     Source: Derived / synthetic matching dataset
+
+  9. jobs_master.csv  (~83 MB)
+     Large job postings master dataset
+     Source: Kaggle LinkedIn Job Postings dataset
+
+  10. job_skills.csv  (~15 MB)
+      Skills extracted from job postings
+      Source: LinkedIn Job Postings (Kaggle)
+
+  11. postings.csv  (~517 MB)
+      Full raw job postings corpus
+      Source: Kaggle LinkedIn Job Postings 2023-2024
+
+  12. Entity Recognition in Resumes.json  (~1.2 MB)
+      NER-annotated resume dataset
+      Source: Kaggle NER Resume Dataset
+
+  13. AI-based Career Recommendation System.csv  (~21 KB)
+      Career recommendation training data
+      Source: Kaggle
+
+  14. onet_30_0 directory
+      Full O*NET 30.0 occupational database
+      Used for: Job role descriptions, skill requirements, and SOC codes
+
+  DATASET STATISTICS SUMMARY:
+    Seeded DB records:  3,231 total (1,156 skills + 1,321 aliases + 527 role-skills
+                        + 52 roles + 125 resources + 25 test resumes + 25 profiles)
+    Total raw data:     ~650+ MB across all reference datasets
+    Job postings:       Millions of postings (postings.csv alone is 517 MB)
+    Resume records:     Thousands of labelled/raw resumes used for NLP development
+
+
+--------------------------------------------------------------------------------
+10. DEPLOYMENT CONFIGURATION
+--------------------------------------------------------------------------------
+
+  10.1 LOCAL DEVELOPMENT
+    Start Backend:
+      cd backend && python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8001
+
+    Start Frontend:
+      cd Jobnity && npx vite --host 0.0.0.0 --port 5173
+
+    Backend URL:  http://localhost:8001
+    Frontend URL: http://localhost:5173
+    API Docs:     http://localhost:8001/docs  (Swagger UI)
+
+  10.2 VERCEL (SERVERLESS) DEPLOYMENT
+    Configuration: vercel.json
+    Entrypoint:    api/index.py  (wraps FastAPI as ASGI serverless function)
+
+    Serverless Environment Handling (config.py):
+      - Detects Vercel via VERCEL / VERCEL_ENV environment variable
+      - Falls back to write-test on the current directory
+      - If serverless: copies jobnity.db to /tmp/jobnity.db (writable)
+      - Uploaded files are saved to /tmp/jobnity_uploads/ (ephemeral)
+      - Ephemeral uploads are acceptable since text is extracted immediately
+        and stored in the database
+
+  10.3 DOCKER DEPLOYMENT
+    Configuration: Dockerfile + docker-compose.yml
+    Build:  docker-compose up --build
+    The Docker setup packages backend + built frontend together.
+
+  10.4 ENVIRONMENT VARIABLES
+    DATABASE_URL       SQLite path or PostgreSQL DSN
+    UPLOAD_DIR         Directory for uploaded resume files
+    SECRET_KEY         API secret key (change in production)
+    CORS_ORIGINS       Comma-separated allowed origins (default: *)
+
+
+--------------------------------------------------------------------------------
+11. FRONTEND DESIGN SYSTEM
+--------------------------------------------------------------------------------
+
+  Framework     : React 18 with Vite bundler
+  Routing       : React Router DOM v7
+  Animations    : Framer Motion (page transitions, micro-animations)
+  Charts        : Recharts (skill gap score gauge, statistics)
+  CSS           : Vanilla CSS with custom design tokens (styles.css ~79 KB)
+
+  Design Language:
+    - Dark theme with glassmorphism panels
+    - Gradient color palette (purple to blue primary, amber to orange accents)
+    - Animated background (floating gradient orbs)
+    - Smooth page transitions (opacity + Y-axis slide, 350ms spring curve)
+    - Hover effects on interactive elements
+    - Step indicator progress bar for multi-step flows
+    - Loading skeleton states for async data
+
+  Typography:
+    - Google Fonts: Inter (primary), with system font fallbacks
+
+  Color Tokens:
+    --primary: #7c3aed (purple)
+    --accent:  #f59e0b (amber)
+    --success: #10b981 (green)
+    --danger:  #ef4444 (red)
+    --bg:      #0a0a0f (deep dark)
+    --glass:   rgba(255,255,255,0.05) with blur backdrop
+
+
+--------------------------------------------------------------------------------
+12. PYTHON DEPENDENCIES
+--------------------------------------------------------------------------------
+
+  fastapi>=0.110.0          Web framework and API routing
+  uvicorn[standard]>=0.28.0 ASGI server for FastAPI
+  pydantic>=2.6.0           Data validation and schema definitions
+  pydantic-settings>=2.2.0  Settings management with .env support
+  sqlalchemy>=2.0.28        ORM and database abstraction
+  alembic>=1.13.1           Database migrations
+  pypdf>=4.1.0              PDF text extraction
+  python-docx>=1.1.0        DOCX text extraction
+  python-multipart>=0.0.9   Multipart file upload handling
+  aiofiles>=23.2.1          Async file I/O
+  numpy>=1.26.0             Numerical computation utilities
+  pytest>=8.1.0             Backend unit testing
+  httpx>=0.27.0             HTTP client (for test client)
+
+
+--------------------------------------------------------------------------------
+13. NODE.JS / FRONTEND DEPENDENCIES
+--------------------------------------------------------------------------------
+
+  react                     Core React library (v18)
+  react-dom                 React DOM rendering
+  react-router-dom          Client-side routing (v7)
+  framer-motion             Animation library (v13)
+  recharts                  Charting library (v3)
+  vite                      Build tool and dev server
+  @vitejs/plugin-react      Vite plugin for React/JSX
+
+
+--------------------------------------------------------------------------------
+14. TESTING
+--------------------------------------------------------------------------------
+
+  Backend Tests (pytest):
+    Located in: backend/tests/
+    Run with:   cd backend && python3 -m pytest tests/ -v
+    Coverage:   52/52 passing tests covering:
+                - PDF & DOCX text extraction
+                - Header scoring & name extraction (particles, titles, hyphens)
+                - Evidence-based candidate proficiency estimation (0-5 scale)
+                - Multi-factor skill gap scoring formula (bounds, breakdowns, disclaimers)
+                - REST API route contracts & database migrations
+
+  Frontend Tests (Vitest + React Testing Library):
+    Located in: src/test/
+    Run with:   npm test  (or npm run test:coverage)
+    Coverage:   14/14 passing tests covering:
+                - SkillGapAnalysisStep score gauge rendering & breakdown panel toggle
+                - Matched, missing, below-level, and transferable skill display
+                - Evidence strength indicators & disclaimers
+                - ResumeUploadStep file dropzone interactions
+                - Statistics card counts & CTA navigation callbacks
+
+  Data Integrity Validation (Python):
+    Script:     backend/scripts/validate_taxonomy.py
+    Run with:   cd backend && python3 scripts/validate_taxonomy.py
+    Coverage:   Validates 52 roles, 1,156 canonical skills, 1,321 skill aliases,
+                527 role-skill mappings, 8 skill relationships, and 125 learning resources.
+                Guarantees zero orphan mappings, broken aliases, or relationship cycles.
+
+  API Documentation & Interactive Testing:
+    Swagger UI: http://localhost:8001/docs
+    ReDoc:      http://localhost:8001/redoc
+
+
+--------------------------------------------------------------------------------
+15. KEY DESIGN DECISIONS
+--------------------------------------------------------------------------------
+
+  1. NO PAID APIs - The entire platform runs without any external paid service.
+     No OpenAI, no Google Cloud NLP, no AWS ML. Pure local computation.
+
+  2. SERVERLESS-FIRST - All file handling, DB access, and ML inference are
+     designed to work within Vercel's 250 MB function size and /tmp write limits.
+
+  3. USER IS SOURCE OF TRUTH - After NLP extraction, the user can edit their
+     skill profile before analysis. The confirmed profile is what gets scored,
+     not raw NLP output alone.
+
+  4. EVIDENCE-BASED PROFICIENCY ENGINE - Rather than binary skill presence, the system
+     extracts usage context (work experience, projects, certifications, education)
+     to assign evidence-based proficiency levels (0-5 scale: No Evidence=0, Mentioned=1,
+     Basic=2, Working=3, Proficient=4, Advanced=5) and tracks usage duration in months.
+
+  5. MULTI-FACTOR ALIGNMENT FORMULA - Readiness Score (0-100%) is calculated from 5 factors:
+     - Required Skill Coverage (45%)
+     - Proficiency Level Alignment (25%)
+     - Evidence Quality & Experience Duration (15%)
+     - Preferred Skill Coverage (10%)
+     - Transferable Skill Credit (5%)
+
+  6. BELOW-LEVEL & TRANSFERABLE SKILL MATCHING - Differentiates complete skill gaps
+     from skills present but below required level (`below_level_skills`), and awards
+     partial credit for related candidate skills via `SkillRelationship` graph matching.
+
+  7. PRE-SEEDED DATABASE & MIGRATIONS - Pre-seeded SQLite database (jobnity.db)
+     with automatic table schema migration on startup. Includes a standalone
+     data integrity validation script (`backend/scripts/validate_taxonomy.py`).
+
+
+--------------------------------------------------------------------------------
+16. KNOWN LIMITATIONS AND FUTURE IMPROVEMENTS
+--------------------------------------------------------------------------------
+
+  CURRENT LIMITATIONS:
+  - Database is SQLite (single-file). Under heavy concurrent load, this could
+    become a bottleneck. Upgrade to PostgreSQL for production scale.
+  - Learning resources are manually curated (125 entries). A web-scraping or
+    API-based resource discovery pipeline would expand coverage significantly.
+  - Resume uploads on Vercel are ephemeral (/tmp is cleared between invocations).
+    Uploaded files are only needed for text extraction, so this is acceptable,
+    but file storage (e.g., Supabase Storage, S3) would be needed for file history.
+  - No user authentication. All sessions are identified by resume_id only.
+
+  FUTURE IMPROVEMENTS:
+  - PostgreSQL integration for production deployments
+  - User accounts with OAuth (Google / GitHub)
+  - Full spaCy / BERT NER integration for richer profile extraction
+  - Sentence-BERT embeddings for semantic (not just lexical) skill matching
+  - Integration with live job postings APIs (LinkedIn, Indeed) for real-time role data
+  - Interview preparation module expansion (mock questions per skill)
+  - Resume scoring and improvement suggestions
+  - Multi-language resume support
+  - Mobile-responsive design polish
+
+
+--------------------------------------------------------------------------------
+17. PROJECT DOCUMENTS AND REFERENCES
+--------------------------------------------------------------------------------
+
+  IdeaLab_groupnumber_22.pdf               - Original project synopsis document
+  Jobnity_Project_Explanation.pdf          - Detailed project explanation
+  Jobnity_Detailed_Method_Process_Guide.pdf - Method and process guide
+  Jobnity_Master_Architecture_Algorithms_Guide.pdf - Architecture reference
+  IMPLEMENTATION_PLAN.md                   - Technical implementation plan
+  README.md                                - Quick start and setup guide
+  README_DOCS.md                           - Extended documentation
+  backend/README.md                        - Backend-specific documentation
+  datasets/README.md                       - Dataset descriptions and sources
+  datasets/datasets.md                     - Dataset index
+
+
+================================================================================
+                             END OF PROJECT OVERVIEW
+================================================================================

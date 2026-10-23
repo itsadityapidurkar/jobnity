@@ -20,12 +20,19 @@ class EducationItem(BaseModel):
     degree: Optional[str] = None
     institution: Optional[str] = None
     details: Optional[str] = None
+    field: Optional[str] = None          # NEW: field of study
+    ongoing: Optional[bool] = None       # NEW: currently studying
+    confidence: Optional[float] = None   # NEW: extraction confidence
 
 class ExperienceItem(BaseModel):
     company: Optional[str] = None
     role: Optional[str] = None
     duration: Optional[str] = None
     description: Optional[str] = None
+    duration_months: Optional[int] = None       # NEW: computed duration
+    experience_type: Optional[str] = None       # NEW: full_time / internship / freelance
+    current: Optional[bool] = None              # NEW: currently working here
+    confidence: Optional[float] = None          # NEW: extraction confidence
 
 class ProjectItem(BaseModel):
     name: Optional[str] = None
@@ -124,6 +131,7 @@ class SkillGapRequest(BaseModel):
     profile_id: Optional[str] = None
     role_id: Optional[str] = None
     target_role: Optional[str] = None
+    job_description: Optional[str] = None
 
 class MatchedSkillItem(BaseModel):
     skill_id: Optional[str] = None
@@ -132,6 +140,12 @@ class MatchedSkillItem(BaseModel):
     candidate_level: str = "Intermediate"
     required_level: str = "Intermediate"
     status: str = "Matched"
+    # NEW additive fields
+    match_type: Optional[str] = None              # exact / transferable / prerequisite
+    candidate_proficiency: Optional[int] = None   # 0–5
+    required_proficiency: Optional[int] = None    # 0–5
+    evidence_text: Optional[str] = None
+    evidence_strength: Optional[str] = None
 
 class MissingSkillItem(BaseModel):
     skill_id: Optional[str] = None
@@ -143,6 +157,19 @@ class MissingSkillItem(BaseModel):
     candidate_level: str = "Not Found"
     status: str = "Missing"
     reason: Optional[str] = None
+    # NEW additive fields
+    gap_type: Optional[str] = None                # missing / below_level / transferable
+    candidate_proficiency: Optional[int] = None
+    required_proficiency: Optional[int] = None
+    transferable_from: Optional[str] = None
+    relationship_type: Optional[str] = None
+
+class ScoreBreakdown(BaseModel):
+    required_skill_coverage: int = 0     # % — required skills matched
+    proficiency_alignment: int = 0       # % — proficiency vs required level
+    evidence_quality: int = 0            # % — strength of resume evidence
+    preferred_skill_coverage: int = 0    # % — preferred skills matched
+    transferable_credit: int = 0         # bonus points from transferable skills
 
 class SkillGapStatistics(BaseModel):
     required_total: int = 0
@@ -151,15 +178,22 @@ class SkillGapStatistics(BaseModel):
     preferred_total: int = 0
     preferred_matched: int = 0
     preferred_missing: int = 0
+    below_level_count: int = 0            # NEW
+    transferable_count: int = 0           # NEW
 
 class SkillGapResponse(BaseModel):
     analysis_id: str
     role: Dict[str, Any]
     skill_gap_score: int
     readiness_score: int
+    role_alignment_score: Optional[int] = None    # NEW: renamed label
+    score_breakdown: Optional[ScoreBreakdown] = None  # NEW
+    score_explanation: Optional[str] = None           # NEW
     matched_skills: List[MatchedSkillItem]
     missing_skills: List[MissingSkillItem]
     preferred_missing_skills: List[MissingSkillItem]
+    below_level_skills: List[MissingSkillItem] = Field(default_factory=list)   # NEW
+    transferable_skills: List[MissingSkillItem] = Field(default_factory=list)  # NEW
     statistics: SkillGapStatistics
 
 class RecommendationItem(BaseModel):
@@ -174,3 +208,47 @@ class RecommendationResponse(BaseModel):
     analysis_id: str
     target_role: str
     recommendations: List[RecommendationItem]
+
+# --- INTERVIEW SCHEMAS (LLM QWEN 2.5 - RESUME-GROUNDED ONLY) ---
+class InterviewStartRequest(BaseModel):
+    resume_id: Optional[str] = None
+    candidate_id: Optional[str] = None
+    role_id_or_title: Optional[str] = None
+    target_skill: Optional[str] = None
+    difficulty: Optional[str] = "medium"
+    candidate_profile: Optional[Dict[str, Any]] = None
+
+class InterviewAnswerRequest(BaseModel):
+    resume_id: Optional[str] = None
+    candidate_id: Optional[str] = None
+    interview_id: Optional[str] = None
+    question_id: str
+    question: str
+    answer: str
+    target_role: Optional[str] = None
+    candidate_profile: Optional[Dict[str, Any]] = None
+
+# --- ELIGIBLE ROLE RECOMMENDATION SCHEMAS (LLM QWEN 2.5) ---
+class RoleRecommendationRequest(BaseModel):
+    resume_id: Optional[str] = None
+    candidate_id: Optional[str] = None
+    candidate_profile: Optional[Dict[str, Any]] = None
+    skills: Optional[List[str]] = None
+    limit: Optional[int] = 5
+
+class RecommendedRoleItem(BaseModel):
+    job_role: str
+    match_score: int
+    fit_tier: str
+    rationale: str
+    matching_skills: List[str] = Field(default_factory=list)
+    growth_skills: List[str] = Field(default_factory=list)
+    category: Optional[str] = "Engineering"
+    role_id: Optional[str] = None
+    engine: Optional[str] = "qwen2.5"
+
+class RoleRecommendationResponse(BaseModel):
+    recommendations: List[RecommendedRoleItem]
+    total_evaluated: int
+    engine: str = "qwen2.5"
+

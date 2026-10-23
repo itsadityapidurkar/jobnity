@@ -66,6 +66,32 @@ def test_invalid_file_upload():
     )
     assert response.status_code == 415
 
+def test_image_file_upload_rejection():
+    # Direct image upload (.png)
+    response = client.post(
+        "/api/resumes/upload",
+        files={"file": ("scanned_resume.png", b"\x89PNG\r\n\x1a\nfakeimagecontent", "image/png")}
+    )
+    assert response.status_code == 415
+    assert "image" in response.json()["detail"].lower()
+
+def test_scanned_pdf_upload_rejection():
+    # PDF with no extractable text stream (simulating scanned/image-only PDF)
+    empty_pdf = (
+        b"%PDF-1.4\n"
+        b"1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n"
+        b"2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n"
+        b"3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] >>\nendobj\n"
+        b"xref\n0 4\n0000000000 65535 f \n0000000009 00000 n \n0000000058 00000 n \n0000000115 00000 n \n"
+        b"trailer\n<< /Size 4 /Root 1 0 R >>\nstartxref\n190\n%%EOF"
+    )
+    response = client.post(
+        "/api/resumes/upload",
+        files={"file": ("scanned_copy.pdf", empty_pdf, "application/pdf")}
+    )
+    assert response.status_code == 422
+    assert "scanned" in response.json()["detail"].lower() or "image-only" in response.json()["detail"].lower()
+
 def test_pdf_resume_upload_and_flow():
     # Create sample dummy PDF stream for test
     pdf_bytes = b"%PDF-1.4\n1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> >> >> >>\nendobj\n4 0 obj\n<< /Length 56 >>\nstream\nBT /F1 12 Tf 72 712 Td (Alex Rivers - Python SQL Git) Tj ET\nendstream\nendobj\nxref\n0 5\n0000000000 65535 f \n0000000009 00000 n \n0000000058 00000 n \n0000000115 00000 n \n0000000266 00000 n \ntrailer\n<< /Size 5 /Root 1 0 R >>\nstartxref\n373\n%%EOF"
@@ -131,3 +157,19 @@ def test_resource_retrieval():
     data = res.json()
     assert "resources" in data
     assert "youtube" in data["resources"]
+
+def test_recommend_eligible_roles():
+    response = client.post("/api/roles/recommend", json={
+        "skills": ["python", "react", "fastapi", "docker", "postgresql"],
+        "limit": 4
+    })
+    assert response.status_code == 200
+    data = response.json()
+    assert "recommendations" in data
+    assert len(data["recommendations"]) > 0
+    top_role = data["recommendations"][0]
+    assert "job_role" in top_role
+    assert "match_score" in top_role
+    assert "fit_tier" in top_role
+    assert "rationale" in top_role
+    assert isinstance(top_role["matching_skills"], list)

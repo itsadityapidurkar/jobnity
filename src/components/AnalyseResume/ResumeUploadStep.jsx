@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 
-export default function ResumeUploadStep({ onAnalyze, onSampleSelect }) {
+export default function ResumeUploadStep({ onAnalyze, onSampleSelect, errorMessage, onClearError }) {
   const inputRef = useRef(null)
   const [selectedFile, setSelectedFile] = useState(null)
   const [dragging, setDragging] = useState(false)
@@ -9,6 +9,11 @@ export default function ResumeUploadStep({ onAnalyze, onSampleSelect }) {
   function validateAndSetFile(file) {
     if (!file) return
     const ext = file.name.split('.').pop()?.toLowerCase()
+    const imageExtensions = ['png', 'jpg', 'jpeg', 'webp', 'bmp', 'tiff', 'heic', 'gif', 'svg']
+    if (imageExtensions.includes(ext)) {
+      setError('Image files and scanned copies (.png, .jpg, etc.) cannot be processed. Please upload an original digital PDF or DOCX file with selectable text.')
+      return
+    }
     if (!['pdf', 'docx'].includes(ext)) {
       setError('Please select a valid PDF or DOCX file.')
       return
@@ -18,6 +23,7 @@ export default function ResumeUploadStep({ onAnalyze, onSampleSelect }) {
       return
     }
     setError('')
+    if (onClearError) onClearError()
     setSelectedFile({
       file,
       name: file.name,
@@ -49,10 +55,39 @@ export default function ResumeUploadStep({ onAnalyze, onSampleSelect }) {
   return (
     <div className="resume-panel upload-panel">
       <div className="panel-heading">
-        <p className="eyebrow">Analyse Your Resume</p>
-        <h1>Discover your skill gap &amp; clear career path.</h1>
-        <p>Upload your resume to identify your skills and discover where you can improve.</p>
+        <p className="eyebrow">Career Intelligence</p>
+        <h1>Analyse Your Resume</h1>
+        <p>Upload your resume to see your exact skill match for industry roles, uncover high-priority areas to grow, and build your career roadmap.</p>
       </div>
+
+      {(errorMessage || error) && (
+        <div className="upload-error-alert" role="alert" style={{
+          background: 'rgba(239, 68, 68, 0.12)',
+          border: '1px solid rgba(239, 68, 68, 0.35)',
+          borderRadius: '12px',
+          padding: '1rem 1.25rem',
+          margin: '0 auto 1.5rem',
+          maxWidth: '560px',
+          textAlign: 'left'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.35rem' }}>
+            <span style={{ fontSize: '1.25rem' }}>⚠️</span>
+            <strong style={{ color: '#fca5a5', fontSize: '0.95rem' }}>
+              {(errorMessage || error).toLowerCase().includes('scanned') || (errorMessage || error).toLowerCase().includes('image')
+                ? 'Text Not Readable in Document'
+                : 'Upload Issue'}
+            </strong>
+          </div>
+          <p style={{ color: '#e2e8f0', fontSize: '0.875rem', margin: '0 0 0.5rem 0', lineHeight: '1.45' }}>
+            {errorMessage || error}
+          </p>
+          {((errorMessage || error).toLowerCase().includes('scanned') || (errorMessage || error).toLowerCase().includes('image')) && (
+            <div style={{ color: '#94a3b8', fontSize: '0.8rem', background: 'rgba(0,0,0,0.25)', padding: '0.5rem 0.75rem', borderRadius: '6px' }}>
+              💡 <strong>Helpful Tip:</strong> Please upload an original digital PDF or Word (.docx) document where text can be highlighted and selected. Scanned photos or camera snapshots cannot be read.
+            </div>
+          )}
+        </div>
+      )}
 
       {!selectedFile ? (
         <div 
@@ -71,18 +106,18 @@ export default function ResumeUploadStep({ onAnalyze, onSampleSelect }) {
           <svg viewBox="0 0 24 24" aria-hidden="true" className="upload-zone__icon">
             <path d="M12 15V4m0 0L7.5 8.5M12 4l4.5 4.5M5 14.5v4A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5v-4" />
           </svg>
-          <h2>Upload Resume</h2>
+          <h2>Choose a Resume File</h2>
           <p>
             Drag and drop your file here, or{' '}
             <button type="button" onClick={() => inputRef.current?.click()}>
               browse files
             </button>
           </p>
-          <small className="supported-formats">Supported formats: PDF, DOCX (up to 10 MB)</small>
+          <small className="supported-formats">Supported formats: PDF or DOCX (up to 10 MB)</small>
           {error && <p className="upload-zone__error">{error}</p>}
 
           <div className="sample-resumes-prompt">
-            <span>Or test with a sample resume:</span>
+            <span>Or explore instantly with a sample profile:</span>
             <div className="sample-buttons">
               <button type="button" className="sample-btn" onClick={() => onSampleSelect('Software Engineer')}>Software Engineer</button>
               <button type="button" className="sample-btn" onClick={() => onSampleSelect('Data Scientist')}>Data Scientist</button>

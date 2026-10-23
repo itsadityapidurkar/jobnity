@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function ResumeReviewStep({ profile, onConfirm }) {
   const [candidate, setCandidate] = useState(profile)
@@ -138,40 +139,38 @@ export default function ResumeReviewStep({ profile, onConfirm }) {
   return (
     <div className="resume-panel resume-panel--review">
       <div className="panel-heading">
-        <p className="eyebrow">Candidate Profile Review</p>
-        <h1>Review &amp; Edit Extracted Details</h1>
-        <p>Verify and correct the parsed information. This edited profile is the final source of truth for skill-gap analysis.</p>
+        <p className="eyebrow">Step 2 · Profile Verification</p>
+        <h1>Review Your Profile Information</h1>
+        <p>Please verify your contact details, skills, and background below. You can easily add, edit, or remove any item before choosing your target role.</p>
 
-        {/* Mobile Tab Segmented Filter Switch */}
+        {/* Mobile Tab Segmented Filter Switch with Shared Element Layout Morphing */}
         <div className="mobile-review-tabs mobile-only" role="tablist" aria-label="Review sections">
-          <button 
-            type="button" 
-            className={`mobile-review-tab ${mobileActiveTab === 'all' ? 'is-active' : ''}`}
-            onClick={() => setMobileActiveTab('all')}
-          >
-            All Sections
-          </button>
-          <button 
-            type="button" 
-            className={`mobile-review-tab ${mobileActiveTab === 'contact' ? 'is-active' : ''}`}
-            onClick={() => setMobileActiveTab('contact')}
-          >
-            Contact
-          </button>
-          <button 
-            type="button" 
-            className={`mobile-review-tab ${mobileActiveTab === 'skills' ? 'is-active' : ''}`}
-            onClick={() => setMobileActiveTab('skills')}
-          >
-            Skills ({candidate.skills.length})
-          </button>
-          <button 
-            type="button" 
-            className={`mobile-review-tab ${mobileActiveTab === 'experience' ? 'is-active' : ''}`}
-            onClick={() => setMobileActiveTab('experience')}
-          >
-            Experience &amp; Edu
-          </button>
+          {[
+            { key: 'all', label: 'All Sections' },
+            { key: 'contact', label: 'Contact' },
+            { key: 'skills', label: `Skills (${candidate.skills.length})` },
+            { key: 'experience', label: 'Experience & Edu' }
+          ].map((tab) => {
+            const isActive = mobileActiveTab === tab.key
+            return (
+              <button 
+                key={tab.key}
+                type="button" 
+                className={`mobile-review-tab ${isActive ? 'is-active' : ''}`}
+                onClick={() => setMobileActiveTab(tab.key)}
+                style={{ position: 'relative' }}
+              >
+                {isActive && (
+                  <motion.div
+                    layoutId="mobile-review-tab-indicator"
+                    className="mobile-tab-active-indicator"
+                    transition={{ type: 'spring', stiffness: 420, damping: 32 }}
+                  />
+                )}
+                <span style={{ position: 'relative', zIndex: 1 }}>{tab.label}</span>
+              </button>
+            )
+          })}
         </div>
       </div>
 
@@ -329,7 +328,7 @@ export default function ResumeReviewStep({ profile, onConfirm }) {
         className="primary-button panel-button confirm-profile-btn"
         onClick={() => onConfirm(candidate)}
       >
-        Confirm Profile &amp; Select Target Role
+        Save Profile &amp; Choose Target Role
         <span aria-hidden="true">→</span>
       </button>
 
@@ -340,7 +339,7 @@ export default function ResumeReviewStep({ profile, onConfirm }) {
           className="primary-button full-width-mobile-btn"
           onClick={() => onConfirm(candidate)}
         >
-          Confirm Profile &amp; Continue
+          Save &amp; Choose Target Role
           <span aria-hidden="true">→</span>
         </button>
       </div>

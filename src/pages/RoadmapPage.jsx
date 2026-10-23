@@ -6,12 +6,24 @@ import Navigation from '../components/Navigation'
 import RoadmapExplorer from '../components/Roadmaps/RoadmapExplorer'
 import RoleRoadmapView from '../components/Roadmaps/RoleRoadmapView'
 import SkillRoadmapView from '../components/Roadmaps/SkillRoadmapView'
-import uploadBackground from '../assets/resume-upload-hero.png'
+import heroBackground from '../assets/jobnity-hero.png'
 
 const viewVariants = {
-  initial: { opacity: 0, y: 14, scale: 0.995 },
-  animate: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] } },
-  exit: { opacity: 0, y: -14, scale: 0.995, transition: { duration: 0.2, ease: 'easeInOut' } }
+  initial: { opacity: 0, y: 18, filter: 'blur(6px)', scale: 0.995 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    scale: 1,
+    transition: { duration: 0.38, ease: [0.16, 1, 0.3, 1] }
+  },
+  exit: {
+    opacity: 0,
+    y: -14,
+    filter: 'blur(4px)',
+    scale: 0.995,
+    transition: { duration: 0.22, ease: [0.7, 0, 0.84, 0] }
+  }
 }
 
 export default function RoadmapPage() {
@@ -50,7 +62,7 @@ export default function RoadmapPage() {
   }
 
   return (
-    <BackgroundLayout backgroundImage={uploadBackground} className="upload-layout">
+    <BackgroundLayout backgroundImage={heroBackground} className="upload-layout">
       <Navigation />
 
       <main className="roadmap-main">

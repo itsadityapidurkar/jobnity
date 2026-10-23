@@ -25,9 +25,9 @@ export default function RoadmapExplorer({ onSelectRole, onSelectSkill, recommend
   return (
     <div className="roadmap-explorer-container">
       <div className="explorer-header">
-        <p className="eyebrow">Interactive Learning Roadmaps</p>
-        <h1>Explore Learning Paths &amp; Resources</h1>
-        <p>Browse roadmaps by specific job roles or deep-dive into individual technical skills.</p>
+        <p className="eyebrow">Structured Learning Paths</p>
+        <h1>Career &amp; Skill Roadmaps</h1>
+        <p>Follow clear, milestone-driven learning paths with vetted courses, documentation, and hands-on projects for 50+ roles and in-demand skills.</p>
       </div>
 
       {/* Recommended skills banner if coming from Skill Gap Analysis */}
@@ -35,9 +35,9 @@ export default function RoadmapExplorer({ onSelectRole, onSelectSkill, recommend
         <div className="recommended-skills-banner">
           <div className="banner-title">
             <span className="banner-icon">🎯</span>
-            <strong>Recommended for your target role ({recommendedRole || 'Target Role'})</strong>
+            <strong>Recommended for {recommendedRole || 'Your Target Role'}</strong>
           </div>
-          <p>Click any of your missing skills to inspect curated roadmaps &amp; resources:</p>
+          <p>Select any skill below to view curated tutorials, courses, and project milestones:</p>
           <div className="recommended-chips">
             {recommendedSkills.map(sk => (
               <button 
@@ -56,21 +56,21 @@ export default function RoadmapExplorer({ onSelectRole, onSelectSkill, recommend
       {/* Mode Selector & Search Bar */}
       <div className="explorer-controls">
         <div className="mode-toggle-group">
-          <span className="mode-label">What do you want to explore?</span>
+          <span className="mode-label">Browse by:</span>
           <div className="mode-buttons">
             <button 
               type="button" 
               className={`mode-btn ${mode === 'role' ? 'is-active' : ''}`}
               onClick={() => { setMode('role'); setSearchTerm('') }}
             >
-              Job Role
+              Career Role
             </button>
             <button 
               type="button" 
               className={`mode-btn ${mode === 'skill' ? 'is-active' : ''}`}
               onClick={() => { setMode('skill'); setSearchTerm('') }}
             >
-              Skill
+              Individual Skill
             </button>
           </div>
         </div>

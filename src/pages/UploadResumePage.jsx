@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useRef, useState } from 'react'
-import uploadBackground from '../assets/resume-upload-hero.png'
+import heroBackground from '../assets/jobnity-hero.png'
 import BackgroundLayout from '../components/BackgroundLayout'
 import LoadingSkeleton from '../components/LoadingSkeleton'
 import StepIndicator from '../components/StepIndicator'
@@ -150,5 +150,5 @@ export default function UploadResumePage() {
     }
   }
 
-  return <BackgroundLayout backgroundImage={uploadBackground} className="upload-layout"><header className="upload-header"><Link className="wordmark" to="/">Jobnity</Link><StepIndicator active={0} /></header><div className="upload-main">{status === 'review' || status === 'saving' ? <ReviewPanel profile={profile} onChange={setProfile} onConfirm={confirmProfile} saving={status === 'saving'} /> : <div className="resume-panel"><div className="panel-heading"><p className="eyebrow">Your career starts here</p><h1>Let’s look at your resume.</h1><p>Upload it once and we’ll turn its details into a clear direction.</p></div>{status === 'loading' ? <LoadingSkeleton /> : <UploadZone onFile={upload} error={uploadError} />}</div>}</div><Toast message={toast} onDismiss={() => setToast('')} /></BackgroundLayout>
+  return <BackgroundLayout backgroundImage={heroBackground} className="upload-layout"><header className="upload-header"><Link className="wordmark" to="/">Jobnity</Link><StepIndicator active={0} /></header><div className="upload-main">{status === 'review' || status === 'saving' ? <ReviewPanel profile={profile} onChange={setProfile} onConfirm={confirmProfile} saving={status === 'saving'} /> : <div className="resume-panel"><div className="panel-heading"><p className="eyebrow">Your career starts here</p><h1>Let’s look at your resume.</h1><p>Upload it once and we’ll turn its details into a clear direction.</p></div>{status === 'loading' ? <LoadingSkeleton /> : <UploadZone onFile={upload} error={uploadError} />}</div>}</div><Toast message={toast} onDismiss={() => setToast('')} /></BackgroundLayout>
 }

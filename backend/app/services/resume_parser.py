@@ -22,10 +22,10 @@ class ResumeParserService:
         
         full_text = "\n".join(text_content)
         cleaned = clean_text(full_text)
-        if not cleaned:
+        if not cleaned or len(cleaned.strip()) < 20:
             raise HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-                detail="Could not extract readable text from PDF. It may be scanned or empty."
+                detail="Scanned or image-only resumes cannot be processed. No readable text could be extracted. Please upload a digital PDF or DOCX file with selectable text (no scanned copies or images)."
             )
         return cleaned
 
@@ -48,10 +48,10 @@ class ResumeParserService:
         
         full_text = "\n".join(paragraphs)
         cleaned = clean_text(full_text)
-        if not cleaned:
+        if not cleaned or len(cleaned.strip()) < 20:
             raise HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-                detail="Could not extract readable text from DOCX document."
+                detail="Scanned or image-only documents cannot be processed. No readable text could be extracted from this DOCX document. Please upload a document with selectable text."
             )
         return cleaned
 

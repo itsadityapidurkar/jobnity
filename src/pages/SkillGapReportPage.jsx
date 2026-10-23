@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useMemo, useState } from 'react'
-import gapBackground from '../assets/skill-gap-hero.png'
+import heroBackground from '../assets/jobnity-hero.png'
 import BackgroundLayout from '../components/BackgroundLayout'
 import LoadingSkeleton from '../components/LoadingSkeleton'
 import StepIndicator from '../components/StepIndicator'
@@ -67,5 +67,5 @@ export default function SkillGapReportPage() {
     }
   }
 
-  return <BackgroundLayout backgroundImage={gapBackground} className="analysis-layout"><header className="upload-header"><Link className="wordmark" to="/">Jobnity</Link><StepIndicator active={2} /></header><main className="analysis-main"><div className="analysis-intro"><p className="eyebrow">Your personal benchmark</p><h1>Find your next best move.</h1><p>See how your current profile aligns with the role you want.</p></div><RoleSelector selected={role} onSelect={analyse} disabled={status === 'loading'} />{status === 'loading' && <div className="analysis-panel"><LoadingSkeleton title="Measuring your skill fit" detail="Comparing your profile with role requirements." /></div>}{status === 'ready' && analysis && <div className="analysis-results"><ReadinessGauge score={analysis.readinessScore} /><div className="skill-columns"><MatchedList items={analysis.matched} /><MissingList items={analysis.missing} role={role} /></div><Link className="primary-button roadmap-button" to="/roadmap">Generate My Roadmap <span aria-hidden="true">→</span></Link></div>}</main><Toast message={toast} onDismiss={() => setToast('')} /></BackgroundLayout>
+  return <BackgroundLayout backgroundImage={heroBackground} className="analysis-layout"><header className="upload-header"><Link className="wordmark" to="/">Jobnity</Link><StepIndicator active={2} /></header><main className="analysis-main"><div className="analysis-intro"><p className="eyebrow">Your personal benchmark</p><h1>Find your next best move.</h1><p>See how your current profile aligns with the role you want.</p></div><RoleSelector selected={role} onSelect={analyse} disabled={status === 'loading'} />{status === 'loading' && <div className="analysis-panel"><LoadingSkeleton title="Measuring your skill fit" detail="Comparing your profile with role requirements." /></div>}{status === 'ready' && analysis && <div className="analysis-results"><ReadinessGauge score={analysis.readinessScore} /><div className="skill-columns"><MatchedList items={analysis.matched} /><MissingList items={analysis.missing} role={role} /></div><Link className="primary-button roadmap-button" to="/roadmap">Generate My Roadmap <span aria-hidden="true">→</span></Link></div>}</main><Toast message={toast} onDismiss={() => setToast('')} /></BackgroundLayout>
 }

@@ -106,6 +106,24 @@ class CandidateProfile(Base):
     certifications = Column(JSON, default=list)
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
 
+class CandidateSkillEvidence(Base):
+    """Evidence record for each skill detected in a candidate's resume."""
+    __tablename__ = "candidate_skill_evidence"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    profile_id = Column(String, ForeignKey("candidate_profiles.id"), index=True)
+    skill = Column(String, index=True, nullable=False)
+    canonical_skill = Column(String, index=True)
+    evidence_text = Column(Text)
+    evidence_type = Column(String)   # work_experience / project / education / certification / skills_section
+    source_section = Column(String)  # experience / projects / education / skills / certifications
+    strength = Column(String)        # strong / moderate / weak
+    confidence = Column(Float, default=0.5)
+    estimated_months = Column(Integer, nullable=True)  # estimated months of usage
+    proficiency_level = Column(Integer, nullable=True) # 0-5 evidence-based estimate
+    proficiency_label = Column(String, nullable=True)  # No Evidence / Mentioned / Basic / Working / Proficient / Advanced
+    created_at = Column(DateTime, server_default=func.now())
+
 class SkillGapAnalysis(Base):
     __tablename__ = "skill_gap_analyses"
 
@@ -118,5 +136,9 @@ class SkillGapAnalysis(Base):
     matched_skills = Column(JSON, default=list)
     missing_skills = Column(JSON, default=list)
     preferred_missing_skills = Column(JSON, default=list)
+    below_level_skills = Column(JSON, default=list)   # NEW: skills present but below required level
+    transferable_skills = Column(JSON, default=list)  # NEW: related/transferable skill matches
     statistics = Column(JSON, default=dict)
+    score_breakdown = Column(JSON, default=dict)       # NEW: multi-factor breakdown
+    score_explanation = Column(Text, nullable=True)    # NEW: human-readable explanation
     created_at = Column(DateTime, server_default=func.now())

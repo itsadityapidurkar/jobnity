@@ -1,0 +1,876 @@
+================================================================================
+JOBNITY: AI-POWERED CAREER NAVIGATION & EVIDENCE-GROUNDED INTERVIEW PLATFORM
+COMPLETE TECHNICAL SPECIFICATION, ARCHITECTURE, IMPLEMENTATION & SYSTEM DETAILS
+================================================================================
+
+Document Version: 1.0.0
+Author: Aditya Pidurkar & Engineering Team
+Project Target Directory: /home/adityap/ai/Projects/Jobnity
+Target System Architecture: Four-Tier Decoupled Modular Engine (Sensing, Processing, Storage, Visualization)
+Privacy & Deployment Model: 100% Local-First / Zero Data Egress / On-Premise LLM Inference
+Last Updated: October 2026
+
+--------------------------------------------------------------------------------
+TABLE OF CONTENTS
+--------------------------------------------------------------------------------
+1. Executive Summary & Problem Formulation
+2. High-Level System Architecture (Four-Tier Modular Design)
+   2.1 Sensing & Ingestion Module
+   2.2 Processing & Analytical Module
+   2.3 Storage & Persistence Module
+   2.4 Visualization & Client Interaction Module
+3. Complete Technical Stack & Dependency Catalog
+4. Database Architecture & Schema Specification
+5. Comprehensive REST API Contract & Endpoint Catalog
+6. Core Algorithms, Mathematical Formulations & Prompt Pipelines
+   6.1 Evidence Extraction & Multi-Tier Proficiency Classification (L0-L5)
+   6.2 Semantic Role Matching via TF-IDF Vectorization & Cosine Similarity
+   6.3 Multi-Factor Skill Gap & Readiness Scoring Formulation
+   6.4 Grounded Adaptive Interview Question Generation Pipeline
+   6.5 Multi-Axis STAR Rubric Evaluation Engine
+7. End-to-End User Journey & Application Workflow
+   7.1 Step 1: Resume Upload & Ingestion Gate
+   7.2 Step 2: Extracted Profile Review & Credential Verification
+   7.3 Step 3: Role Recommendation & Selection
+   7.4 Step 4: Multi-Axis Skill Gap Analysis & Readiness Report
+   7.5 Structured Career Roadmaps & Resource Mapping
+   7.6 AI Mock Interview Simulation (3-Question Adaptive Loop)
+   7.7 Technical Documentation & Architecture Portal
+8. Frontend UI/UX Design System & Motion Framework
+9. Security, Privacy & Local Inference Guarantees
+10. Repository Directory Structure & File Map
+11. Setup, Installation & Verification Runbook
+12. Complete Report Figures & Diagram Catalog (Figures 4.1 to 4.12)
+
+
+================================================================================
+1. EXECUTIVE SUMMARY & PROBLEM FORMULATION
+================================================================================
+Jobnity is an intelligent, privacy-first career acceleration and technical
+readiness engine designed to bridge the structural disconnect between candidate
+resumes, industry role requirements, and technical interview evaluations.
+
+Traditional hiring platforms and Applicant Tracking Systems (ATS) suffer from:
+1. Keyword Bloat & False Positives: Surface-level keyword matching counts
+   occurrences of terms without validating depth of applied usage, tenure, or
+   project context.
+2. Static & Vague Job Descriptions: Candidates lack actionable clarity regarding
+   the precise technical gaps separating their existing profile from target roles.
+3. Disconnected Mock Interviews: Generic interview prep tools ask generic trivia
+   questions (e.g., standard LeetCode or textbook definitions) rather than
+   evaluating candidates against the actual technologies, architectures, and
+   trade-offs claimed on their resumes.
+
+Jobnity resolves these bottlenecks by combining deterministic NLP parsing,
+mathematical skill gap scoring, and grounded local Large Language Model (LLM)
+inference. The platform extracts verifiable proof-of-work from candidate resumes,
+maps them against 60+ standardized industry benchmark roles, quantifies exact
+skill deficits, delivers personalized week-by-week learning roadmaps, and
+conducts an adaptive technical interview that specifically probes the
+candidate's declared projects and technologies.
+
+
+================================================================================
+2. HIGH-LEVEL SYSTEM ARCHITECTURE (FOUR-TIER MODULAR DESIGN)
+================================================================================
+Following the engineering specifications detailed in Chapter 4 (Implementation
+Architecture), Jobnity is architected as four decoupled, modular subsystems.
+This design adheres to the Open-Closed Principle and the Adapter/Strategy
+patterns, ensuring that additional document formats, LLM backends, or data
+stores can be plugged in without requiring a re-architecture of the core platform.
+
+                  +-----------------------------------------+
+                  |         MODULE 1: SENSING / INGESTION   |
+                  |  - Multi-Format Upload (PDF/DOCX)       |
+                  |  - Cascade Parser (PyPDF2, pdfplumber)  |
+                  |  - ATS Boundary Segmenter & Normalizer  |
+                  +--------------------+--------------------+
+                                       |
+                                       | Normalized Document Text
+                                       v
+                  +-----------------------------------------+
+                  |       MODULE 2: PROCESSING / ANALYTICAL |
+                  |  - NLP Extractor & Proficiency Matrix   |
+                  |  - TF-IDF & Cosine Similarity Matcher   |
+                  |  - Mathematical Skill Gap Scorer        |
+                  |  - Qwen 2.5 Local LLM Interview Engine  |
+                  +--------------------+--------------------+
+                                       |
+                        +--------------+--------------+
+                        |                             |
+                        v                             v
++------------------------------------+   +------------------------------------+
+|    MODULE 3: STORAGE / PERSISTENCE |   | MODULE 4: VISUALIZATION & CLIENT   |
+| - SQLite Embedded Database         |   | - React 18 + Vite SPA              |
+| - SQLAlchemy 2.0 ORM Engine        |   | - Lenis Kinetic Smooth Scrolling   |
+| - Skill Taxonomy (1000+ Skills)    |   | - Framer Motion Morphing Layouts   |
+| - 60+ Benchmark Role Definitions   |   | - Dynamic SVG Radar Charts         |
+| - Session Cache & Rubric History   |   | - Interactive Terminal Simulator   |
++------------------------------------+   +------------------------------------+
+
+2.1 SENSING / INGESTION MODULE
+------------------------------
+- Purpose: Ingest, validate, clean, and segment raw candidate resume files.
+- Ingestion Gateway: Handles multipart HTTP uploads of PDF and DOCX files.
+- Validation Guardrails: Magic byte inspection (%PDF- for PDF, PK\x03\x04 for
+  DOCX), file size caps (<10MB), and corruption detection.
+- Multi-Tier Cascading Extractor:
+  * Tier 1: High-throughput PyPDF2 stream parser for text-native PDFs.
+  * Tier 2: Layout-aware pdfplumber parser for multi-column and table layouts.
+  * Tier 3: python-docx XML parser for Microsoft Word documents.
+- Text Normalization Pipeline: Deduplicates extraneous whitespace, repairs
+  typographical ligatures (fi, fl, ae), and cleans non-printable Unicode characters.
+- ATS Boundary Segmenter: Deterministic regex-based state machine that segments
+  raw text into canonical structural zones: Summary, Experience, Education,
+  Skills, and Projects.
+- Modular Ingestion Adapter (BaseIngestionAdapter): Standardized interface enabling
+  future plugins for cloud object storage (AWS S3, Cloudflare R2), OCR engines
+  (Tesseract), or enterprise ATS integrations (Workday, Greenhouse).
+
+2.2 PROCESSING / ANALYTICAL MODULE
+----------------------------------
+- Purpose: Execute entity extraction, evidence scoring, role matching, gap
+  quantification, and LLM-driven interview evaluation.
+- NLP Extractor: Heuristic entity recognizer for Candidate Name, Email, Phone,
+  Degree, Institution, Graduation Year, and Work Experience tenure.
+- Contextual Evidence Extractor: Evaluates where each skill appears in the resume:
+  Experience (Weight 5) > Certifications (Weight 4) > Projects (Weight 3) >
+  Education (Weight 2) > Unsubstantiated Skill List (Weight 1).
+  Maps evidence to a 6-tier proficiency scale (L0: None to L5: Advanced Master).
+- Semantic Role Recommender: Computes n-gram TF-IDF representations of candidate
+  evidence against benchmark job roles, using cosine distance to produce
+  ranked match tiers: Strong Fit (>80%), Moderate Fit (65-80%), and High Potential.
+- Multi-Factor Skill Gap Scorer: Evaluates required vs. preferred competencies,
+  below-level proficiencies, and transferable skills via a closed-form formula.
+- Grounded Adaptive LLM Evaluator: Powered by a local Qwen 2.5 (3B/7B) model.
+  Generates personalized technical questions grounded directly in the candidate's
+  verified resume projects, and scores candidate answers across Relevance (35%),
+  Technical Correctness (40%), and Clarity/Structure (25%).
+- Pluggable Analytical Bus (BaseAnalyticalAdapter): Decoupled interface allowing
+  zero-downtime hot-swapping between Ollama (Qwen 2.5), HuggingFace Transformers,
+  vLLM, or proprietary enterprise endpoints.
+
+2.3 STORAGE / PERSISTENCE MODULE
+--------------------------------
+- Purpose: Maintain durable relational persistence, session caching, and the
+  curated career knowledge graph.
+- Engine: Embedded SQLite database (`backend/jobnity.db`) managed via SQLAlchemy 2.0.
+- Skill Taxonomy & Ontology: Over 1,000 standardized technical skills with alias
+  normalization (e.g., 'k8s' -> 'kubernetes', 'react.js' -> 'react') and collision
+  guardrails (ensuring 'Java' does not accidentally trigger 'JavaScript').
+- Benchmark Role Repository: 60+ pre-configured industry job profiles complete
+  with required skills, preferred skills, minimum proficiency thresholds, and
+  seniority benchmarks (Junior, Mid, Senior, Lead).
+- Learning Resource Catalog: Hundreds of curated, verified educational resources
+  (official documentation, hands-on labs, interactive sandboxes, video deep dives)
+  mapped directly to specific skill deficit IDs.
+- Interview & Rubric History: Durable logging of interview sessions, individual
+  generated questions, candidate transcript responses, and rubric breakdowns.
+
+2.4 VISUALIZATION & CLIENT INTERACTION MODULE
+--------------------------------------------
+- Purpose: Deliver a polished, ultra-responsive, accessible user interface.
+- Core Architecture: Single Page Application (SPA) built with React 18, Vite,
+  and React Router v6.
+- Motion & Ergonomics: Integrated Lenis kinetic smooth scrolling and Framer
+  Motion layout transitions for fluid page morphing without layout jumps.
+- Visual Gap Diagnostics: Interactive SVG radar charts and stacked horizontal
+  progress gauges displaying candidate proficiency vs. industry role expectations.
+- AI Interview Simulator: A terminal-styled, interactive prompt environment
+  featuring live typing effects, real-time response context pills, and
+  instantaneous rubric scorecards.
+- Roadmap Explorer: Interactive weekly curriculum view with completion checkboxes,
+  direct learning hyperlinks, and estimated study hours.
+
+
+================================================================================
+3. COMPLETE TECHNICAL STACK & DEPENDENCY CATALOG
+================================================================================
+Jobnity is engineered using modern, battle-tested open-source technologies:
+
+BACKEND STACK:
+- Runtime: Python 3.11+ (Standard Linux / Ubuntu x86_64)
+- Web Framework: FastAPI 0.115+ (Asynchronous ASGI framework)
+- ASGI Server: Uvicorn 0.30+ (High-performance ASGI server with uvloop)
+- ORM & Persistence: SQLAlchemy 2.0+ with SQLite dialect
+- Data Validation: Pydantic v2 (Strict schema enforcement and serialization)
+- Document Processing:
+  * pdfplumber (Layout-aware PDF parsing and tabular data extraction)
+  * PyPDF2 (High-throughput raw PDF text stream extraction)
+  * python-docx (Microsoft Word .docx document parsing)
+- Natural Language & Analytics:
+  * scikit-learn (TfidfVectorizer, cosine_similarity)
+  * NumPy (Vector math and array manipulations)
+- LLM Inference Client:
+  * Ollama HTTP API (Local REST client connecting to `http://localhost:11434`)
+  * Local Model: Qwen 2.5 (3B / 7B parameters, quantized GGUF)
+  * httpx & requests (Asynchronous and synchronous HTTP networking)
+- Testing & Quality:
+  * Pytest 8.0+
+  * pytest-asyncio (Async endpoint test runner)
+  * pytest-cov (Coverage analysis, 61/61 backend tests passing)
+
+FRONTEND STACK:
+- Framework: React 18.3+
+- Build Tool: Vite 5.4+ (Rollup-powered development server and bundler)
+- Routing: React Router v6 (Client-side animated route management)
+- Kinetic Smooth Scrolling: Lenis 1.1+ (@studio-freight/lenis)
+- Motion & Animation: Framer Motion 11.0+ (Shared element layout morphing)
+- Styling: Tailwind CSS 3.4+ & Pure CSS Custom Variables (Design token system)
+- Data Visualization: Recharts 2.12+ & Native SVG Radar and Bar components
+- Iconography: Lucide React (Crisp, accessible SVG icons)
+- HTTP Client: Axios 1.7+ (Centralized API client with error handling)
+- Frontend Testing: Vitest + React Testing Library (16/16 frontend tests passing)
+
+ENVIRONMENT & DEPLOYMENT:
+- Backend Port: 8001 (`http://localhost:8001`)
+- Frontend Port: 5173 (`http://localhost:5173`)
+- LLM Daemon: Ollama on port 11434 (`http://localhost:11434`)
+
+
+================================================================================
+4. DATABASE ARCHITECTURE & SCHEMA SPECIFICATION
+================================================================================
+The relational data layer is defined in `backend/app/models/` and structured as:
+
+1. TABLE `resumes`:
+   - `id`: VARCHAR(36) PRIMARY KEY (UUID v4)
+   - `filename`: VARCHAR(255) NOT NULL
+   - `file_type`: VARCHAR(50) NOT NULL ('pdf', 'docx')
+   - `file_path`: VARCHAR(512) NOT NULL
+   - `file_size_bytes`: INTEGER NOT NULL
+   - `raw_text`: TEXT NOT NULL
+   - `created_at`: DATETIME DEFAULT CURRENT_TIMESTAMP
+
+2. TABLE `candidate_profiles`:
+   - `id`: VARCHAR(36) PRIMARY KEY (UUID v4)
+   - `resume_id`: VARCHAR(36) FOREIGN KEY REFERENCES `resumes.id`
+   - `full_name`: VARCHAR(255)
+   - `email`: VARCHAR(255)
+   - `phone`: VARCHAR(50)
+   - `degree`: VARCHAR(255)
+   - `institution`: VARCHAR(255)
+   - `graduation_year`: INTEGER
+   - `total_experience_months`: INTEGER DEFAULT 0
+   - `summary_text`: TEXT
+   - `created_at`: DATETIME DEFAULT CURRENT_TIMESTAMP
+
+3. TABLE `job_roles`:
+   - `id`: VARCHAR(64) PRIMARY KEY (e.g., 'software-engineer', 'data-scientist')
+   - `title`: VARCHAR(255) NOT NULL
+   - `department`: VARCHAR(100) NOT NULL
+   - `tier_level`: VARCHAR(50) NOT NULL ('Junior', 'Mid', 'Senior', 'Lead')
+   - `description`: TEXT NOT NULL
+   - `target_skills_json`: TEXT NOT NULL (JSON array of required/preferred skill objects)
+
+4. TABLE `skills`:
+   - `id`: VARCHAR(64) PRIMARY KEY (e.g., 'python', 'docker', 'react')
+   - `canonical_name`: VARCHAR(100) NOT NULL UNIQUE
+   - `category`: VARCHAR(100) NOT NULL ('Frontend', 'Backend', 'DevOps', 'Data/AI')
+   - `aliases_json`: TEXT (JSON array of alias strings, e.g., ['py', 'python3'])
+
+5. TABLE `skill_evidences`:
+   - `id`: VARCHAR(36) PRIMARY KEY (UUID v4)
+   - `candidate_id`: VARCHAR(36) FOREIGN KEY REFERENCES `candidate_profiles.id`
+   - `skill_id`: VARCHAR(64) FOREIGN KEY REFERENCES `skills.id`
+   - `proficiency_level`: INTEGER NOT NULL (0 to 5)
+   - `confidence_score`: FLOAT NOT NULL (0.0 to 1.0)
+   - `source_section`: VARCHAR(50) ('Experience', 'Projects', 'Certifications', etc.)
+   - `context_snippet`: TEXT NOT NULL
+
+6. TABLE `skill_gap_analyses`:
+   - `id`: VARCHAR(36) PRIMARY KEY (UUID v4)
+   - `candidate_id`: VARCHAR(36) FOREIGN KEY REFERENCES `candidate_profiles.id`
+   - `target_role_id`: VARCHAR(64) FOREIGN KEY REFERENCES `job_roles.id`
+   - `overall_fit_score`: FLOAT NOT NULL (0.0 to 100.0)
+   - `matched_skills_json`: TEXT NOT NULL
+   - `missing_skills_json`: TEXT NOT NULL
+   - `below_level_skills_json`: TEXT NOT NULL
+   - `created_at`: DATETIME DEFAULT CURRENT_TIMESTAMP
+
+7. TABLE `interview_sessions`:
+   - `id`: VARCHAR(36) PRIMARY KEY (UUID v4)
+   - `candidate_id`: VARCHAR(36) FOREIGN KEY REFERENCES `candidate_profiles.id`
+   - `target_role_id`: VARCHAR(64) FOREIGN KEY REFERENCES `job_roles.id`
+   - `current_question_index`: INTEGER DEFAULT 0
+   - `total_questions`: INTEGER DEFAULT 3
+   - `is_completed`: BOOLEAN DEFAULT FALSE
+   - `final_score`: FLOAT DEFAULT 0.0
+   - `created_at`: DATETIME DEFAULT CURRENT_TIMESTAMP
+
+8. TABLE `interview_questions`:
+   - `id`: VARCHAR(36) PRIMARY KEY (UUID v4)
+   - `session_id`: VARCHAR(36) FOREIGN KEY REFERENCES `interview_sessions.id`
+   - `question_index`: INTEGER NOT NULL
+   - `question_text`: TEXT NOT NULL
+   - `focus_technology`: VARCHAR(100) NOT NULL
+   - `grounded_context`: TEXT NOT NULL
+   - `candidate_answer`: TEXT
+   - `created_at`: DATETIME DEFAULT CURRENT_TIMESTAMP
+
+9. TABLE `interview_evaluations`:
+   - `id`: VARCHAR(36) PRIMARY KEY (UUID v4)
+   - `question_id`: VARCHAR(36) FOREIGN KEY REFERENCES `interview_questions.id`
+   - `relevance_score`: FLOAT NOT NULL (0.0 to 10.0)
+   - `correctness_score`: FLOAT NOT NULL (0.0 to 10.0)
+   - `clarity_score`: FLOAT NOT NULL (0.0 to 10.0)
+   - `composite_score`: FLOAT NOT NULL (0.0 to 100.0)
+   - `star_alignment`: VARCHAR(50) ('Strong', 'Adequate', 'Incomplete')
+   - `strengths_feedback`: TEXT NOT NULL
+   - `improvements_feedback`: TEXT NOT NULL
+   - `created_at`: DATETIME DEFAULT CURRENT_TIMESTAMP
+
+10. TABLE `learning_resources`:
+    - `id`: VARCHAR(36) PRIMARY KEY (UUID v4)
+    - `skill_id`: VARCHAR(64) FOREIGN KEY REFERENCES `skills.id`
+    - `title`: VARCHAR(255) NOT NULL
+    - `resource_type`: VARCHAR(50) NOT NULL ('Documentation', 'Course', 'Lab', 'Book')
+    - `url`: VARCHAR(512) NOT NULL
+    - `difficulty`: VARCHAR(50) NOT NULL ('Beginner', 'Intermediate', 'Advanced')
+    - `estimated_hours`: INTEGER DEFAULT 5
+
+
+================================================================================
+5. COMPREHENSIVE REST API CONTRACT & ENDPOINT CATALOG
+================================================================================
+
+1. GET /api/health
+   - Purpose: Liveness and readiness probe for FastAPI backend and local LLM.
+   - Response: `{"status": "healthy", "version": "1.0.0", "llm_connected": true}`
+
+2. POST /api/resumes/upload
+   - Method: POST (multipart/form-data)
+   - Parameters: `file`: Binary file stream (PDF or DOCX)
+   - Response (201 Created):
+     ```json
+     {
+       "resume_id": "c5b1110b-2ee5-4ec3-b193-2667ec77ce07",
+       "filename": "Aditya_Pidurkar_Resume.pdf",
+       "file_size_bytes": 142850,
+       "parsed_profile": {
+         "full_name": "Aditya Pidurkar",
+         "email": "aditya@example.com",
+         "phone": "+91 9876543210",
+         "degree": "B.Tech Computer Science & Engineering",
+         "institution": "Ramdeobaba University",
+         "graduation_year": 2026,
+         "total_experience_months": 24,
+         "skills": [
+           {"name": "Python", "level": 4, "section": "Experience"},
+           {"name": "FastAPI", "level": 4, "section": "Projects"},
+           {"name": "Docker", "level": 3, "section": "Experience"}
+         ]
+       }
+     }
+     ```
+
+3. POST /api/resumes/sample
+   - Method: POST (application/json)
+   - Payload: `{"role_type": "Software Engineer"}` (or "Data Scientist", "Cloud Engineer")
+   - Purpose: Instantly loads rich, pre-configured candidate profiles for testing
+     and demonstrations without requiring file uploads.
+   - Response: Full profile object matching the format of `/upload`.
+
+4. PUT /api/resumes/{resume_id}/profile
+   - Method: PUT (application/json)
+   - Purpose: Allows candidate to verify, edit, or append skills and experience
+     details during Step 2 (Review).
+   - Response: Updated candidate profile object.
+
+5. POST /api/roles/recommend
+   - Method: POST (application/json)
+   - Payload: `{"resume_id": "c5b1110b-..."}`
+   - Purpose: Evaluates candidate skills against 60+ benchmark roles.
+   - Response (200 OK):
+     ```json
+     {
+       "recommendations": [
+         {
+           "role_id": "full-stack-engineer",
+           "title": "Full Stack Engineer",
+           "match_percentage": 88.5,
+           "tier": "Strong Fit",
+           "strengths": ["Python", "FastAPI", "React", "SQLAlchemy"],
+           "missing_skills": ["Redis", "GraphQL"],
+           "rationale": "Strong alignment in core backend API design and modern frontend libraries."
+         },
+         {
+           "role_id": "devops-engineer",
+           "title": "DevOps / Cloud Engineer",
+           "match_percentage": 72.0,
+           "tier": "Moderate Fit",
+           "strengths": ["Docker", "Linux", "Bash"],
+           "missing_skills": ["Kubernetes", "Terraform", "CI/CD Pipelines"],
+           "rationale": "Solid containerization fundamentals, requires expansion in orchestration."
+         }
+       ]
+     }
+     ```
+
+6. GET /api/roles/{role_id}/skills
+   - Method: GET
+   - Purpose: Returns the full competency breakdown for a target role.
+   - Response: List of required skills, preferred skills, and minimum levels.
+
+7. POST /api/analysis/skill-gap
+   - Method: POST (application/json)
+   - Payload: `{"resume_id": "c5b1110b-...", "target_role_id": "full-stack-engineer"}`
+   - Purpose: Performs multi-factor mathematical gap analysis.
+   - Response:
+     ```json
+     {
+       "overall_readiness_score": 84.5,
+       "fit_tier": "Job Ready",
+       "score_breakdown": {
+         "required_core_coverage": 88.0,
+         "proficiency_depth_alignment": 82.5,
+         "preferred_skills_bonus": 75.0,
+         "evidence_quality_weight": 90.0
+       },
+       "matched_skills": [
+         {"skill": "Python", "candidate_level": 4, "required_level": 3, "status": "Matched"},
+         {"skill": "React", "candidate_level": 3, "required_level": 3, "status": "Matched"}
+       ],
+       "below_level_skills": [
+         {"skill": "Docker", "candidate_level": 2, "required_level": 3, "deficit": 1}
+       ],
+       "missing_skills": [
+         {"skill": "Redis", "required_level": 2, "priority": "High"}
+       ]
+     }
+     ```
+
+8. GET /api/roadmaps/roles/{role_id}
+   - Method: GET
+   - Purpose: Generates a sequential, milestone-based learning roadmap.
+   - Response: 8-week structured roadmap with weekly topics, prerequisites,
+     hands-on project objectives, and curated learning resource URLs.
+
+9. POST /api/interview/start
+   - Method: POST (application/json)
+   - Payload: `{"resume_id": "c5b1110b-...", "target_role_id": "full-stack-engineer"}`
+   - Purpose: Initializes a 3-question adaptive technical interview session
+     and generates Question 1 grounded in candidate resume projects.
+   - Response:
+     ```json
+     {
+       "session_id": "8f3b2011-9a4d-44a1-b8d1-7c91a03e1102",
+       "question_number": 1,
+       "total_questions": 3,
+       "question": "In your resume, you built an ASGI backend using FastAPI and SQLAlchemy. How did you manage asynchronous database sessions to prevent connection leaks under concurrent traffic?",
+       "focus_technology": "FastAPI & Async SQLAlchemy",
+       "grounded_source": "Resume Project: High-Throughput API Gateway"
+     }
+     ```
+
+10. POST /api/interview/evaluate
+    - Method: POST (application/json)
+    - Payload:
+      ```json
+      {
+        "session_id": "8f3b2011-...",
+        "question_number": 1,
+        "answer_text": "I used SQLAlchemy's async_sessionmaker bound to AsyncEngine with connection pool pre-ping enabled, and ensured every route opened sessions within an async context manager (async with) to guarantee cleanup."
+      }
+      ```
+    - Purpose: Evaluates candidate answer via Qwen 2.5 LLM, produces STAR
+      rubric scoring, and yields Question 2 (or final summary if question 3).
+    - Response:
+      ```json
+      {
+        "evaluation": {
+          "composite_score": 92.0,
+          "relevance_score": 9.5,
+          "correctness_score": 9.0,
+          "clarity_score": 9.0,
+          "strengths": "Demonstrated excellent understanding of connection pooling and context manager cleanup semantics.",
+          "improvement_areas": "Could briefly mention transaction rollback handling in exception blocks."
+        },
+        "next_question": {
+          "question_number": 2,
+          "question": "When configuring Docker containers for this service, how did you structure multi-stage builds to minimize image attack surface and final artifact size?",
+          "focus_technology": "Docker Multi-Stage Builds"
+        }
+      }
+      ```
+
+11. GET /api/interview/session/{session_id}
+    - Method: GET
+    - Purpose: Retrieves full transcript, question history, and rubric cards
+      for a completed interview session.
+
+
+================================================================================
+6. CORE ALGORITHMS, MATHEMATICAL FORMULATIONS & PROMPT PIPELINES
+================================================================================
+
+6.1 EVIDENCE EXTRACTION & PROFICIENCY CLASSIFICATION (L0-L5)
+------------------------------------------------------------
+Candidate skill claims are not treated equally. An empirical weight function
+W(section) assigns proof-of-work credibility:
+- W(Production Work Experience) = 5
+- W(Verified Industry Certifications) = 4
+- W(Shipped Independent Projects) = 3
+- W(Academic Coursework / Education) = 2
+- W(Isolated Skills List / Header Keyword) = 1
+
+For each skill s in document sections {sec_i}:
+  Cumulative Evidence Score E(s) = SUM[ W(sec_i) * (1 + 0.15 * TenureMonths) ]
+
+Mapping to Canonical Proficiency Matrix:
+- L0 (None): E(s) = 0 (No mentions detected)
+- L1 (Basic Familiarity): 1 <= E(s) < 4 (Listed in skill inventory or coursework)
+- L2 (Working Knowledge): 4 <= E(s) < 9 (Used in academic or hobby projects)
+- L3 (Proficient): 9 <= E(s) < 18 (Applied in production or major capstone)
+- L4 (Advanced): 18 <= E(s) < 30 (Multiple production deployments, 24+ months)
+- L5 (Subject Matter Expert): E(s) >= 30 (Architectural leadership, 36+ months)
+
+6.2 SEMANTIC ROLE MATCHING (TF-IDF & COSINE SIMILARITY)
+-------------------------------------------------------
+Candidate extracted profile text T_cand is normalized, lowercased, and converted
+into an n-gram TF-IDF vector v_cand:
+  v_cand = TfidfVectorizer(ngram_range=(1, 2), stop_words='english').fit_transform(T_cand)
+
+Each standardized role j in the job catalog has a benchmark vector v_role_j:
+  Cosine Similarity S_cos(cand, role_j) = (v_cand . v_role_j) / (||v_cand|| * ||v_role_j||)
+
+The match score is calibrated across hard competency thresholds to yield tiers:
+- Strong Fit: S_cos >= 0.80 AND Core Coverage >= 75%
+- Moderate Fit: 0.65 <= S_cos < 0.80
+- High Potential: S_cos < 0.65 with high transferable skill overlap
+
+6.3 MULTI-FACTOR SKILL GAP & READINESS SCORING FORMULATION
+----------------------------------------------------------
+The final Readiness Index Score R in [0, 100] is calculated via:
+
+  R = 0.55 * C_req + 0.25 * P_align + 0.10 * E_qual + 0.10 * C_pref + B_trans
+
+Where:
+- C_req (Core Required Coverage):
+    C_req = ( Count of required skills where Level_cand >= Level_req ) / ( Total Required Skills ) * 100
+- P_align (Proficiency Depth Alignment):
+    P_align = ( 1 / N ) * SUM[ min(1.0, Level_cand(k) / Level_req(k)) ] * 100
+- E_qual (Evidence Quality Factor):
+    Normalized aggregate of proof-of-work weights across verified skills.
+- C_pref (Preferred / Secondary Skill Coverage):
+    Coverage of nice-to-have competencies that differentiate candidates.
+- B_trans (Transferable Skill Bonus):
+    Up to 5.0 bonus points awarded when candidate possesses equivalent technologies
+    (e.g., strong PostgreSQL proficiency compensating for MariaDB requirement).
+
+6.4 GROUNDED ADAPTIVE INTERVIEW QUESTION GENERATION PIPELINE
+------------------------------------------------------------
+To eliminate LLM hallucination and ensure strict relevance, the interview prompt
+in `backend/app/services/llm_service.py` is injected with real resume evidence:
+
+SYSTEM PROMPT:
+"You are a Senior Technical Hiring Lead conducting an in-depth technical interview.
+You must STRICTLY GROUND every question in the candidate's real resume projects,
+technologies, and claimed proficiency levels.
+DO NOT ask generic trivia. Ask real-world architectural, operational, or trade-off
+questions that verify whether the candidate truly built what they claimed.
+Ensure questions adhere to the STAR framework (Situation, Task, Action, Result)."
+
+INJECTED CONTEXT:
+Candidate Target Role: {target_role_title}
+Verified Candidate Stack: {candidate_skills_with_levels}
+Grounded Project Artifact: {project_title_and_description}
+Question Index: {question_number} of 3
+Difficulty Progression:
+- Question 1: System Architecture & Design Choices
+- Question 2: Edge Cases, Bottlenecks & Production Root Cause Debugging
+- Question 3: Security, Scalability & Continuous Deployment Trade-offs
+
+6.5 MULTI-AXIS STAR RUBRIC EVALUATION ENGINE
+--------------------------------------------
+When the candidate submits an answer, Qwen 2.5 evaluates the transcript:
+- Relevance (Weight 35%): Did the candidate answer the specific question asked,
+  referencing real technical mechanics rather than generic platitudes?
+- Technical Correctness (Weight 40%): Are the architectural concepts, code patterns,
+  and trade-offs technically accurate according to industry best practices?
+- Clarity & Structure (Weight 25%): Did the candidate present their thoughts
+  methodically, adhering to Situation-Task-Action-Result structure?
+
+Composite Answer Score = (0.35 * Relevance + 0.40 * Correctness + 0.25 * Clarity) * 10
+
+
+================================================================================
+7. END-TO-END USER JOURNEY & APPLICATION WORKFLOW
+================================================================================
+The user interacts with Jobnity through a seamless, 5-phase guided journey:
+
+7.1 STEP 1: RESUME UPLOAD & INGESTION GATE (`/analyse-resume`)
+- Candidate drags & drops a PDF or DOCX resume, or clicks one of three pre-loaded
+  sample industry profiles (Software Engineer, Data Scientist, Cloud Engineer).
+- Backend executes multi-tier text extraction, ATS boundary segmentation, and
+  entity recognition within 250 milliseconds.
+
+7.2 STEP 2: EXTRACTED PROFILE REVIEW & VERIFICATION
+- Candidate reviews parsed contact details, extracted education, and categorized
+  skills organized into clean tags (Languages, Frameworks, Tools, Cloud).
+- Candidate has the ability to adjust proficiency ratings or add omitted
+  credentials before committing to analysis.
+
+7.3 STEP 3: ROLE RECOMMENDATION & TARGET SELECTION
+- The system presents AI-recommended target job profiles ranked by compatibility.
+- Each card displays Match Score, Key Candidate Strengths, Missing Skills, and
+  a concise rationale explaining the fit.
+- Candidate selects their target ambition (e.g., "Full Stack Engineer").
+
+7.4 STEP 4: MULTI-AXIS SKILL GAP ANALYSIS & READINESS REPORT
+- Interactive visual diagnostic dashboard renders:
+  * Readiness Score Gauge (e.g., 84% - Job Ready).
+  * Category Breakdown (Core Coverage, Proficiency Alignment, Evidence Quality).
+  * Matched vs. Deficit Skills Breakdown with direct remediation paths.
+  * Two primary call-to-actions: "Practice Technical Interview" or "Explore Roadmaps".
+
+7.5 STRUCTURED CAREER ROADMAPS (`/roadmaps`)
+- Interactive 8-week curriculum mapped specifically to the candidate's deficits.
+- Features milestone check-offs, practical capstone project specifications,
+  and direct outbound links to official documentation and interactive labs.
+
+7.6 AI MOCK INTERVIEW SIMULATION (`/interview`)
+- Interactive, terminal-inspired simulation.
+- Generates 3 progressive, highly personalized technical questions grounded
+  in the candidate's actual projects.
+- Live progress indicator (Question 1 of 3, Question 2 of 3, Complete).
+- Real-time feedback modal displaying composite scores, STAR alignment,
+  key technical strengths, and actionable remediation tips.
+
+7.7 TECHNICAL DOCUMENTATION & ARCHITECTURE PORTAL (`/docs`)
+- Self-contained, tabbed documentation suite detailing Tech Stack, Backend
+  Pipelines, Frontend Architecture, and Algorithmic Formulations.
+
+
+================================================================================
+8. FRONTEND UI/UX DESIGN SYSTEM & MOTION FRAMEWORK
+================================================================================
+- Color System: Pure, high-contrast monochrome and neutral palette:
+  * Backgrounds: `#ffffff` (Canvas), `#f9fafb` (Surface), `#f3f4f6` (Muted)
+  * Borders: `#e5e7eb` (Subtle), `#111827` (High-contrast structural borders)
+  * Typography: `#111827` (Headings), `#374151` (Body), `#6b7280` (Muted/Captions)
+  * Accents: Monochromatic slate and obsidian with green readiness indicators.
+- Typography: Inter / SF Pro sans-serif typography paired with JetBrains Mono
+  for code blocks, terminals, and mathematical formulas.
+- Kinetic Smooth Scrolling: Powered by Lenis, creating seamless momentum
+  scrolling with zero friction across long pages while respecting accessibility
+  preferences (`prefers-reduced-motion`).
+- Page Morphing & Transitions: Managed via Framer Motion's `AnimatePresence`,
+  providing smooth entry and exit transitions (`y: 12px -> 0px, opacity: 0 -> 1`)
+  preventing visual jarring during step progression.
+
+
+================================================================================
+9. SECURITY, PRIVACY & LOCAL INFERENCE GUARANTEES
+================================================================================
+1. Zero Data Egress: All parsing, evidence extraction, vector similarity, and
+   LLM question generation occur 100% locally on the host machine.
+2. Confidentiality of Candidate Data: Resume documents and candidate PII never
+   traverse external commercial AI APIs (no OpenAI, Anthropic, or third-party cloud).
+3. Payload & File Guardrails: Binary magic byte checking prevents arbitrary code
+   execution or malicious payload injection disguised as documents.
+4. Ephemeral & Isolated Processing: Document uploads are processed in isolated
+   memory streams, with disk persistence restricted to local encrypted SQLite storage.
+
+
+================================================================================
+10. REPOSITORY DIRECTORY STRUCTURE & FILE MAP
+================================================================================
+
+Jobnity/
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   │   ├── routes/
+│   │   │   │   ├── analysis.py      # Skill gap scoring & readiness endpoints
+│   │   │   │   ├── health.py        # Health & model availability probe
+│   │   │   │   ├── interview.py     # AI mock interview session endpoints
+│   │   │   │   ├── resumes.py       # Resume upload, parsing & sample profiles
+│   │   │   │   ├── roadmaps.py      # Learning roadmaps & resource endpoints
+│   │   │   │   └── roles.py         # Role catalog & recommendation endpoints
+│   │   │   └── router.py            # Central FastAPI API route aggregator
+│   │   ├── core/
+│   │   │   └── config.py            # Environment settings & directory paths
+│   │   ├── db/
+│   │   │   ├── base.py              # Declarative SQLAlchemy base model
+│   │   │   ├── init_db.py           # Database seeder (Roles, Skills, Resources)
+│   │   │   └── session.py           # Database connection & session maker
+│   │   ├── models/                  # SQLAlchemy ORM table models
+│   │   │   ├── candidate.py
+│   │   │   ├── interview.py
+│   │   │   ├── resume.py
+│   │   │   ├── roadmap.py
+│   │   │   └── role.py
+│   │   ├── schemas/                 # Pydantic v2 validation contracts
+│   │   ├── services/
+│   │   │   ├── evidence_extractor.py# Proof-of-work scoring & proficiency matrix
+│   │   │   ├── llm_service.py       # Qwen 2.5 local inference & STAR rubric engine
+│   │   │   ├── nlp_parser.py        # PDF/DOCX multi-tier text extractor
+│   │   │   ├── role_matcher.py      # TF-IDF & Cosine Similarity matching engine
+│   │   │   └── skill_gap_service.py # Closed-form mathematical gap calculation
+│   │   └── main.py                  # ASGI FastAPI application entrypoint
+│   ├── tests/                       # Complete pytest suite (61 unit & integration tests)
+│   └── jobnity.db                   # Local SQLite relational database
+│
+├── src/                             # React 18 + Vite Frontend Application
+│   ├── components/
+│   │   ├── AnalyseResume/           # 4-Step Guided Wizard Components
+│   │   │   ├── ResumeUploadStep.jsx # Step 1: Upload & sample profiles
+│   │   │   ├── ResumeReviewStep.jsx # Step 2: Extracted profile verification
+│   │   │   ├── RoleSelectionStep.jsx# Step 3: AI role recommendations
+│   │   │   └── SkillGapAnalysisStep.jsx # Step 4: Diagnostic gap charts
+│   │   ├── Navigation.jsx           # Global header with status indicators
+│   │   └── Roadmaps/                # Roadmap explorer & weekly breakdown
+│   ├── pages/
+│   │   ├── AnalyseResumePage.jsx    # Guided analysis page controller
+│   │   ├── DocsPage.jsx             # Comprehensive engineering documentation
+│   │   ├── LandingPage.jsx          # Public landing page & value pillars
+│   │   ├── MockInterviewPage.jsx    # Interactive AI mock interview terminal
+│   │   └── RoadmapPage.jsx          # Career roadmaps explorer
+│   ├── services/
+│   │   └── apiClient.js             # Centralized Axios client with fallback
+│   ├── App.jsx                      # Animated routes & Lenis scroll manager
+│   ├── index.css                    # Tailwind CSS configuration
+│   ├── main.jsx                     # React root mount
+│   └── styles.css                   # Custom UI component styles & typography
+│
+├── report_figures/                  # Dedicated publication report figures folder
+│   ├── Figure_4_1_Implementation_Architecture_and_Data_Flow.svg / .png
+│   ├── Figure_4_2_End_to_End_System_Flowchart.svg / .png
+│   ├── Figure_4_3_Modular_Analytical_Pipeline.svg / .png
+│   ├── Figure_4_4_Database_and_Storage_Schema.svg / .png
+│   ├── Figure_4_5_Landing_Page.png / _BW.png
+│   ├── Figure_4_6_Resume_Upload_Step.png / _BW.png
+│   ├── Figure_4_7_Resume_Review_Step.png / _BW.png
+│   ├── Figure_4_8_Role_Selection_Step.png / _BW.png
+│   ├── Figure_4_9_Skill_Gap_Analysis.png / _BW.png
+│   ├── Figure_4_10_Roadmaps_Page.png / _BW.png
+│   ├── Figure_4_11_Mock_Interview_Page.png / _BW.png
+│   └── Figure_4_12_Documentation_Page.png / _BW.png
+│
+├── scripts/
+│   ├── capture_figures.py           # Automated Playwright 2x screenshot engine
+│   └── seed_database.py             # Knowledge base & role taxonomy seeder
+├── package.json                     # Frontend npm dependencies and scripts
+└── vite.config.js                   # Vite configuration with API proxy
+
+
+================================================================================
+11. SETUP, INSTALLATION & VERIFICATION RUNBOOK
+================================================================================
+
+PREREQUISITES:
+- Python 3.11+
+- Node.js 18+ and npm
+- Ollama (installed and running with `qwen2.5` model)
+
+STEP 1: OLLAMA MODEL SETUP
+  ollama serve &
+  ollama pull qwen2.5:3b
+
+STEP 2: BACKEND INSTALLATION & LAUNCH
+  cd /home/adityap/ai/Projects/Jobnity
+  python3 -m venv .venv
+  source .venv/bin/activate
+  pip install -r backend/requirements.txt
+  python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+
+STEP 3: FRONTEND INSTALLATION & LAUNCH
+  npm install
+  npm run dev -- --host 0.0.0.0 --port 5173
+
+STEP 4: EXECUTE VERIFICATION TEST SUITES
+  # Run backend unit and integration tests (61 tests)
+  python3 -m pytest backend/tests -v
+
+  # Run frontend vitest suite (16 tests)
+  npm test -- --run
+
+  # Run frontend production build
+  npm run build
+
+
+================================================================================
+12. COMPLETE REPORT FIGURES & DIAGRAM CATALOG (FIGURES 4.1 TO 4.12)
+================================================================================
+All figures are saved in `/home/adityap/ai/Projects/Jobnity/report_figures/`
+in vector SVG, ultra-high-resolution 3200x2000 PNG, and high-contrast
+black-and-white / grayscale editions optimized for academic reports and printing:
+
+1. Figure 4.1: Implementation Architecture and Data Flow
+   - Vector SVG: `report_figures/Figure_4_1_Implementation_Architecture_and_Data_Flow.svg`
+   - High-Res PNG: `report_figures/Figure_4_1_Implementation_Architecture_and_Data_Flow.png`
+   - Description: Four-tier decoupled architecture comprising Sensing, Processing,
+     Storage, and Visualization modules with pluggable adapter buses.
+
+2. Figure 4.2: End-to-End Candidate Progression System Flowchart
+   - Vector SVG: `report_figures/Figure_4_2_End_to_End_System_Flowchart.svg`
+   - High-Res PNG: `report_figures/Figure_4_2_End_to_End_System_Flowchart.png`
+   - Description: Complete 20-step sequential flowchart spanning Document Upload,
+     Text Normalization, Evidence Scoring, Role Alignment, Gap Profiling, and
+     Adaptive Interview Evaluation.
+
+3. Figure 4.3: Modular Analytical Pipeline Architecture
+   - Vector SVG: `report_figures/Figure_4_3_Modular_Analytical_Pipeline.svg`
+   - High-Res PNG: `report_figures/Figure_4_3_Modular_Analytical_Pipeline.png`
+   - Description: Detailed diagram illustrating the pluggable adapter bus,
+     showing how external LLM providers or semantic algorithms plug in
+     without modifying core logic.
+
+4. Figure 4.4: Relational Database Schema & Entity Relationship Model
+   - Vector SVG: `report_figures/Figure_4_4_Database_and_Storage_Schema.svg`
+   - High-Res PNG: `report_figures/Figure_4_4_Database_and_Storage_Schema.png`
+   - Description: Complete ER diagram covering Resumes, Candidates, Job Roles,
+     Skills, Gap Analyses, Interview Sessions, Questions, and Rubric Evaluations.
+
+5. Figure 4.5: Jobnity Landing Page
+   - Color PNG: `report_figures/Figure_4_5_Landing_Page.png`
+   - Print Grayscale: `report_figures/Figure_4_5_Landing_Page_BW.png`
+   - Description: Public landing hero section, trust indicators, value pillars,
+     and guided CTA.
+
+6. Figure 4.6: Step 1 - Resume Upload & Ingestion
+   - Color PNG: `report_figures/Figure_4_6_Resume_Upload_Step.png`
+   - Print Grayscale: `report_figures/Figure_4_6_Resume_Upload_Step_BW.png`
+   - Description: Ingestion interface featuring drag & drop upload and sample
+     profile selector buttons.
+
+7. Figure 4.7: Step 2 - Extracted Profile Review & Credential Verification
+   - Color PNG: `report_figures/Figure_4_7_Resume_Review_Step.png`
+   - Print Grayscale: `report_figures/Figure_4_7_Resume_Review_Step_BW.png`
+   - Description: Parsed candidate review screen displaying contact details,
+     categorized skill badges, education, and tenure.
+
+8. Figure 4.8: Step 3 - Target Role Recommendation & Selection
+   - Color PNG: `report_figures/Figure_4_8_Role_Selection_Step.png`
+   - Print Grayscale: `report_figures/Figure_4_8_Role_Selection_Step_BW.png`
+   - Description: AI role matching view displaying compatibility tiers, key
+     strengths, and selection controls.
+
+9. Figure 4.9: Step 4 - Multi-Axis Skill Gap Analysis & Diagnostic Gauges
+   - Color PNG: `report_figures/Figure_4_9_Skill_Gap_Analysis.png`
+   - Print Grayscale: `report_figures/Figure_4_9_Skill_Gap_Analysis_BW.png`
+   - Description: Diagnostic report with readiness score gauge, proficiency
+     breakdown, and matched vs. missing skills cards.
+
+10. Figure 4.10: Structured Career Learning Roadmaps
+    - Color PNG: `report_figures/Figure_4_10_Roadmaps_Page.png`
+    - Print Grayscale: `report_figures/Figure_4_10_Roadmaps_Page_BW.png`
+    - Description: 8-week sequential curriculum view with milestone progress
+      checkboxes and curated learning links.
+
+11. Figure 4.11: AI Mock Technical Interview Simulator
+    - Color PNG: `report_figures/Figure_4_11_Mock_Interview_Page.png`
+    - Print Grayscale: `report_figures/Figure_4_11_Mock_Interview_Page_BW.png`
+    - Description: Interactive interview terminal displaying resume-grounded
+      technical question, response input box, and real-time STAR rubric cards.
+
+12. Figure 4.12: Technical Architecture & System Documentation
+    - Color PNG: `report_figures/Figure_4_12_Documentation_Page.png`
+    - Print Grayscale: `report_figures/Figure_4_12_Documentation_Page_BW.png`
+    - Description: Integrated engineering documentation portal covering architecture,
+      APIs, data models, and algorithms.
+
+================================================================================
+END OF SPECIFICATION DOCUMENT
+================================================================================

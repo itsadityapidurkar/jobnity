@@ -1,11 +1,92 @@
-from typing import Optional, List
+from typing import Optional, List, Dict, Any
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.orm import Session
 from app.core.database import get_db
-from app.models import JobRole, RoleSkill
-from app.schemas import RoleResponse, RoleListResponse, RoleSkillListResponse, RoleSkillResponse
+from app.models import JobRole, RoleSkill, CandidateProfile
+from app.schemas import (
+    RoleResponse, RoleListResponse, RoleSkillListResponse, RoleSkillResponse,
+    RoleRecommendationRequest, RoleRecommendationResponse, RecommendedRoleItem
+)
+from app.services.llm_service import LLMService
 
 router = APIRouter(prefix="/roles", tags=["Job Roles"])
+
+@router.post("/recommend", response_model=RoleRecommendationResponse, summary="Recommend Eligible Job Roles via LLM")
+def recommend_eligible_roles(
+    req: RoleRecommendationRequest,
+    db: Session = Depends(get_db)
+):
+    """
+    Evaluates candidate's verified resume profile against tech job roles using Qwen 2.5 LLM.
+    Returns matching job roles with match %, fit tier, rationale, and matching skills.
+    """
+    profile_dict: Dict[str, Any] = {}
+
+    if req.candidate_profile and isinstance(req.candidate_profile, dict):
+        profile_dict = dict(req.candidate_profile)
+    elif req.resume_id or req.candidate_id:
+        lookup_id = req.resume_id or req.candidate_id
+        candidate = db.query(CandidateProfile).filter(
+            (CandidateProfile.resume_id == lookup_id) | (CandidateProfile.id == lookup_id)
+        ).first()
+        if candidate:
+            profile_dict = {
+                "skills": candidate.skills or [],
+                "experience": candidate.experience or [],
+                "projects": candidate.projects or [],
+                "education": candidate.education or [],
+                "certifications": candidate.certifications or []
+            }
+
+    if not profile_dict.get("skills") and req.skills:
+        profile_dict["skills"] = req.skills
+
+    # Fetch available database roles for catalog alignment
+    db_roles = db.query(JobRole).limit(80).all()
+    available_roles = [
+        {"role_id": r.role_id, "job_role": r.job_role, "category": r.category}
+        for r in db_roles
+    ]
+
+    # Run LLM role matching with heuristic fallback
+    matches = LLMService.match_eligible_roles(profile_dict, available_roles=available_roles)
+
+    # Attach role_id if available in database
+    enriched_items: List[RecommendedRoleItem] = []
+    engine_used = "qwen2.5"
+
+    for m in matches[:(req.limit or 6)]:
+        role_title = m.get("job_role", "Software Engineer")
+        engine_used = m.get("engine", engine_used)
+        
+        # Find matching DB role
+        matched_db_role = next(
+            (r for r in db_roles if r.job_role.lower() == role_title.lower() or role_title.lower() in r.job_role.lower()),
+            None
+        )
+
+        role_id = matched_db_role.role_id if matched_db_role else None
+        category = matched_db_role.category if matched_db_role and matched_db_role.category else m.get("category", "Engineering")
+
+        enriched_items.append(
+            RecommendedRoleItem(
+                job_role=role_title,
+                match_score=int(m.get("match_score", 75)),
+                fit_tier=m.get("fit_tier", "Solid Fit"),
+                rationale=m.get("rationale", ""),
+                matching_skills=m.get("matching_skills", []),
+                growth_skills=m.get("growth_skills", []),
+                category=category,
+                role_id=role_id,
+                engine=m.get("engine", "qwen2.5")
+            )
+        )
+
+    return RoleRecommendationResponse(
+        recommendations=enriched_items,
+        total_evaluated=len(enriched_items),
+        engine=engine_used
+    )
 
 @router.get("", response_model=RoleListResponse, summary="List Job Roles")
 def list_job_roles(

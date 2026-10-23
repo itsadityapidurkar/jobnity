@@ -248,8 +248,90 @@ def import_datasets():
             db.commit()
             print(f"Seeded {count} sample candidate profiles.")
 
+    # 7. Skill Relationships — from skill_relationships.csv
+    rel_csv = os.path.join(dataset_dir, "skill_relationships.csv")
+    if os.path.exists(rel_csv):
+        with open(rel_csv, encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            count = 0
+            for row in reader:
+                src_id = row.get("source_skill_id", "").strip()
+                src = row.get("source_skill", "").strip()
+                rel_type = row.get("relationship_type", "related").strip()
+                tgt_id = row.get("target_skill_id", "").strip()
+                tgt = row.get("target_skill", "").strip()
+                if not src or not tgt:
+                    continue
+                exists = db.query(SkillRelationship).filter(
+                    SkillRelationship.source_skill == src,
+                    SkillRelationship.target_skill == tgt,
+                    SkillRelationship.relationship_type == rel_type
+                ).first()
+                if not exists:
+                    db.add(SkillRelationship(
+                        source_skill_id=src_id,
+                        source_skill=src,
+                        relationship_type=rel_type,
+                        target_skill_id=tgt_id,
+                        target_skill=tgt
+                    ))
+                    count += 1
+            db.commit()
+            print(f"Imported {count} skill relationships from CSV.")
+
+    # 8. Skill Relationships — derived from taxonomy columns
+    skills_csv2 = os.path.join(dataset_dir, "skills_taxonomy_dataset.csv")
+    if os.path.exists(skills_csv2):
+        with open(skills_csv2, encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            count = 0
+            for row in reader:
+                skill_id = row.get("skill_id", "").strip()
+                skill_name = row.get("skill", "").strip()
+                if not skill_name:
+                    continue
+
+                def add_rel(src_id, src, rel_type, tgt_id, tgt):
+                    nonlocal count
+                    if not src or not tgt or src.lower() == tgt.lower():
+                        return
+                    exists = db.query(SkillRelationship).filter(
+                        SkillRelationship.source_skill == src,
+                        SkillRelationship.target_skill == tgt,
+                        SkillRelationship.relationship_type == rel_type
+                    ).first()
+                    if not exists:
+                        db.add(SkillRelationship(
+                            source_skill_id=src_id,
+                            source_skill=src,
+                            relationship_type=rel_type,
+                            target_skill_id=tgt_id,
+                            target_skill=tgt
+                        ))
+                        count += 1
+
+                # related_skills
+                related = row.get("related_skills", "")
+                for rel in [r.strip() for r in related.split(",") if r.strip()]:
+                    add_rel(skill_id, skill_name, "related", "", rel)
+
+                # prerequisite_skills
+                prereqs = row.get("prerequisite_skills", "")
+                for pre in [p.strip() for p in prereqs.split(",") if p.strip()]:
+                    add_rel("", pre, "prerequisite", skill_id, skill_name)
+
+                # parent_skill
+                parent = row.get("parent_skill", "").strip()
+                if parent:
+                    add_rel(skill_id, skill_name, "child", "", parent)
+                    add_rel("", parent, "parent", skill_id, skill_name)
+
+            db.commit()
+            print(f"Derived {count} skill relationships from taxonomy columns.")
+
     db.close()
     print("Database seeding completed successfully!")
 
 if __name__ == "__main__":
     import_datasets()
+

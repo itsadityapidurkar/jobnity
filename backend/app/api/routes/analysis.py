@@ -4,6 +4,7 @@ from app.core.database import get_db
 from app.schemas import SkillGapRequest, SkillGapResponse, RecommendationResponse
 from app.services.skill_gap import SkillGapService
 from app.services.roadmap import RoadmapService
+from app.services.career_recommender import get_career_recommendations
 
 router = APIRouter(prefix="/analysis", tags=["Skill Gap Analysis"])
 
@@ -28,7 +29,8 @@ def analyze_skill_gap(
     result = SkillGapService.calculate_skill_gap(
         db=db,
         resume_id=request.resume_id,
-        role_id=target_role_id
+        role_id=target_role_id,
+        job_description=request.job_description
     )
     return result
 
@@ -39,3 +41,17 @@ def get_analysis_recommendations(
 ):
     result = RoadmapService.get_recommendations_for_analysis(db=db, analysis_id=analysis_id)
     return result
+
+@router.get("/{analysis_id}/career-recommendations", summary="Get Explainable Career Recommendations")
+def get_career_recs(
+    analysis_id: str,
+    db: Session = Depends(get_db)
+):
+    """
+    Returns ranked career recommendations:
+    - priority_skills_to_learn (with reasons and resources)
+    - alternative_roles (roles candidate is close to qualifying for)
+    - high_leverage_skills (skills unlocking multiple roles)
+    """
+    return get_career_recommendations(db=db, analysis_id=analysis_id)
+

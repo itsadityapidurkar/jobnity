@@ -63,6 +63,10 @@ class Settings(BaseSettings):
     UPLOAD_DIR: str = default_upload_dir
     MAX_UPLOAD_SIZE_MB: int = 10
 
+    # Local LLM Integration (Qwen 2.5 via Ollama)
+    OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+    OLLAMA_MODEL: str = os.getenv("OLLAMA_MODEL", "qwen2.5:3b")
+
     # CORS - Allow all origins
     CORS_ORIGINS: Union[str, List[str]] = ["*"]
 
