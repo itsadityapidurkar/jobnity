@@ -46,6 +46,7 @@ get_backend_pid() {
   fi
   pid=$(lsof -ti :"$BACKEND_PORT" 2>/dev/null | head -1)
   if [[ -n "$pid" ]]; then
+    echo "$pid" > "$PID_BACKEND"
     echo "$pid"
     return 0
   fi
@@ -63,6 +64,7 @@ get_frontend_pid() {
   fi
   pid=$(lsof -ti :"$FRONTEND_PORT" 2>/dev/null | head -1)
   if [[ -n "$pid" ]]; then
+    echo "$pid" > "$PID_FRONTEND"
     echo "$pid"
     return 0
   fi
@@ -80,8 +82,16 @@ start_services() {
     echo -n "  • Starting Backend (FastAPI on port $BACKEND_PORT)... "
     cd "$JOBNITY_DIR/backend" || { echo "${CLR_RED}Failed to cd to backend!${CLR_RESET}"; exit 1; }
     setsid python3 -m uvicorn app.main:app --host 0.0.0.0 --port "$BACKEND_PORT" > "$LOG_BACKEND" 2>&1 &
-    sleep 2
-    local new_b_pid=$(get_backend_pid)
+    
+    local new_b_pid=""
+    for i in {1..16}; do
+      sleep 0.5
+      new_b_pid=$(get_backend_pid)
+      if [[ -n "$new_b_pid" ]]; then
+        break
+      fi
+    done
+
     if [[ -n "$new_b_pid" ]]; then
       echo "$new_b_pid" > "$PID_BACKEND"
       echo "${CLR_GREEN}Started (PID: $new_b_pid)${CLR_RESET}"
@@ -98,8 +108,16 @@ start_services() {
     echo -n "  • Starting Frontend (Vite on port $FRONTEND_PORT)... "
     cd "$JOBNITY_DIR" || { echo "${CLR_RED}Failed to cd to project root!${CLR_RESET}"; exit 1; }
     setsid npm run dev -- --port "$FRONTEND_PORT" > "$LOG_FRONTEND" 2>&1 &
-    sleep 2
-    local new_f_pid=$(get_frontend_pid)
+    
+    local new_f_pid=""
+    for i in {1..12}; do
+      sleep 0.5
+      new_f_pid=$(get_frontend_pid)
+      if [[ -n "$new_f_pid" ]]; then
+        break
+      fi
+    done
+
     if [[ -n "$new_f_pid" ]]; then
       echo "$new_f_pid" > "$PID_FRONTEND"
       echo "${CLR_GREEN}Started (PID: $new_f_pid)${CLR_RESET}"
